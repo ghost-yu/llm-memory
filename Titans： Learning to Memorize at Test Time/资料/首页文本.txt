@@ -1,0 +1,48 @@
+Titans: Learning to Memorize at Test Time
+Ali Behrouz
+†, Peilin Zhong
+†, and Vahab Mirrokni
+†
+†Google Research
+{alibehrouz, peilinz, mirrokni}@google.com
+Abstract
+Over more than a decade there has been an extensive research effort of how effectively utilize recurrent models and
+attentions. While recurrent models aim to compress the data into a fixed-size memory (called hidden state), attention allows
+attending to the entire context window, capturing the direct dependencies of all tokens. This more accurate modeling
+of dependencies, however, comes with a quadratic cost, limiting the model to a fixed-length context. We present a new
+neural long-term memory module that learns to memorize historical context and helps an attention to attend to the
+current context while utilizing long past information. We show that this neural memory has the advantage of a fast
+parallelizable training while maintaining a fast inference. From a memory perspective, we argue that attention due to its
+limited context but accurate dependency modeling performs as a short-term memory, while neural memory due to its
+ability to memorize the data, acts as a long-term, more persistent, memory. Based on these two modules, we introduce
+a new family of architectures, called Titans, and present three variants to address how one can effectively incorporate
+memory into this architecture. Our experimental results on language modeling, common-sense reasoning, genomics,
+and time series tasks show that Titans are more effective than Transformers and recent modern linear recurrent models.
+They further can effectively scale to larger than 2M context window size with higher accuracy in needle-in-haystack tasks
+compared to baselines.
+1
+Introduction
+“The true art of memory is the art of attention!"
+— Samuel Johnson, 1787
+T
+ransformers, pure attention-based architectures (Vaswani et al. 2017), have been firmly established as state-of-
+the-art models in sequence modeling, mainly due to their in-context learning and ability to learn at scale (Kaplan
+et al. 2020). The primary building blocks of Transformers–attention modules—function as associative memory
+blocks (Bietti et al. 2024), where they learn to store key-value associations and retrieve them by computing pairwise
+similarity between queries (i.e., search signals) and keys (i.e., contexts). Accordingly, by design, the output of a Transformer
+is exclusively conditioned on the direct dependencies of tokens in the current context window. This accurate modeling of
+dependencies, however, comes with quadratic time and memory complexity in terms of the context length. In complex
+real-world tasks (e.g., language modeling (N. F. Liu et al. 2024), video understanding (C.-Y. Wu et al. 2019), long-term time
+series forecasting (H. Zhou et al. 2021)), the context window can become extremely large, making the applicability of
+Transformers challenging in these downstream tasks.
+To overcome the scalability issue of Transformers, recent studies aim to design different variants of linear Transform-
+ers (Kacham, Mirrokni, and P. Zhong 2024; Katharopoulos et al. 2020; S. Yang, B. Wang, Shen, et al. 2024), where softmax is
+replaced by a kernel function in the attention (see §2.1 for details), resulting in a significant drop in memory consumption.
+Despite efficiency and the ability to scale to longer context, linear Transformers do not show competitive performance
+compared to Transformers as the kernel trick makes the model a linear recurrent network, in which the data is compressed
+into a matrix-valued states (Katharopoulos et al. 2020). This, however, brings a contradictory fact about linear recurrent (or
+linear Transformers) models: On one hand, we use these linear models to enhance scalability and efficiency (linear vs.
+quadratic complexity), whose advantages is appeared for very long context; On the other hand, a very long context cannot
+be properly compressed in a small vector-valued or matrix-valued states (S. Wang 2024).
+1
+arXiv:2501.00663v1  [cs.LG]  31 Dec 2024

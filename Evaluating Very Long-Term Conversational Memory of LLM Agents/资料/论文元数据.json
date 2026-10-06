@@ -1,0 +1,21 @@
+{
+  "arxiv": "2402.17753",
+  "title": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
+  "category": "记忆评测",
+  "relation": "方向补充：LoCoMo，Mem0 论文使用的基准",
+  "purpose": "评估长时间、多会话对话中的记忆能力。",
+  "version": "v1",
+  "pdf_url": "https://arxiv.org/pdf/2402.17753v1",
+  "local_pdf": "G:\\大模型记忆\\Evaluating Very Long-Term Conversational Memory of LLM Agents\\原论文.pdf",
+  "pages": 19,
+  "bytes": 1608560,
+  "sha256": "218188e1d66a553afe324491e3e5e5d0af107196c9ff32c65bb3640ebf638539",
+  "authors": [
+    "Maharana, Adyasha",
+    "Lee, Dong-Ho",
+    "Tulyakov, Sergey",
+    "Bansal, Mohit",
+    "Barbieri, Francesco",
+    "Fang, Yuwei"
+  ]
+}

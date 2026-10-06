@@ -1,0 +1,243 @@
+{
+  "scope": "local CMS teaching implementation contracts and limitations; no official Hope",
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "device": "cpu",
+    "dtype": "float32"
+  },
+  "source_sha256": "084c17b2f5ee13e53c1cd1fa1e1764196b6f128b69dfcc88f7cabdb63a1a441d",
+  "signatures": {
+    "MemoryBlock.__init__": "(self, dim=8, hidden=32)",
+    "MemoryBlock.forward": "(self, x)",
+    "CMS.__init__": "(self)",
+    "CMS.forward": "(self, x)",
+    "PeriodicSGD.__init__": "(self, model, periods, lr=0.1)",
+    "PeriodicSGD.update": "(self, loss)",
+    "loss_fn": "(pred, target)",
+    "evaluate": "(model, x, a, b, current)",
+    "run_one": "(init, periods, x, a, b)",
+    "check_gradient_accumulation": "()",
+    "main": "()"
+  },
+  "parameter_shapes": {
+    "blocks.0.net.0.weight": [
+      32,
+      8
+    ],
+    "blocks.0.net.0.bias": [
+      32
+    ],
+    "blocks.0.net.2.weight": [
+      8,
+      32
+    ],
+    "blocks.0.net.2.bias": [
+      8
+    ],
+    "blocks.1.net.0.weight": [
+      32,
+      8
+    ],
+    "blocks.1.net.0.bias": [
+      32
+    ],
+    "blocks.1.net.2.weight": [
+      8,
+      32
+    ],
+    "blocks.1.net.2.bias": [
+      8
+    ],
+    "blocks.2.net.0.weight": [
+      32,
+      8
+    ],
+    "blocks.2.net.0.bias": [
+      32
+    ],
+    "blocks.2.net.2.weight": [
+      8,
+      32
+    ],
+    "blocks.2.net.2.bias": [
+      8
+    ]
+  },
+  "parameter_count": 1656,
+  "forward_hook_shapes": [
+    {
+      "class": "Linear",
+      "input": [
+        8,
+        8
+      ],
+      "output": [
+        8,
+        32
+      ]
+    },
+    {
+      "class": "GELU",
+      "input": [
+        8,
+        32
+      ],
+      "output": [
+        8,
+        32
+      ]
+    },
+    {
+      "class": "Linear",
+      "input": [
+        8,
+        32
+      ],
+      "output": [
+        8,
+        8
+      ]
+    },
+    {
+      "class": "MemoryBlock",
+      "input": [
+        8,
+        8
+      ],
+      "output": [
+        8,
+        8
+      ]
+    }
+  ],
+  "schedule": {
+    "periods": [
+      1,
+      2,
+      4
+    ],
+    "records": [
+      {
+        "step": 1,
+        "counts": [
+          1,
+          0,
+          0
+        ],
+        "changed": [
+          true,
+          false,
+          false
+        ],
+        "buffer_norms": [
+          0.0,
+          0.20579597353935242,
+          0.2023228406906128
+        ]
+      },
+      {
+        "step": 2,
+        "counts": [
+          2,
+          1,
+          0
+        ],
+        "changed": [
+          true,
+          true,
+          false
+        ],
+        "buffer_norms": [
+          0.0,
+          0.0,
+          0.3975168466567993
+        ]
+      },
+      {
+        "step": 3,
+        "counts": [
+          3,
+          1,
+          0
+        ],
+        "changed": [
+          true,
+          false,
+          false
+        ],
+        "buffer_norms": [
+          0.0,
+          0.1863231360912323,
+          0.5807755589485168
+        ]
+      },
+      {
+        "step": 4,
+        "counts": [
+          4,
+          2,
+          1
+        ],
+        "changed": [
+          true,
+          true,
+          true
+        ],
+        "buffer_norms": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "frozen_parameters_but_changed_output_max_abs": 0.009578049182891846,
+  "observed_errors": {
+    "zero_period": {
+      "type": "ZeroDivisionError",
+      "message": "integer modulo by zero",
+      "steps_after_failure": 1
+    }
+  },
+  "short_schedule": {
+    "periods": [
+      1
+    ],
+    "counts": [
+      1,
+      0,
+      0
+    ],
+    "change_entry_length": 1
+  },
+  "checkpoint_keys": [
+    "seed",
+    "scope",
+    "states"
+  ],
+  "checkpoint_prediction_max_error": {
+    "every_step": 0.0,
+    "cms": 0.0,
+    "all_slow": 0.0
+  },
+  "gradient_accumulation_error": 0.0,
+  "checks_passed": [
+    "parameter count",
+    "forward shape",
+    "scalar loss",
+    "loss/MSE scale",
+    "update returns None",
+    "mean gradient updates",
+    "pending buffers",
+    "buffers detached",
+    "parameter grad untouched",
+    "actual update counts",
+    "frozen block parameters",
+    "frozen block output changes",
+    "zero period rejected at runtime",
+    "short schedule truncation observed",
+    "checkpoint scope",
+    "checkpoint predictions"
+  ]
+}

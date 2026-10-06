@@ -1,0 +1,18 @@
+{
+  "arxiv": "2501.00663",
+  "title": "Titans: Learning to Memorize at Test Time",
+  "category": "模型内部记忆",
+  "relation": "视频一直接链接",
+  "purpose": "测试时通过神经记忆模块写入和检索信息。",
+  "version": "v1",
+  "pdf_url": "https://arxiv.org/pdf/2501.00663v1",
+  "local_pdf": "G:\\大模型记忆\\Titans： Learning to Memorize at Test Time\\原论文.pdf",
+  "pages": 27,
+  "bytes": 3657065,
+  "sha256": "a65e4a7d02784df1a040b487127e6dd09fff4474e5caf94d93263af3d50cfbc2",
+  "authors": [
+    "Behrouz, Ali",
+    "Zhong, Peilin",
+    "Mirrokni, Vahab"
+  ]
+}

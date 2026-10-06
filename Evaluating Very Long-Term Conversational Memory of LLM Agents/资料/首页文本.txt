@@ -1,0 +1,73 @@
+Evaluating Very Long-Term Conversational Memory of LLM Agents
+Adyasha Maharana1
+Dong-Ho Lee2
+Sergey Tulyakov3
+Mohit Bansal1†
+Francesco Barbieri†
+Yuwei Fang3†
+University of North Carolina, Chapel Hill1
+University of Southern California2
+Snap Inc.3
+Abstract
+Existing works on long-term open-domain dia-
+logues focus on evaluating model responses
+within contexts spanning no more than five
+chat sessions. Despite advancements in long-
+context large language models (LLMs) and
+retrieval augmented generation (RAG) tech-
+niques, their efficacy in very long-term dia-
+logues remains unexplored. To address this
+research gap, we introduce a machine-human
+pipeline to generate high-quality, very long-
+term dialogues by leveraging LLM-based agent
+architectures and grounding their dialogues on
+personas and temporal event graphs. Moreover,
+we equip each agent with the capability of shar-
+ing and reacting to images. The generated con-
+versations are verified and edited by human an-
+notators for long-range consistency and ground-
+ing to the event graphs. Using this pipeline,
+we collect LOCOMO, a dataset of very long-
+term conversations, each encompassing 300
+turns and 9K tokens on avg., over up to 35 ses-
+sions. Based on LOCOMO, we present a com-
+prehensive evaluation benchmark to measure
+long-term memory in models, encompassing
+question answering, event summarization, and
+multi-modal dialogue generation tasks. Our ex-
+perimental results indicate that LLMs exhibit
+challenges in understanding lengthy conversa-
+tions and comprehending long-range temporal
+and causal dynamics within dialogues. Employ-
+ing strategies like long-context LLMs or RAG
+can offer improvements but these models still
+substantially lag behind human performance.1
+1
+Introduction
+Despite recent advancements in dialogue models
+based on LLMs for extended contexts (Bertsch
+et al., 2024; Xiao et al., 2023), as well as the inte-
+gration of retrieval augmented generation (RAG)
+1Code and data to be available at
+https://snap-research.github.io/locomo
+†Equal advising.
+Figure 1: An example in LOCOMO. Dialogs are
+steered by the speakers’ personas and corresponding
+events e.g., Joanna’s responses are consistent with her
+pet allergies. For Nate, the event got a new dog is fol-
+lowed by a playdate with neighbor’s dog, showcasing
+long-term memory. Multimodal dialog is enabled with
+image-sharing and image-response behaviors.
+techniques (Shuster et al., 2021; Ram et al., 2023;
+Shi et al., 2023), there is still a need for thorough
+evaluation of their efficacy in handling very long
+conversations. Indeed, studies in long-term open-
+domain dialogues have concentrated on assessing
+model responses within limited contexts e.g., ∼1K
+tokens over five chat sessions (Xu et al., 2022; Jang
+et al., 2023; Zhang et al., 2023). This long term
+evaluation is crucial for refining engaging chat-
+bots capable of remembering key information from
+past interactions, to generate empathetic, consis-
+tent, and useful responses.
+arXiv:2402.17753v1  [cs.CL]  27 Feb 2024

@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "checks": 14,
+  "local_links": 34,
+  "dataset_questions": 1986,
+  "data_sha256": "553cd5a15e25f2ceccc6ed185221eba645080c93e5b91087560a91aa5961f365",
+  "files": {
+    "解释.md": {
+      "bytes": 44016,
+      "sha256": "6b2be675f77b339718c455dcf34ddb78354398126261ddc2bb4ca550d34bfd66"
+    },
+    "资料/数据核查.json": {
+      "bytes": 189,
+      "sha256": "ea96db53eadc230956e52b969c4273723be5cadbb8571bc50cb68b9dfb9c922b"
+    },
+    "复现/README.md": {
+      "bytes": 5587,
+      "sha256": "d68b565b3a376f7bc4424c6dc48fc2ffe67754d873454f613d7f446998f30d74"
+    },
+    "复现/requirements.txt": {
+      "bytes": 122,
+      "sha256": "b0f6f61e90cd81890a4485d66311af3463e3813fd95afb549835cd0edef98212"
+    },
+    "复现/scripts/demo_amem.py": {
+      "bytes": 8362,
+      "sha256": "039ddad3a333b17f059fb2569ad26b8eadbe169beed92ecbe1315d332d20bcc1"
+    },
+    "复现/scripts/plot_results.py": {
+      "bytes": 1688,
+      "sha256": "6dc6148a3a767f361e069881997e78070eb6d54d267d750b4290b8ae90f423e7"
+    },
+    "复现/scripts/audit_delivery.py": {
+      "bytes": 2774,
+      "sha256": "0b7f201a9b417792e337741777121797aa7dc0fe709048a393e9e12ea4644868"
+    },
+    "复现/outputs/results.json": {
+      "bytes": 24119,
+      "sha256": "2781174fcad50e1f8edc40470c4c8f6e6fe566d77261227aa369ae9b2cc83c91"
+    },
+    "复现/outputs/original_stdout.txt": {
+      "bytes": 9946,
+      "sha256": "b3595ae82375feb1e2f2ddc238b3f79fb39b466cfb4c8622dabe6cbc6e70ac3f"
+    },
+    "复现/outputs/mechanism.png": {
+      "bytes": 90876,
+      "sha256": "595849fb07c2c666d84a4af21df1cdf42133c0f57d4befd80e9855d20a01b9e5"
+    },
+    "复现/outputs/mechanism.svg": {
+      "bytes": 57378,
+      "sha256": "2c35959e671bb2875b990092b11aa41570d6288be2cd4d057bb90c238f3f1615"
+    },
+    "复现/outputs/notes-56b00452c5a4.json": {
+      "bytes": 1934,
+      "sha256": "796b3b58a5dd39eaf3dcc528952d00b8052a46013d87dc120927eb5a1e9d0d79"
+    }
+  }
+}

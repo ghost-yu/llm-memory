@@ -1,0 +1,5 @@
+# Recorded offline mechanism environment, not the full mem0 package
+# Python 3.12.14; SQLite and ZoneInfo from standard library
+pydantic==2.13.5
+# Plotting used a separate Anaconda Python 3.7.6 environment:
+# matplotlib==3.1.3

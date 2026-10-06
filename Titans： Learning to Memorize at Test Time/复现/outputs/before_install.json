@@ -1,0 +1,56 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "os": "Windows-11-10.0.26200-SP0",
+  "checks": {
+    "syntax": {
+      "status": "pass",
+      "result": {
+        "parsed_files": 7
+      }
+    },
+    "scalar_gradient_and_memory_update": {
+      "status": "pass",
+      "result": {
+        "analytic": -16.0,
+        "finite_difference": -16.00000000046009,
+        "trajectory": [
+          {
+            "t": 1,
+            "before": 1.0,
+            "gradient": -16.0,
+            "momentum": 0.8,
+            "after": 1.7000000000000002,
+            "loss": 6.759999999999998
+          },
+          {
+            "t": 2,
+            "before": 1.7000000000000002,
+            "gradient": -10.399999999999999,
+            "momentum": 0.9199999999999999,
+            "after": 2.45,
+            "loss": 1.2099999999999993
+          }
+        ]
+      }
+    },
+    "associative_scan_algebra": {
+      "status": "pass",
+      "result": {
+        "composed": [
+          0.06400000000000002,
+          0.08399999999999999
+        ],
+        "sequential": 0.12240000000000002,
+        "composed_result": 0.12240000000000001
+      }
+    },
+    "repository_neural_memory_forward_backward_state_causality": {
+      "status": "fail",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\大模型记忆\\Titans： Learning to Memorize at Test Time\\复现\\scripts\\verify_memory.py\", line 18, in check\n    report['checks'][name] = {'status': 'pass', 'result': fn()}\n                                                          ^^^^\n  File \"G:\\大模型记忆\\Titans： Learning to Memorize at Test Time\\复现\\scripts\\verify_memory.py\", line 63, in repository_memory\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+    },
+    "repository_mac_forward_backward": {
+      "status": "fail",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\大模型记忆\\Titans： Learning to Memorize at Test Time\\复现\\scripts\\verify_memory.py\", line 18, in check\n    report['checks'][name] = {'status': 'pass', 'result': fn()}\n                                                          ^^^^\n  File \"G:\\大模型记忆\\Titans： Learning to Memorize at Test Time\\复现\\scripts\\verify_memory.py\", line 104, in repository_mac\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+    }
+  }
+}

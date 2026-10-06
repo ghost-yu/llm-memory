@@ -1,0 +1,89 @@
+{
+  "scope": "Original evaluation MemoryNote, AgenticMemorySystem, SimpleEmbeddingRetriever methods; controlled JSON/encoder/cosine collaborator, not MiniLM or provider schema validation",
+  "source_sha256": "039ddad3a333b17f059fb2569ad26b8eadbe169beed92ecbe1315d332d20bcc1",
+  "original_sources": {
+    "代码\\A-mem-historical\\memory_layer.py": "120a0ac5071279dba8e0e06ef5de12c88ceb30e4adecb2b3827b27552e3dc592",
+    "代码\\A-mem-sys-historical\\agentic_memory\\memory_system.py": "b25dfccaa1c059e92d6c4eead10d462719be6716dd1528db7e3394636f35e38b"
+  },
+  "signatures": {
+    "MemoryNote.__init__": "(self, content: str, id: Optional[str] = None, keywords: Optional[List[str]] = None, links: Optional[Dict] = None, importance_score: Optional[float] = None, retrieval_count: Optional[int] = None, timestamp: Optional[str] = None, last_accessed: Optional[str] = None, context: Optional[str] = None, evolution_history: Optional[List] = None, category: Optional[str] = None, tags: Optional[List[str]] = None, llm_controller: Optional[amem_contract_demo.LLMController] = None)",
+    "MemoryNote.analyze_content": "(content: str, llm_controller: amem_contract_demo.LLMController) -> Dict",
+    "AgenticMemorySystem.__init__": "(self, model_name: str = 'all-MiniLM-L6-v2', llm_backend: str = 'openai', llm_model: str = 'gpt-4o-mini', evo_threshold: int = 100, api_key: Optional[str] = None)",
+    "AgenticMemorySystem.add_note": "(self, content: str, time: str = None, **kwargs) -> str",
+    "AgenticMemorySystem.consolidate_memories": "(self)",
+    "AgenticMemorySystem.process_memory": "(self, note: amem_contract_demo.MemoryNote) -> bool",
+    "AgenticMemorySystem.find_related_memories": "(self, query: str, k: int = 5) -> List[amem_contract_demo.MemoryNote]",
+    "AgenticMemorySystem.find_related_memories_raw": "(self, query: str, k: int = 5) -> List[amem_contract_demo.MemoryNote]",
+    "SimpleEmbeddingRetriever.__init__": "(self, model_name: str = 'all-MiniLM-L6-v2')",
+    "SimpleEmbeddingRetriever.add_documents": "(self, documents: List[str])",
+    "SimpleEmbeddingRetriever.search": "(self, query: str, k: int = 5) -> List[Dict[str, float]]",
+    "SimpleEmbeddingRetriever.save": "(self, retriever_cache_file: str, retriever_cache_embeddings_file: str)",
+    "SimpleEmbeddingRetriever.load": "(self, retriever_cache_file: str, retriever_cache_embeddings_file: str)",
+    "SimpleEmbeddingRetriever.load_from_local_memory": "(memories: Dict, model_name: str) -> 'SimpleEmbeddingRetriever'",
+    "Retriever.__init__": "(self, model_name='offline-hash')",
+    "Retriever.encode": "(self, text)",
+    "Retriever.add_documents": "(self, docs)",
+    "Retriever.search": "(self, query, k=5)",
+    "Provider.__init__": "(self)",
+    "Provider.get_completion": "(self, prompt, response_format=None, **kw)",
+    "LLMController.__init__": "(self, *a, **kw)",
+    "demo.classes": "(path, names, namespace)",
+    "demo.state": "(m)",
+    "demo.main": "()"
+  },
+  "checks_passed": {
+    "empty_find_tuple_raw_list": true,
+    "falsy_defaults_replace_zero": true,
+    "provided_nonempty_tags_aliased": true,
+    "analyze_invalid_json_returns_string": true,
+    "constructor_invalid_analysis_string": true,
+    "analyze_provider_failure_unbound_response": true,
+    "missing_category_triggers_analysis": true,
+    "duplicate_id_breaks_alignment": true,
+    "duplicate_id_query_IndexError": true,
+    "zero_threshold_after_partial_insert": true,
+    "zero_threshold_mutations_remain": true,
+    "short_tags_truncate_missing_context_fallback": true,
+    "unknown_actions_ignored_but_evolve_true": true,
+    "later_action_failure_no_rollback": true,
+    "previous_action_mutation_retained": true,
+    "process_bad_json_propagates": true,
+    "negative_link_reads_last_note": true,
+    "duplicate_links_append_before_budget_check": true,
+    "out_of_range_link_IndexError": true,
+    "original_retriever_first_corpus_alias": true,
+    "original_k_zero_returns_all_adapter_none": true,
+    "original_topk_indices_actual_ndarray": true,
+    "original_duplicate_document_map_last_position": true
+  },
+  "observations": {
+    "constructor_invalid_analysis_string": "TypeError: string indices must be integers, not 'str'",
+    "analyze_provider_failure_unbound_response": "UnboundLocalError: cannot access local variable 'response' where it is not associated with a value",
+    "duplicate_id_counts": {
+      "notes": 1,
+      "documents": 2
+    },
+    "duplicate_id_query_IndexError": "IndexError: list index out of range",
+    "zero_threshold_after_partial_insert": "ZeroDivisionError: integer modulo by zero",
+    "later_action_failure_no_rollback": "TypeError: 'NoneType' object is not iterable",
+    "process_bad_json_propagates": "JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "out_of_range_link_IndexError": "IndexError: list index out of range",
+    "retriever": {
+      "k0_original": [
+        0,
+        1
+      ],
+      "k0_adapter": [],
+      "embedding_shape": [
+        2,
+        2
+      ],
+      "cosine_shape": [
+        1,
+        2
+      ]
+    }
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5"
+}

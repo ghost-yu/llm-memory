@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/letta-ai/letta",
+  "ref": "a0139b5fdc203f827168cb741c9f4fea3cec09bf",
+  "date": "2024-02-12T22:37:44Z",
+  "message": "fix: Chunk inserts into DB on CLI load  (#994)",
+  "selection": "latest available commit before 2024-02-13 UTC, near paper v2; not a proven paper release"
+}

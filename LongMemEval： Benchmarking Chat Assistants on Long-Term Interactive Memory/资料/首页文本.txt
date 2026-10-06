@@ -1,0 +1,54 @@
+Published as a conference paper at ICLR 2025
+LONGMEMEVAL: BENCHMARKING CHAT ASSIST-
+ANTS ON LONG-TERM INTERACTIVE MEMORY
+Di Wu1∗, Hongwei Wang2, Wenhao Yu2, Yuwei Zhang3*, Kai-Wei Chang1, Dong Yu2
+1UCLA, 2Tencent AI Lab Seattle, 3UC San Diego
+{diwu,kwchang}@cs.ucla.edu
+ABSTRACT
+Recent large language model (LLM)-driven chat assistant systems have integrated
+memory components to track user-assistant chat histories, enabling more accurate
+and personalized responses. However, their long-term memory capabilities in
+sustained interactions remain underexplored.
+We introduce LONGMEMEVAL,
+a comprehensive benchmark designed to evaluate five core long-term memory
+abilities of chat assistants:
+information extraction, multi-session reasoning,
+temporal reasoning, knowledge updates, and abstention. With 500 meticulously
+curated questions embedded within freely scalable user-assistant chat histories,
+LONGMEMEVAL presents a significant challenge to existing long-term memory
+systems, with commercial chat assistants and long-context LLMs showing a 30%
+accuracy drop on memorizing information across sustained interactions.
+We
+then present a unified framework that breaks down the long-term memory design
+into three stages: indexing, retrieval, and reading. Built upon key experimental
+insights, we propose several memory design optimizations including session
+decomposition for value granularity, fact-augmented key expansion for indexing,
+and time-aware query expansion for refining the search scope. Extensive exper-
+iments show that these optimizations greatly improve both memory recall and
+downstream question answering on LONGMEMEVAL. Overall, our study provides
+valuable resources and guidance for advancing the long-term memory capabilities
+of LLM-based chat assistants, paving the way toward more personalized and
+reliable conversational AI. Our benchmark and code are publicly available at
+https://github.com/xiaowu0162/LongMemEval.
+1
+INTRODUCTION
+Large language models (LLMs) have exhibited impressive capabilities in solving diverse tasks
+through natural language, leading to numerous successful chat assistant applications (OpenAI,
+2022; Microsoft, 2023). Nevertheless, LLMs face limitations on tasks relying heavily on personal
+knowledge accumulated through long-term user-AI interactions, such as psychological counseling
+or secretarial duties (Zhong et al., 2024). Failing to incorporate user background and preferences
+into responses can diminish the response’s accuracy as well as user satisfaction. To personalize
+LLM-based assistants, long-term memory, the ability to memorize, recall, and reason with a long
+interaction history, is indispensable. Recently, several commercial (OpenAI, 2024; Coze, 2024)
+and open-source assistant systems with memory (Zhong et al., 2024; Zhang et al., 2024) have been
+introduced. These systems leverage techniques like compressing, indexing, and retrieving from chat
+histories to generate more accurate and personalized responses.
+Despite these advances, there has been limited progress in holistically evaluating the memory
+capability in long-term interactions. While several benchmarks evaluate LLMs on understanding
+long chat histories (Xu et al., 2022a;b; Zhong et al., 2024; Maharana et al., 2024; Du et al., 2024;
+Kim et al., 2024), they have two major shortcomings. First, they do not accurately reflect user-AI
+interactions: many focus solely on human-human conversations (Xu et al., 2022a; Maharana et al.,
+2024; Kim et al., 2024), while others omit task-oriented dialogues, which represent a significant
+∗work done during internship at Tencent AI Lab, mentored by Hongwei and Wenhao.
+1
+arXiv:2410.10813v2  [cs.CL]  4 Mar 2025

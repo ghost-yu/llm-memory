@@ -1,0 +1,20 @@
+{
+  "arxiv": "2504.19413",
+  "title": "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory",
+  "category": "Agent 外部记忆",
+  "relation": "对应视频二提及的 Mem0 系统",
+  "purpose": "从对话抽取、整合和检索事实，并讨论图记忆扩展。",
+  "version": "v1",
+  "pdf_url": "https://arxiv.org/pdf/2504.19413v1",
+  "local_pdf": "G:\\大模型记忆\\Mem0： Building Production-Ready AI Agents with Scalable Long-Term Memory\\原论文.pdf",
+  "pages": 23,
+  "bytes": 1144031,
+  "sha256": "bec870b657aa73405275a6d8fe27bcd4271799e028bc62986ab9c4cd27a3712d",
+  "authors": [
+    "Chhikara, Prateek",
+    "Khant, Dev",
+    "Aryan, Saket",
+    "Singh, Taranjeet",
+    "Yadav, Deshraj"
+  ]
+}

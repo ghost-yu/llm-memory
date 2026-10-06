@@ -1,0 +1,20 @@
+{
+  "arxiv": "2501.13956",
+  "title": "Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+  "category": "Agent 外部记忆",
+  "relation": "对应视频二提及的 Zep 系统",
+  "purpose": "用时序知识图谱追踪事实、关系及其时间变化。",
+  "version": "v1",
+  "pdf_url": "https://arxiv.org/pdf/2501.13956v1",
+  "local_pdf": "G:\\大模型记忆\\Zep： A Temporal Knowledge Graph Architecture for Agent Memory\\原论文.pdf",
+  "pages": 12,
+  "bytes": 148771,
+  "sha256": "d26f7eb599540e8b14d75e7efda58a07661abbb1b864e58323b5768475a15d42",
+  "authors": [
+    "Rasmussen, Preston",
+    "Paliychuk, Pavlo",
+    "Beauvais, Travis",
+    "Ryan, Jack",
+    "Chalef, Daniel"
+  ]
+}

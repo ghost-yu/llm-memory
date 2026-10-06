@@ -1,0 +1,11 @@
+{
+  "checkpoint_reload_matches_saved_metrics": true,
+  "differences": {
+    "written_accuracy": 0.0,
+    "reset_accuracy": 0.0,
+    "changed_context_accuracy": 0.0,
+    "changed_key_accuracy": 0.0,
+    "untouched_keys_accuracy": 0.0
+  },
+  "commit": "ce7da9e9a7909e95c8249ceece7c88000bc2c0b9"
+}

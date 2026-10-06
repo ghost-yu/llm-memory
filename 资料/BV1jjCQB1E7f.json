@@ -1,0 +1,8 @@
+{
+  "bvid": "BV1jjCQB1E7f",
+  "title": "Google Titans：大模型记忆论文解读",
+  "desc": "原论文：https://arxiv.org/abs/2501.00663\n原博客：https://research.google/blog/introducing-nested-learning-a-new-ml-paradigm-for-continual-learning/\n源代码：https://github.com/waylandzhang/titans-pytorch\nTensor Logic：https://github.com/Kocoro-lab/tensorlogic",
+  "pubdate": 1763272615,
+  "cid": 34040843086,
+  "uploader": "LLM张老师"
+}

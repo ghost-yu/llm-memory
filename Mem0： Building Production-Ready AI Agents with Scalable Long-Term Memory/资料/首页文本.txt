@@ -1,0 +1,37 @@
+Mem0: Building Production-Ready AI Agents with
+Scalable Long-Term Memory
+Prateek Chhikara, Dev Khant, Saket Aryan, Taranjeet Singh, and Deshraj Yadav
+research@mem0.ai
+Large Language Models (LLMs) have demonstrated remarkable prowess in generating contextually coherent
+responses, yet their fixed context windows pose fundamental challenges for maintaining consistency over
+prolonged multi-session dialogues. We introduce Mem0, a scalable memory-centric architecture that addresses
+this issue by dynamically extracting, consolidating, and retrieving salient information from ongoing conver-
+sations. Building on this foundation, we further propose an enhanced variant that leverages graph-based
+memory representations to capture complex relational structures among conversational elements. Through
+comprehensive evaluations on the LOCOMO benchmark, we systematically compare our approaches against six
+baseline categories: (i) established memory-augmented systems, (ii) retrieval-augmented generation (RAG)
+with varying chunk sizes and k-values, (iii) a full-context approach that processes the entire conversation
+history, (iv) an open-source memory solution, (v) a proprietary model system, and (vi) a dedicated memory
+management platform. Empirical results demonstrate that our methods consistently outperform all existing
+memory systems across four question categories: single-hop, temporal, multi-hop, and open-domain. No-
+tably, Mem0 achieves 26% relative improvements in the LLM-as-a-Judge metric over OpenAI, while Mem0 with
+graph memory achieves around 2% higher overall score than the base Mem0 configuration. Beyond accuracy
+gains, we also markedly reduce computational overhead compared to the full-context approach. In particular,
+Mem0 attains a 91% lower p95 latency and saves more than 90% token cost, thereby offering a compelling
+balance between advanced reasoning capabilities and practical deployment constraints. Our findings highlight
+the critical role of structured, persistent memory mechanisms for long-term conversational coherence, paving
+the way for more reliable and efficient LLM-driven AI agents.
+Code can be found at: https://mem0.ai/research
+1. Introduction
+Human memory is a foundation of intelligence—it shapes our identity, guides decision-making, and enables
+us to learn, adapt, and form meaningful relationships (Craik and Jennings, 1992). Among its many roles,
+memory is essential for communication: we recall past interactions, infer preferences, and construct evolving
+mental models of those we engage with (Assmann, 2011). This ability to retain and retrieve information
+over extended periods enables coherent, contextually rich exchanges that span days, weeks, or even months.
+AI agents, powered by large language models (LLMs), have made remarkable progress in generating fluent,
+contextually appropriate responses (Yu et al., 2024, Zhang et al., 2024). However, these systems are
+fundamentally limited by their reliance on fixed context windows, which severely restrict their ability to
+maintain coherence over extended interactions (Bulatov et al., 2022, Liu et al., 2023). This limitation stems
+from LLMs’ lack of persistent memory mechanisms that can extend beyond their finite context windows.
+While humans naturally accumulate and organize experiences over time, forming a continuous narrative
+arXiv:2504.19413v1  [cs.CL]  28 Apr 2025

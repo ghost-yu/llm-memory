@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "scope": "20 runtime signatures, 16 observed boundary checks, original sources and artifact/link consistency; not semantic certification",
+  "runtime_checks": 16,
+  "local_links_checked": 33,
+  "artifacts": [
+    {
+      "path": "解释.md",
+      "sha256": "e43bf03388833f2ede2115c35c53a74818405caf81e8f6487e208e20e4b4a0ae",
+      "bytes": 40624
+    },
+    {
+      "path": "资料/skill内容核查.md",
+      "sha256": "3fb1028b50e7f497fd8d21b3aa15eda417c83202d6b443dbeb6e7aacb6bf24f2",
+      "bytes": 4635
+    },
+    {
+      "path": "复现/README.md",
+      "sha256": "54c4dd2d943809987c4d81122dbd5c82faa9e63237a1344354ac8cf030ffc8ee",
+      "bytes": 5261
+    },
+    {
+      "path": "复现/scripts/demo_zep.py",
+      "sha256": "83bbe5053f68ff2abf748e3b64aa144eb012b97b0a340afa6c666770b6e34c47",
+      "bytes": 8181
+    },
+    {
+      "path": "复现/scripts/trace_contracts.py",
+      "sha256": "20de4531b31f36bb26fd3c867bdb04551fb5b944feb9a61cd6662baa1c09c6b8",
+      "bytes": 6055
+    },
+    {
+      "path": "复现/scripts/audit_skill_revision.py",
+      "sha256": "16323798b3e520c680369fa52b2cbfda8f24c3824d159158ba128f611490d6ed",
+      "bytes": 3514
+    },
+    {
+      "path": "复现/outputs/contracts_trace.json",
+      "sha256": "dc391fb16812a6e296d4da79ffbb8336a7bd31b88ea14306349a0a1ccb50894b",
+      "bytes": 4918
+    },
+    {
+      "path": "复现/outputs/results.json",
+      "sha256": "2c02e14157136a81d01cbcca89563fe4761a34d4ed4a96965da6762206a9b5d3",
+      "bytes": 18088
+    },
+    {
+      "path": "代码/graphiti-historical/graphiti_core/graphiti.py",
+      "sha256": "2499bb9a71fd53413609afc9afcc2cd2a45be5387c0aa4fa1cb850e73fc60b4a",
+      "bytes": 27782
+    }
+  ],
+  "manual_content_review": "资料/skill内容核查.md"
+}

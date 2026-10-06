@@ -1,0 +1,48 @@
+It’s All Connected: A Journey Through Test-Time Memorization,
+Attentional Bias, Retention, and Online Optimization
+Ali Behrouz
+†, Meisam Razaviyayn
+†, Peilin Zhong
+†, and Vahab Mirrokni
+†
+†Google Research
+{alibehrouz, razaviyayn, peilinz, mirrokni}@google.com
+Abstract
+Designing efficient and effective architectural backbones has been in the core of research efforts to enhance the
+capability of foundation models. Inspired by the human cognitive phenomenon of attentional bias—the natural tendency to
+prioritize certain events or stimuli—we reconceptualize neural architectures, including Transformers, Titans, and modern
+linear recurrent neural networks as associative memory modules that learn a mapping of keys and values using an internal
+objective, referred to as attentional bias. Surprisingly, we observed that most existing sequence models leverage either
+(1) dot-product similarity, or (2) ℓ2 regression objectives as their attentional bias. Going beyond these objectives, we
+present a set of alternative attentional bias configurations along with their effective approximations to stabilize their
+training procedure. We then reinterpret forgetting mechanisms in modern deep learning architectures as a form of
+retention regularization, providing a novel set of forget gates for sequence models. Building upon these insights, we
+present Miras, a general framework to design deep learning architectures based on four choices of: (i) associative memory
+architecture, (ii) attentional bias objective, (iii) retention gate, and (iv) memory learning algorithm. We present three novel
+sequence models—Moneta, Yaad, and Memora—that go beyond the power of existing linear RNNs while maintaining a
+fast parallelizable training process. Our experiments show different design choices in Miras yield models with varying
+strengths. For example, certain instances of Miras achieve exceptional performance in special tasks such as language
+modeling, commonsense reasoning, and recall intensive tasks, even outperforming Transformers and other modern linear
+recurrent models.
+1
+Introduction
+Designing efficient architectural backbones for sequence modeling is a key to enhance the capability of foundation models
+in domains ranging from language (Behrouz et al. 2024c; Vaswani et al. 2017a) and computer vision (Dosovitskiy et al.
+2020) to computational biology (Wang et al. 2024) and neuroscience (Behrouz et al. 2024a). While Transformers (Vaswani
+et al. 2017a), mainly due to their in-context learning and ability to learn at scale (Kaplan et al. 2020), have been firmly
+established as state-of-the-art (SOTA) models in sequence modeling, their quadratic time and space complexity limits their
+applicability in tasks that require long context modeling (Dalal et al. 2025; Li et al. 2024a; Liu et al. 2024b).
+Recent efforts aim to overcome Transformer limitations in long-context modeling by designing efficient recurrent alterna-
+tives (Behrouz et al. 2024c; Neil et al. 2017; Smith et al. 2022). Unlike Transformer’s linearly growing memory (i.e., the
+KV cache), these models compress the context into a fixed size memory, demanding improved memory management for
+comparable performance. To design more effective architectures, studies focus on improving memory capacity and its
+management by using/designing more expressive: (1) Learning rules: from Hebbian rule (Hebb 2005) to Delta rule (Neil
+et al. 2017); (2) Forget gates: from LSTM’s (Schmidhuber et al. 1997) to Mamba2’s (Dao et al. 2024) and then Titan’s forget
+gates (Behrouz et al. 2024c); and (3) More expressive memory architectures: from vector-valued memory in RetNet (Sun
+et al. 2023) and LRU (Orvieto et al. 2023) to neural deep memory in Titans (Behrouz et al. 2024c) and TTT (Sun et al.
+2024).
+At the core of these advancements lies a critical question: “what is the underlying design framework behind these sequence
+models, and how can these models be enhanced?”. Taking inspiration from the broad definitions of associative memory and
+learning in neuropsychology literature (Okano et al. 2000), several studies discuss the connection between Transformers
+1
+arXiv:2504.13173v1  [cs.LG]  17 Apr 2025

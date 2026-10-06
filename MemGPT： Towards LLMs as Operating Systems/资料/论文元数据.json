@@ -1,0 +1,22 @@
+{
+  "arxiv": "2310.08560",
+  "title": "MemGPT: Towards LLMs as Operating Systems",
+  "category": "Agent 外部记忆",
+  "relation": "方向补充，未确认视频逐字讨论该论文",
+  "purpose": "借鉴操作系统分层内存，让 Agent 管理有限上下文与外部存储。",
+  "version": "v2",
+  "pdf_url": "https://arxiv.org/pdf/2310.08560v2",
+  "local_pdf": "G:\\大模型记忆\\MemGPT： Towards LLMs as Operating Systems\\原论文.pdf",
+  "pages": 13,
+  "bytes": 663708,
+  "sha256": "9f674bcff69c86f11c813dcfad613d8841f5f8ed17979e3c4df06a91df7762e0",
+  "authors": [
+    "Packer, Charles",
+    "Wooders, Sarah",
+    "Lin, Kevin",
+    "Fang, Vivian",
+    "Patil, Shishir G.",
+    "Stoica, Ion",
+    "Gonzalez, Joseph E."
+  ]
+}

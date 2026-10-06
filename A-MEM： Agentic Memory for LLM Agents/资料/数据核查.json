@@ -1,0 +1,12 @@
+{
+  "source": "代码/A-mem-historical/data/locomo10.json",
+  "samples": 10,
+  "questions": 1986,
+  "categories": {
+    "1": 282,
+    "2": 321,
+    "3": 96,
+    "4": 841,
+    "5": 446
+  }
+}

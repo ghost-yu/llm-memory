@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "questions": 60,
+  "rows": 120,
+  "checks": 13,
+  "links": 29,
+  "files": {
+    "解释.md": {
+      "bytes": 39036,
+      "sha256": "4fd08385b9411f770984af9c55ba470b8289075185133b66d5fb3be39d4afe6c"
+    },
+    "复现/README.md": {
+      "bytes": 4969,
+      "sha256": "74ed8f997152799c757bff4b327a0dc2a11f027c7145fe78c7df22989d74c440"
+    },
+    "复现/requirements.txt": {
+      "bytes": 171,
+      "sha256": "7c0ae48f05720f13807d69628c199bf4ee93bfe49ee1866419a70ec0d12ecd3f"
+    },
+    "复现/scripts/demo_longmemeval.py": {
+      "bytes": 8208,
+      "sha256": "ef5aa9700d00882c8b743b5df166d1e042ebbe0e9812a6d1045710f248d9dc0c"
+    },
+    "复现/scripts/plot_results.py": {
+      "bytes": 1114,
+      "sha256": "077d02f70cd61b0cff30c53ddbf4038696209e3f09f077cfb10685a37bb89cba"
+    },
+    "复现/scripts/audit_delivery.py": {
+      "bytes": 3227,
+      "sha256": "6161fe030b3700564547ed5c5d555abc77156908d06b6181ab131df030e321de"
+    },
+    "复现/outputs/results.json": {
+      "bytes": 1369565,
+      "sha256": "0173e0f5d7806f1d1542721fdf3e67436629e3db6327152ba19a36d45bb44741"
+    },
+    "复现/outputs/retrieval.png": {
+      "bytes": 118695,
+      "sha256": "44c46cd7c931e16957a016803778f9f12eec36483977cd9d7014356555886c27"
+    },
+    "复现/outputs/retrieval.svg": {
+      "bytes": 68904,
+      "sha256": "6982d249e8fe7df1a171910cd4254b36f14bde149f2840f103185e42c359b5d0"
+    },
+    "资料/数据/来源.json": {
+      "bytes": 357,
+      "sha256": "8090e9ca92d6d366ee33f7d49a9aca11a1fbe1f9d472a51d70fd8c9a6e5e5c25"
+    }
+  }
+}

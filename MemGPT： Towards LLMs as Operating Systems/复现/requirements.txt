@@ -1,0 +1,3 @@
+# Main demo: Python standard library only; tested Python 3.12.14.
+# Plotting uses existing Anaconda Python 3.7.6 / Matplotlib 3.1.3 / NumPy.
+# This does not describe dependencies of the complete historical MemGPT runtime.

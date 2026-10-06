@@ -1,0 +1,19 @@
+{
+  "arxiv": "2512.24695",
+  "title": "Nested Learning: The Illusion of Deep Learning Architectures",
+  "category": "模型内部记忆",
+  "relation": "视频一简介所链接 Google 博客的论文",
+  "purpose": "讨论多层优化、不同更新频率的记忆，以及 Hope 架构。",
+  "version": "v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.24695v1",
+  "local_pdf": "G:\\大模型记忆\\Nested Learning： The Illusion of Deep Learning Architectures\\原论文.pdf",
+  "pages": 52,
+  "bytes": 6089956,
+  "sha256": "e87a9ce82ff24e96f55b83fb9713a5d6fc9e4a1a232c12d42da49c10022ed891",
+  "authors": [
+    "Behrouz, Ali",
+    "Razaviyayn, Meisam",
+    "Zhong, Peilin",
+    "Mirrokni, Vahab"
+  ]
+}

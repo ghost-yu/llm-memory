@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "scope": "24 signatures, 23 observed boundary conditions, locked clean source commits and file/link consistency; not semantic content certification",
+  "runtime_checks": 23,
+  "local_links_checked": 39,
+  "artifacts": [
+    {
+      "path": "解释.md",
+      "sha256": "6b2be675f77b339718c455dcf34ddb78354398126261ddc2bb4ca550d34bfd66",
+      "bytes": 44016
+    },
+    {
+      "path": "资料/skill内容核查.md",
+      "sha256": "61ddb7c9541ecee78495463572f4cd8b2059af10b76d434dd3d278329d02723f",
+      "bytes": 5177
+    },
+    {
+      "path": "复现/README.md",
+      "sha256": "d68b565b3a376f7bc4424c6dc48fc2ffe67754d873454f613d7f446998f30d74",
+      "bytes": 5587
+    },
+    {
+      "path": "复现/scripts/demo_amem.py",
+      "sha256": "039ddad3a333b17f059fb2569ad26b8eadbe169beed92ecbe1315d332d20bcc1",
+      "bytes": 8362
+    },
+    {
+      "path": "复现/scripts/trace_contracts.py",
+      "sha256": "c393621cc35f7c2b0220ec4f5fa7e907669dc52931839e9383e12f988ff4dd2c",
+      "bytes": 8440
+    },
+    {
+      "path": "复现/scripts/audit_skill_revision.py",
+      "sha256": "15092d16b8b6192657d73c7184c5ea8fbb37d2c44a961a0727164f37dbe57e75",
+      "bytes": 3982
+    },
+    {
+      "path": "复现/outputs/contracts_trace.json",
+      "sha256": "64f75aa1a428372247902bd7ecfed892023e28ec8d377118aab0bc3990eda08e",
+      "bytes": 5299
+    },
+    {
+      "path": "复现/outputs/contracts_stdout.txt",
+      "sha256": "1a045e210dadb2a39088390ba747ddc8dc9bf7b1a27f3e776381d04f196a9586",
+      "bytes": 20310
+    },
+    {
+      "path": "复现/outputs/results.json",
+      "sha256": "2781174fcad50e1f8edc40470c4c8f6e6fe566d77261227aa369ae9b2cc83c91",
+      "bytes": 24119
+    },
+    {
+      "path": "代码/A-mem-historical/utils.py",
+      "sha256": "f67c78b15c3ec7cab4c103a39c13083cc70bf34c296f1232f3146ca7cfc78a75",
+      "bytes": 8026
+    }
+  ],
+  "manual_content_review": "资料/skill内容核查.md"
+}

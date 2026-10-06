@@ -1,0 +1,77 @@
+{
+  "notes": [
+    {
+      "content": "Alice enjoys art painting",
+      "id": "art",
+      "keywords": [
+        "painting",
+        "art",
+        "hobby"
+      ],
+      "links": [],
+      "importance_score": 1.0,
+      "retrieval_count": 0,
+      "timestamp": "202501011000",
+      "last_accessed": "202610050130",
+      "context": "art painting hobby",
+      "evolution_history": [],
+      "category": "Uncategorized",
+      "tags": [
+        "art",
+        "painting",
+        "hobby"
+      ]
+    },
+    {
+      "content": "Alice built a cache storage for web",
+      "id": "cache",
+      "keywords": [
+        "cache",
+        "storage",
+        "web"
+      ],
+      "links": [],
+      "importance_score": 1.0,
+      "retrieval_count": 0,
+      "timestamp": "202501021000",
+      "last_accessed": "202610050130",
+      "context": "cache uses LRU eviction",
+      "evolution_history": [],
+      "category": "Uncategorized",
+      "tags": [
+        "cache",
+        "LRU",
+        "eviction"
+      ]
+    },
+    {
+      "content": "Alice added LRU eviction to the cache",
+      "id": "lru",
+      "keywords": [
+        "cache",
+        "storage",
+        "web"
+      ],
+      "links": [
+        1
+      ],
+      "importance_score": 1.0,
+      "retrieval_count": 0,
+      "timestamp": "202501031000",
+      "last_accessed": "202610050130",
+      "context": "cache storage for web",
+      "evolution_history": [],
+      "category": "Uncategorized",
+      "tags": [
+        "cache",
+        "LRU",
+        "eviction"
+      ]
+    }
+  ],
+  "corpus": [
+    "Alice enjoys art painting , art painting hobby painting art hobby art painting hobby",
+    "Alice built a cache storage for web , cache uses LRU eviction cache storage web cache LRU eviction",
+    "Alice added LRU eviction to the cache , cache storage for web cache storage web cache LRU eviction"
+  ]
+}

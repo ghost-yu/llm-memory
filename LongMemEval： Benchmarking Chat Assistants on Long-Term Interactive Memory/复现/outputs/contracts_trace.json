@@ -1,0 +1,80 @@
+{
+  "scope": "Original indexing/metrics/cache/date/prompt functions and original judge-label/time-partition statements; controlled tokenizer/CoN/date responses, not API inference",
+  "original_sources": {
+    "src/retrieval/eval_utils.py": "dea83a069eb84e2557ed78d1984860d573b35855f860e739342eddc303309d95",
+    "src/retrieval/run_retrieval.py": "2a5a07a3688f40f51d8853364dfb12f14cfcdf1758138bcc090f8ababa9bebab",
+    "src/retrieval/index_expansion_utils.py": "2c4c9291d67ba0f002f1d5b45f5f6123a8ef6d03d346eaaa5759f1cd8df852b6",
+    "src/index_expansion/temp_query_search_pruning.py": "7d962b0564d98239287fb463df2f9d9bbd0d29659c3682e79390792709d9d869",
+    "src/evaluation/evaluate_qa.py": "5085eb9ae08b91c6c4f97c6bea9b8c2d6e55f9ec72c27734cafa0a04f00a430a",
+    "src/generation/run_generation.py": "a972364c734604968b833e695fb2daaf613c4d74c2c4e91c0290904a06ca2a31"
+  },
+  "demo_sha256": "ef5aa9700d00882c8b743b5df166d1e042ebbe0e9812a6d1045710f248d9dc0c",
+  "signatures": {
+    "dcg": "(relevances, k)",
+    "ndcg": "(rankings, correct_docs, corpus_ids, k=10)",
+    "evaluate_retrieval": "(rankings, correct_docs, corpus_ids, k=10)",
+    "evaluate_retrieval_turn2session": "(rankings, correct_docs, corpus_ids, k=10)",
+    "process_item_flat_index": "(data, granularity, sess_id, timestamp)",
+    "fetch_expansion_from_cache": "(index_expansion_result_cache, cur_sess_id)",
+    "resolve_expansion": "(expansion_type, resolution_strategy, existing_corpus, existing_corpus_ids, existing_corpus_timestamps, cur_item_expansions, cur_sess_id, ts)",
+    "increment_date": "(date_str, x)",
+    "infer_time_range": "(query, query_date)",
+    "get_anscheck_prompt": "(task, question, answer, response, abstention=False)",
+    "prepare_prompt": "(entry, retriever_type, topk_context: int, useronly: bool, history_format: str, cot: bool, tokenizer, tokenizer_backend, max_retrieval_length, merge_key_expansion_into_value, con=False, con_client=None, con_model=None)",
+    "DenseRetrievalMaster.__init__": "(self, args, gpu_id)",
+    "DenseRetrievalMaster.prepare_retriever": "(self)",
+    "DenseRetrievalMaster.run_flat_retrieval": "(self, query, retriever, corpus)"
+  },
+  "checks_passed": {
+    "assistant_only_session_empty_key_noans": true,
+    "assistant_only_turn_no_documents": true,
+    "answer_user_missing_label_KeyError": true,
+    "numeric_has_answer_1_accepted": true,
+    "unknown_granularity_NotImplemented": true,
+    "gold_unknown_any_all_ndcg_zero": true,
+    "gold_empty_vacuous_all": true,
+    "k_zero_nonempty_gold_all_zero": true,
+    "ranking_out_of_range_IndexError": true,
+    "duplicate_rank_can_ndcg_exceed_one": true,
+    "turn2session_budget_expands_past_two_turns": true,
+    "cache_prefix_normalization": true,
+    "separate_mutates_input_identity": true,
+    "split_merge_duplicates_ID_new_lists": true,
+    "empty_userfact_list_merge_drops_matching_key": true,
+    "None_userfact_keeps_blank_prefixed_original": true,
+    "increment_date_calendar_rollover": true,
+    "invalid_date_ValueError": true,
+    "time_parser_missing_end_not_validated": true,
+    "prompt_restores_round_and_pops_source_labels": true,
+    "flat_turn_useronly_list_TypeError": true,
+    "flat_turn_k_zero_empty_history_Assertion": true,
+    "orig_session_k_zero_returns_all": true,
+    "zero_token_budget_prompt_without_history": true,
+    "CoN_JSON_replaces_round_with_controlled_note": true,
+    "judge_yes_substring_in_yesterday_passes": true,
+    "judge_unknown_task_NotImplemented": true,
+    "turn_time_filter_session_substring_false_match": true
+  },
+  "observations": {
+    "answer_user_missing_label_KeyError": "KeyError: 'has_answer'",
+    "unknown_granularity_NotImplemented": "NotImplementedError: ",
+    "ranking_out_of_range_IndexError": "IndexError: list index out of range",
+    "duplicate_ranking_metric": [
+      1.0,
+      1.0,
+      2.6309297535714578
+    ],
+    "invalid_date_ValueError": "ValueError: day is out of range for month",
+    "round_prompt": "I will give you several history chats between you and a user. Please answer the question based on the relevant chat history.\n\n\nHistory Chats:\n\n\n### Session 1:\nSession Date: 2025/01/01\nSession Content:\n\n[{\"role\": \"user\", \"content\": \"OLDUSER\"}, {\"role\": \"assistant\", \"content\": \"OLDASSISTANT\"}]\n\n\nCurrent Date: 2025/03/01\nQuestion: What degree?\nAnswer:",
+    "flat_turn_useronly_list_TypeError": "TypeError: list indices must be integers or slices, not str",
+    "flat_turn_k_zero_empty_history_Assertion": "AssertionError: ",
+    "judge_label_input": "No. Yesterday was unrelated.",
+    "judge_unknown_task_NotImplemented": "NotImplementedError: ",
+    "partition_false_match": [
+      "s10_1",
+      "other_1"
+    ]
+  },
+  "python": "3.7.6 (default, Jan  8 2020, 20:23:39) [MSC v.1916 64 bit (AMD64)]",
+  "numpy": "1.21.6"
+}

@@ -1,0 +1,603 @@
+{
+  "scope": "Original temporal resolution and RRF functions; dataclass/prompt/provider/SQLite host replacements",
+  "commit": "77cb67cdfea7a080f217236b56f8ca39b25ca0e4",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "sources": {
+    "graphiti_core/utils/datetime_utils.py": "f31375839d4faca4cdb2e1eeeb1f33be80365039645630a57ce9dcbea218ed42",
+    "graphiti_core/utils/maintenance/temporal_operations.py": "b579410fbf251f5bdca9587b9d87e575e8cd436d8401b0503609a190239591ad",
+    "graphiti_core/utils/maintenance/edge_operations.py": "0a13ebcb13e799a913bcfddd379e1775956d24b8e1ecba66d18caa19ec5b802e",
+    "graphiti_core/search/search_utils.py": "312767581c03710f3c28dbfc7c8ef8e501aa5acc372a7405dc6712c6f2ef970d"
+  },
+  "checks": {
+    "late_old_event_not_current": true,
+    "old_fact_closes_at_intermediate": true,
+    "expired_at_preserved_on_revision": true,
+    "duplicate_keeps_uuid_and_count": true,
+    "valid_time_answers": true,
+    "half_open_boundary": true,
+    "group_scope": true,
+    "transaction_snapshot_changes_past_answer": true,
+    "historical_facts_retained": true,
+    "nonoverlap_not_invalidated": true,
+    "equal_start_unresolved_observed": true,
+    "invalid_date_returns_none": true,
+    "rrf_multi_list_agreement": true,
+    "sqlite_snapshot_reopen_exact": true
+  },
+  "snapshots": [
+    {
+      "received": "2025-01-02T00:00:00Z",
+      "value": "Beijing",
+      "resolved": "daebd47fa08c4868ac22ee7758b7394f",
+      "invalidated": [],
+      "edges": [
+        {
+          "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Beijing",
+          "user": "alice",
+          "value": "Beijing",
+          "created_at": "2025-01-02T00:00:00+00:00",
+          "valid_at": "2025-01-01T00:00:00+00:00",
+          "invalid_at": null,
+          "expired_at": null
+        }
+      ]
+    },
+    {
+      "received": "2025-03-02T00:00:00Z",
+      "value": "Shanghai",
+      "resolved": "7593e8132ca3427faf86d93669b1e5e0",
+      "invalidated": [
+        "daebd47fa08c4868ac22ee7758b7394f"
+      ],
+      "edges": [
+        {
+          "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Beijing",
+          "user": "alice",
+          "value": "Beijing",
+          "created_at": "2025-01-02T00:00:00+00:00",
+          "valid_at": "2025-01-01T00:00:00+00:00",
+          "invalid_at": "2025-03-01T00:00:00+00:00",
+          "expired_at": "2025-03-02T00:00:00+00:00"
+        },
+        {
+          "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Shanghai",
+          "user": "alice",
+          "value": "Shanghai",
+          "created_at": "2025-03-02T00:00:00+00:00",
+          "valid_at": "2025-03-01T00:00:00+00:00",
+          "invalid_at": null,
+          "expired_at": null
+        }
+      ]
+    },
+    {
+      "received": "2025-04-01T00:00:00Z",
+      "value": "Hangzhou",
+      "resolved": "363c03a7ddb6407799650a26d60307ae",
+      "invalidated": [
+        "daebd47fa08c4868ac22ee7758b7394f"
+      ],
+      "edges": [
+        {
+          "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Beijing",
+          "user": "alice",
+          "value": "Beijing",
+          "created_at": "2025-01-02T00:00:00+00:00",
+          "valid_at": "2025-01-01T00:00:00+00:00",
+          "invalid_at": "2025-02-01T00:00:00+00:00",
+          "expired_at": "2025-03-02T00:00:00+00:00"
+        },
+        {
+          "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Shanghai",
+          "user": "alice",
+          "value": "Shanghai",
+          "created_at": "2025-03-02T00:00:00+00:00",
+          "valid_at": "2025-03-01T00:00:00+00:00",
+          "invalid_at": null,
+          "expired_at": null
+        },
+        {
+          "uuid": "363c03a7ddb6407799650a26d60307ae",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Hangzhou",
+          "user": "alice",
+          "value": "Hangzhou",
+          "created_at": "2025-04-01T00:00:00+00:00",
+          "valid_at": "2025-02-01T00:00:00+00:00",
+          "invalid_at": "2025-03-01T00:00:00+00:00",
+          "expired_at": "2025-04-01T00:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "received": "2025-04-02T00:00:00Z",
+      "value": "Shanghai",
+      "resolved": "7593e8132ca3427faf86d93669b1e5e0",
+      "invalidated": [],
+      "edges": [
+        {
+          "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Beijing",
+          "user": "alice",
+          "value": "Beijing",
+          "created_at": "2025-01-02T00:00:00+00:00",
+          "valid_at": "2025-01-01T00:00:00+00:00",
+          "invalid_at": "2025-02-01T00:00:00+00:00",
+          "expired_at": "2025-03-02T00:00:00+00:00"
+        },
+        {
+          "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Shanghai",
+          "user": "alice",
+          "value": "Shanghai",
+          "created_at": "2025-03-02T00:00:00+00:00",
+          "valid_at": "2025-03-01T00:00:00+00:00",
+          "invalid_at": null,
+          "expired_at": null
+        },
+        {
+          "uuid": "363c03a7ddb6407799650a26d60307ae",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Hangzhou",
+          "user": "alice",
+          "value": "Hangzhou",
+          "created_at": "2025-04-01T00:00:00+00:00",
+          "valid_at": "2025-02-01T00:00:00+00:00",
+          "invalid_at": "2025-03-01T00:00:00+00:00",
+          "expired_at": "2025-04-01T00:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "received": "2025-04-03T00:00:00Z",
+      "value": "Paris",
+      "resolved": "aad11dfd38e1457cbf6c7ef2d707bf52",
+      "invalidated": [],
+      "edges": [
+        {
+          "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Beijing",
+          "user": "alice",
+          "value": "Beijing",
+          "created_at": "2025-01-02T00:00:00+00:00",
+          "valid_at": "2025-01-01T00:00:00+00:00",
+          "invalid_at": "2025-02-01T00:00:00+00:00",
+          "expired_at": "2025-03-02T00:00:00+00:00"
+        },
+        {
+          "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Shanghai",
+          "user": "alice",
+          "value": "Shanghai",
+          "created_at": "2025-03-02T00:00:00+00:00",
+          "valid_at": "2025-03-01T00:00:00+00:00",
+          "invalid_at": null,
+          "expired_at": null
+        },
+        {
+          "uuid": "363c03a7ddb6407799650a26d60307ae",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Hangzhou",
+          "user": "alice",
+          "value": "Hangzhou",
+          "created_at": "2025-04-01T00:00:00+00:00",
+          "valid_at": "2025-02-01T00:00:00+00:00",
+          "invalid_at": "2025-03-01T00:00:00+00:00",
+          "expired_at": "2025-04-01T00:00:00+00:00"
+        },
+        {
+          "uuid": "aad11dfd38e1457cbf6c7ef2d707bf52",
+          "name": "LIVES_IN",
+          "fact": "bob lives in Paris",
+          "user": "bob",
+          "value": "Paris",
+          "created_at": "2025-04-03T00:00:00+00:00",
+          "valid_at": "2025-01-01T00:00:00+00:00",
+          "invalid_at": null,
+          "expired_at": null
+        }
+      ]
+    }
+  ],
+  "final": [
+    {
+      "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+      "name": "LIVES_IN",
+      "fact": "alice lives in Beijing",
+      "user": "alice",
+      "value": "Beijing",
+      "created_at": "2025-01-02T00:00:00+00:00",
+      "valid_at": "2025-01-01T00:00:00+00:00",
+      "invalid_at": "2025-02-01T00:00:00+00:00",
+      "expired_at": "2025-03-02T00:00:00+00:00"
+    },
+    {
+      "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+      "name": "LIVES_IN",
+      "fact": "alice lives in Shanghai",
+      "user": "alice",
+      "value": "Shanghai",
+      "created_at": "2025-03-02T00:00:00+00:00",
+      "valid_at": "2025-03-01T00:00:00+00:00",
+      "invalid_at": null,
+      "expired_at": null
+    },
+    {
+      "uuid": "363c03a7ddb6407799650a26d60307ae",
+      "name": "LIVES_IN",
+      "fact": "alice lives in Hangzhou",
+      "user": "alice",
+      "value": "Hangzhou",
+      "created_at": "2025-04-01T00:00:00+00:00",
+      "valid_at": "2025-02-01T00:00:00+00:00",
+      "invalid_at": "2025-03-01T00:00:00+00:00",
+      "expired_at": "2025-04-01T00:00:00+00:00"
+    },
+    {
+      "uuid": "aad11dfd38e1457cbf6c7ef2d707bf52",
+      "name": "LIVES_IN",
+      "fact": "bob lives in Paris",
+      "user": "bob",
+      "value": "Paris",
+      "created_at": "2025-04-03T00:00:00+00:00",
+      "valid_at": "2025-01-01T00:00:00+00:00",
+      "invalid_at": null,
+      "expired_at": null
+    }
+  ],
+  "query_dates": [
+    "2025-01-15T00:00:00Z",
+    "2025-02-15T00:00:00Z",
+    "2025-03-15T00:00:00Z"
+  ],
+  "answers": [
+    [
+      "Beijing"
+    ],
+    [
+      "Hangzhou"
+    ],
+    [
+      "Shanghai"
+    ]
+  ],
+  "before_late_answer": [
+    "Beijing"
+  ],
+  "rrf_ranking": [
+    "shanghai",
+    "beijing",
+    "hangzhou",
+    "paris"
+  ],
+  "model_calls": [
+    {
+      "stage": "duplicate",
+      "context": {
+        "related_edges": [],
+        "extracted_edges": {
+          "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Beijing"
+        }
+      },
+      "response": {
+        "is_duplicate": false,
+        "uuid": null
+      }
+    },
+    {
+      "stage": "dates",
+      "context": {
+        "edge_fact": "alice lives in Beijing",
+        "current_episode": "alice lives in Beijing",
+        "previous_episodes": [],
+        "reference_timestamp": "2025-01-01T00:00:00+00:00"
+      },
+      "response": {
+        "valid_at": "2025-01-01T00:00:00Z",
+        "invalid_at": null
+      }
+    },
+    {
+      "stage": "contradictions",
+      "context": {
+        "new_edge": {
+          "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Beijing"
+        },
+        "existing_edges": []
+      },
+      "response": {
+        "invalidated_edges": []
+      }
+    },
+    {
+      "stage": "duplicate",
+      "context": {
+        "related_edges": [
+          {
+            "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Beijing"
+          }
+        ],
+        "extracted_edges": {
+          "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Shanghai"
+        }
+      },
+      "response": {
+        "is_duplicate": false,
+        "uuid": null
+      }
+    },
+    {
+      "stage": "dates",
+      "context": {
+        "edge_fact": "alice lives in Shanghai",
+        "current_episode": "alice lives in Shanghai",
+        "previous_episodes": [],
+        "reference_timestamp": "2025-03-01T00:00:00+00:00"
+      },
+      "response": {
+        "valid_at": "2025-03-01T00:00:00Z",
+        "invalid_at": null
+      }
+    },
+    {
+      "stage": "contradictions",
+      "context": {
+        "new_edge": {
+          "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Shanghai"
+        },
+        "existing_edges": [
+          {
+            "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Beijing"
+          }
+        ]
+      },
+      "response": {
+        "invalidated_edges": [
+          {
+            "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+            "fact": "alice lives in Beijing"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "duplicate",
+      "context": {
+        "related_edges": [
+          {
+            "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Beijing"
+          },
+          {
+            "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Shanghai"
+          }
+        ],
+        "extracted_edges": {
+          "uuid": "363c03a7ddb6407799650a26d60307ae",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Hangzhou"
+        }
+      },
+      "response": {
+        "is_duplicate": false,
+        "uuid": null
+      }
+    },
+    {
+      "stage": "dates",
+      "context": {
+        "edge_fact": "alice lives in Hangzhou",
+        "current_episode": "alice lives in Hangzhou",
+        "previous_episodes": [],
+        "reference_timestamp": "2025-02-01T00:00:00+00:00"
+      },
+      "response": {
+        "valid_at": "2025-02-01T00:00:00Z",
+        "invalid_at": null
+      }
+    },
+    {
+      "stage": "contradictions",
+      "context": {
+        "new_edge": {
+          "uuid": "363c03a7ddb6407799650a26d60307ae",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Hangzhou"
+        },
+        "existing_edges": [
+          {
+            "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Beijing"
+          },
+          {
+            "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Shanghai"
+          }
+        ]
+      },
+      "response": {
+        "invalidated_edges": [
+          {
+            "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+            "fact": "alice lives in Beijing"
+          },
+          {
+            "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+            "fact": "alice lives in Shanghai"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "duplicate",
+      "context": {
+        "related_edges": [
+          {
+            "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Beijing"
+          },
+          {
+            "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Shanghai"
+          },
+          {
+            "uuid": "363c03a7ddb6407799650a26d60307ae",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Hangzhou"
+          }
+        ],
+        "extracted_edges": {
+          "uuid": "030ac11efd4a45bbb3c4cd3cc106c1b5",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Shanghai"
+        }
+      },
+      "response": {
+        "is_duplicate": true,
+        "uuid": "7593e8132ca3427faf86d93669b1e5e0"
+      }
+    },
+    {
+      "stage": "dates",
+      "context": {
+        "edge_fact": "alice lives in Shanghai",
+        "current_episode": "alice lives in Shanghai",
+        "previous_episodes": [],
+        "reference_timestamp": "2025-03-01T00:00:00+00:00"
+      },
+      "response": {
+        "valid_at": "2025-03-01T00:00:00Z",
+        "invalid_at": null
+      }
+    },
+    {
+      "stage": "contradictions",
+      "context": {
+        "new_edge": {
+          "uuid": "030ac11efd4a45bbb3c4cd3cc106c1b5",
+          "name": "LIVES_IN",
+          "fact": "alice lives in Shanghai"
+        },
+        "existing_edges": [
+          {
+            "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Beijing"
+          },
+          {
+            "uuid": "7593e8132ca3427faf86d93669b1e5e0",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Shanghai"
+          },
+          {
+            "uuid": "363c03a7ddb6407799650a26d60307ae",
+            "name": "LIVES_IN",
+            "fact": "alice lives in Hangzhou"
+          }
+        ]
+      },
+      "response": {
+        "invalidated_edges": [
+          {
+            "uuid": "daebd47fa08c4868ac22ee7758b7394f",
+            "fact": "alice lives in Beijing"
+          },
+          {
+            "uuid": "363c03a7ddb6407799650a26d60307ae",
+            "fact": "alice lives in Hangzhou"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "duplicate",
+      "context": {
+        "related_edges": [],
+        "extracted_edges": {
+          "uuid": "aad11dfd38e1457cbf6c7ef2d707bf52",
+          "name": "LIVES_IN",
+          "fact": "bob lives in Paris"
+        }
+      },
+      "response": {
+        "is_duplicate": false,
+        "uuid": null
+      }
+    },
+    {
+      "stage": "dates",
+      "context": {
+        "edge_fact": "bob lives in Paris",
+        "current_episode": "bob lives in Paris",
+        "previous_episodes": [],
+        "reference_timestamp": "2025-01-01T00:00:00+00:00"
+      },
+      "response": {
+        "valid_at": "2025-01-01T00:00:00Z",
+        "invalid_at": null
+      }
+    },
+    {
+      "stage": "contradictions",
+      "context": {
+        "new_edge": {
+          "uuid": "aad11dfd38e1457cbf6c7ef2d707bf52",
+          "name": "LIVES_IN",
+          "fact": "bob lives in Paris"
+        },
+        "existing_edges": []
+      },
+      "response": {
+        "invalidated_edges": []
+      }
+    },
+    {
+      "stage": "dates",
+      "context": {
+        "edge_fact": "bad",
+        "current_episode": "bad",
+        "previous_episodes": [],
+        "reference_timestamp": "2025-04-03T00:00:00+00:00"
+      },
+      "response": {
+        "valid_at": "not-a-date",
+        "invalid_at": null
+      }
+    }
+  ],
+  "database": "temporal-82b30ae14f83.sqlite",
+  "equal_start_limitation": "Original strict valid_at comparison leaves equal-start contradictory edges unresolved"
+}

@@ -1,0 +1,49 @@
+Nested Learning: The Illusion of Deep Learning Architecture
+Ali Behrouz , Meisam Razaviyayn, Peilin Zhong, and Vahab Mirrokni
+Abstract
+Over the last decades, developing more powerful neural architectures and simultaneously designing optimization
+algorithms to effectively train them have been the core of research efforts to enhance the capability of machine learning
+models. Despite the recent progresses, particularly in developing Language Models (LMs), there are fundamental challenges
+and unanswered questions about how such models can continually learn/memorize, self-improve, and find effective solutions.
+In this paper, we present a new learning paradigm, called Nested Learning (NL), that coherently represents a machine
+learning model with a set of nested, multi-level, and/or parallel optimization problems, each of which with its own “context
+flow”. Through the lenses of NL, existing deep learning methods learns from data through compressing their own context
+flow, and in-context learning naturally emerges in large models. NL suggests a philosophy to design more expressive
+learning algorithms with more “levels”, resulting in higher-order in-context learning and potentially unlocking effective
+continual learning capabilities. In addition to its neuro-scientific motivation, we advocate for NL by presenting three
+core contributions: (1) Expressive Optimizers: We show that known gradient-based optimizers, such as Adam, SGD with
+Momentum, etc., are in fact associative memory modules that aim to compress the gradients’ information (by gradient
+descent). Building on this insight, we present other “more expressive" optimizers with deep memory and/or more powerful
+learning rules; (2) Self-Modifying Learning Module: Taking advantage of NL’s insights on learning algorithms, we present a
+sequence model that learns how to modify itself by learning its own update algorithm; and (3) Continuum Memory System:
+We present a new formulation for memory system that generalizes the traditional viewpoint of “long-term/short-term
+memory”. Combining our self-modifying sequence model with the continuum memory system, we present a continual
+learning module, called Hope, showing promising results in language modeling, knowledge incorporation, and few-shot
+generalization tasks, continual learning, and long-context reasoning tasks.
+“We cannot solve our problems with the same
+thinking we used when we created them!"
+— Attributed to Albert Einstein
+1
+Introduction
+For decades, AI research has focused on designing machine learning algorithms that learn from data (Pitts 1943; McCulloch
+et al. 1948; McCulloch 1949; Samuel 1959) or experience (Sutton et al. 1998; Connell et al. 1999; Silver et al. 2025);
+often by optimizing an objective L(𝜻���) over parameters 𝜻��� ∈ Θ with gradient-based methods. While traditional machine
+learning techniques required careful engineering and domain expertise to design feature extractors, limiting their ability to
+directly process and learn from natural data (LeCun et al. 2015), deep representation learning offered a fully automated
+alternative to discover the representations needed for the task. Thereafter, deep learning has been an inseparable part of
+the large-scale computational models with seminal success in chemistry and biology (Jumper et al. 2021), games (Silver
+et al. 2016, 2018), computer vision (Krizhevsky et al. 2012; Dosovitskiy et al. 2021), and multimodal and natural language
+understanding (Achiam et al. 2023; Liu et al. 2024a; Comanici et al. 2025).
+Stacking of multiple layers, as it is done in deep learning models, provides the models with better expressive power in
+representing complex features, and more internal computations (e.g., #FLOPS) (Montúfar et al. 2014; Poole et al. 2016;
+Hestness et al. 2017), all of which are critical and desirable characteristics for static tasks that require in-distribution
+predictions over an a-priori fixed set. This deep design, however, is not a universal solution to all the challenges and
+cannot help the expressive power of the models in multiple aspects, for example: (i) The computational depth of deep
+models might not change with more layers (Merrill et al. 2022; Sanford et al. 2024), leaving their ability to implement
+complex algorithms untouched compared to traditional shallow approaches (Merrill et al. 2024); (ii) The capacity of some
+class of parameters might show marginal improvement with increasing the depth/width of the model (Kaplan et al. 2020);
+(iii) The training process might converge to a suboptimal solution, mainly due to the suboptimal choice of the optimizer
+§Correspondence to: {alibehrouz, razaviyayn, mirrokni}@google.com and peilin.zhong@columbia.edu.
+§A version of this work is published at Neural Information Processing Systems (NeurIPS) 2025.
+1
+arXiv:2512.24695v1  [cs.LG]  31 Dec 2025

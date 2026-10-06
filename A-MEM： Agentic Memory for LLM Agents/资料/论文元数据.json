@@ -1,0 +1,21 @@
+{
+  "arxiv": "2502.12110",
+  "title": "A-MEM: Agentic Memory for LLM Agents",
+  "category": "Agent 外部记忆",
+  "relation": "方向补充，未确认视频逐字讨论该论文",
+  "purpose": "让记忆形成带关联的笔记，并随新信息组织和演化。",
+  "version": "v11",
+  "pdf_url": "https://arxiv.org/pdf/2502.12110v11",
+  "local_pdf": "G:\\大模型记忆\\A-MEM： Agentic Memory for LLM Agents\\原论文.pdf",
+  "pages": 28,
+  "bytes": 1015164,
+  "sha256": "fec32b521c4a1f793442bf1aeb26139c583078350d1cd4ab8f4eccc54a0694f0",
+  "authors": [
+    "Xu, Wujiang",
+    "Liang, Zujie",
+    "Mei, Kai",
+    "Gao, Hang",
+    "Tan, Juntao",
+    "Zhang, Yongfeng"
+  ]
+}

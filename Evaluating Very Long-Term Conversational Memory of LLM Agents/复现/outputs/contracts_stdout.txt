@@ -1,0 +1,11 @@
+1 QA samples evaluated; 1 accuracy values
+1 QA samples evaluated; 1 accuracy values
+1 QA samples evaluated; 1 accuracy values
+1 QA samples evaluated; 1 accuracy values
+1 QA samples evaluated; 1 accuracy values
+1 QA samples evaluated; 1 accuracy values
+1 QA samples evaluated; 1 accuracy values
+1 QA samples evaluated; 1 accuracy values
+1 QA samples evaluated; 1 accuracy values
+{'category': 6, 'answer': 'apple', 'prediction': 'apple', 'evidence': ['D1:1']}
+0 QA samples evaluated; 0 accuracy values

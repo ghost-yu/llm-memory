@@ -1,0 +1,86 @@
+{
+  "scope": "Original seven functions with controlled interface replacements; no Graphiti package import or LLM inference",
+  "source_sha256": "83bbe5053f68ff2abf748e3b64aa144eb012b97b0a340afa6c666770b6e34c47",
+  "original_sources": {
+    "graphiti_core/utils/datetime_utils.py": "f31375839d4faca4cdb2e1eeeb1f33be80365039645630a57ce9dcbea218ed42",
+    "graphiti_core/utils/maintenance/temporal_operations.py": "b579410fbf251f5bdca9587b9d87e575e8cd436d8401b0503609a190239591ad",
+    "graphiti_core/utils/maintenance/edge_operations.py": "0a13ebcb13e799a913bcfddd379e1775956d24b8e1ecba66d18caa19ec5b802e",
+    "graphiti_core/search/search_utils.py": "312767581c03710f3c28dbfc7c8ef8e501aa5acc372a7405dc6712c6f2ef970d"
+  },
+  "signatures": {
+    "ensure_utc": "(dt: datetime.datetime | None) -> datetime.datetime | None",
+    "extract_edge_dates": "(llm_client: zep_contract_demo.LLMClient, edge: zep_contract_demo.EntityEdge, current_episode: zep_contract_demo.EpisodicNode, previous_episodes: list[zep_contract_demo.EpisodicNode]) -> tuple[datetime.datetime | None, datetime.datetime | None]",
+    "get_edge_contradictions": "(llm_client: zep_contract_demo.LLMClient, new_edge: zep_contract_demo.EntityEdge, existing_edges: list[zep_contract_demo.EntityEdge]) -> list[zep_contract_demo.EntityEdge]",
+    "dedupe_extracted_edge": "(llm_client: zep_contract_demo.LLMClient, extracted_edge: zep_contract_demo.EntityEdge, related_edges: list[zep_contract_demo.EntityEdge]) -> zep_contract_demo.EntityEdge",
+    "resolve_edge_contradictions": "(resolved_edge: zep_contract_demo.EntityEdge, invalidation_candidates: list[zep_contract_demo.EntityEdge]) -> list[zep_contract_demo.EntityEdge]",
+    "resolve_extracted_edge": "(llm_client: zep_contract_demo.LLMClient, extracted_edge: zep_contract_demo.EntityEdge, related_edges: list[zep_contract_demo.EntityEdge], existing_edges: list[zep_contract_demo.EntityEdge], current_episode: zep_contract_demo.EpisodicNode, previous_episodes: list[zep_contract_demo.EpisodicNode]) -> tuple[zep_contract_demo.EntityEdge, list[zep_contract_demo.EntityEdge]]",
+    "rrf": "(results: list[list[str]], rank_const=1) -> list[str]",
+    "demo.dt": "(s)",
+    "demo.serial": "(x)",
+    "demo.snapshot": "(edges)",
+    "demo.active_at": "(rows, date, user='alice')",
+    "demo.load": "(path, names)",
+    "demo.semaphore_gather": "(*tasks)",
+    "demo.utc_now": "()",
+    "EntityEdge.__init__": "(self, uuid: str, name: str, fact: str, user: str, value: str, created_at: datetime.datetime, valid_at: datetime.datetime | None = None, invalid_at: datetime.datetime | None = None, expired_at: datetime.datetime | None = None) -> None",
+    "EpisodicNode.__init__": "(self, content: str, valid_at: datetime.datetime) -> None",
+    "PromptAdapter.__init__": "(self, stage)",
+    "PromptAdapter.__call__": "(self, context)",
+    "Provider.__init__": "(self)",
+    "Provider.generate_response": "(self, prompt, response_model=None)"
+  },
+  "checks_passed": {
+    "UTC_offset_converted": true,
+    "naive_assumed_UTC": true,
+    "UTC_identity_and_None": true,
+    "in_place_and_deep_snapshot": true,
+    "nonoverlap_preserves_fields": true,
+    "equal_start_not_resolved": true,
+    "dedupe_returns_existing_identity": true,
+    "unknown_duplicate_uuid_falls_back": true,
+    "unknown_contradiction_ignored_known_fact_mutated": true,
+    "nonoverlap_does_not_undo_fact_mutation": true,
+    "integer_date_not_caught_as_ValueError": true,
+    "None_dates_preserve_existing_interval": true,
+    "three_stages_run_even_duplicate": true,
+    "rrf_empty_and_stable_ties": true,
+    "rrf_repeated_id_counts_again": true,
+    "rrf_zero_rank_const_fails": true
+  },
+  "observations": {
+    "timezone": {
+      "offset_result": "2025-01-01T00:00:00+00:00",
+      "naive_result": "2025-01-01T08:00:00+00:00"
+    },
+    "nonoverlap_fact_mutation": {
+      "uuid": "ended",
+      "name": "LIVES_IN",
+      "fact": "rewritten by response",
+      "user": "alice",
+      "value": "old",
+      "created_at": "2025-01-02T00:00:00+00:00",
+      "valid_at": "2024-01-01T00:00:00+00:00",
+      "invalid_at": "2024-12-31T00:00:00+00:00",
+      "expired_at": null
+    },
+    "wrong_date_type_error": "AttributeError: 'int' object has no attribute 'replace'",
+    "duplicate_retained_interval": {
+      "uuid": "duplicate",
+      "name": "LIVES_IN",
+      "fact": "same",
+      "user": "alice",
+      "value": "same",
+      "created_at": "2025-01-02T00:00:00+00:00",
+      "valid_at": "2025-01-01T00:00:00+00:00",
+      "invalid_at": "2025-02-01T00:00:00+00:00",
+      "expired_at": "2025-01-02T00:00:00+00:00"
+    },
+    "parallel_stages": [
+      "duplicate",
+      "dates",
+      "contradictions"
+    ],
+    "rank_const_zero_error": "ZeroDivisionError"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+}

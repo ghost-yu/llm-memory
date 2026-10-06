@@ -1,0 +1,71 @@
+{
+  "status": "pass",
+  "scope": "tool/system mechanism only, deterministic controller, no LLM",
+  "commit": "a0139b5fdc203f827168cb741c9f4fea3cec09bf",
+  "clean_original_checkout": true,
+  "artifacts": [
+    {
+      "path": "原论文.pdf",
+      "bytes": 663708,
+      "sha256": "9f674bcff69c86f11c813dcfad613d8841f5f8ed17979e3c4df06a91df7762e0"
+    },
+    {
+      "path": "解释.md",
+      "bytes": 41447,
+      "sha256": "84e2da7d54d9df39ef02ea04c3ecb32808ea724865fd0a829269ac97291a6b6c"
+    },
+    {
+      "path": "资料/代码版本.json",
+      "bytes": 318,
+      "sha256": "96572c5aa7d48f399f607da301660405b30eb9076000a8f4b8a5c307b6f572be"
+    },
+    {
+      "path": "复现/README.md",
+      "bytes": 6213,
+      "sha256": "75d0f964cd358d94cdc0be33b74f03bd9d4d32beb7d457e18604a9ecee092367"
+    },
+    {
+      "path": "复现/requirements.txt",
+      "bytes": 222,
+      "sha256": "d01c492d7bcd27c6c771bb8eeb2e0d9b27bd71fac2facf1fd35e77631e613a50"
+    },
+    {
+      "path": "复现/scripts/demo_memgpt.py",
+      "bytes": 10796,
+      "sha256": "6caccdfa6580e42ed21135f8af70e79454920cb9d2155caecb8e8ef8e7954d57"
+    },
+    {
+      "path": "复现/scripts/plot_demo.py",
+      "bytes": 1733,
+      "sha256": "59b79ed20dafcc91ceec213543aad2769829b5855756df6d088806087f2ba11d"
+    },
+    {
+      "path": "复现/outputs/demo_results.json",
+      "bytes": 85625,
+      "sha256": "d73e1864d2d235f8de75b34dc85c84ffcc3e9a53b23c6c0509bcb6befba598d4"
+    },
+    {
+      "path": "复现/outputs/memory_state.json",
+      "bytes": 649,
+      "sha256": "3db5e3f5d55e2261146e8e15a1501fb77fbdf1aa4d735f3620dbbfed7c2b6300"
+    },
+    {
+      "path": "复现/outputs/demo_summary.png",
+      "bytes": 88840,
+      "sha256": "de51ed163b72ef44cedb5e7d163c86144448a955edf247a3333ddd1bd99349c6"
+    },
+    {
+      "path": "复现/outputs/demo_summary.svg",
+      "bytes": 59797,
+      "sha256": "7b022c51d86045a1a6c34d9899b20214621403d89014addd9ec0235ac197bba5"
+    },
+    {
+      "path": "复现/outputs/memory-dbeacb3c.sqlite",
+      "bytes": 376832,
+      "sha256": "12bbf2dbffaa34b442b3a378aade36b84aad1ec48af5c32246bf01d89f0a684f"
+    }
+  ],
+  "local_links_checked": 25,
+  "all_20_pagination_traces_checked": true,
+  "database_rows_verified": true
+}

@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "scope": "14 original signatures, 28 observed boundary conditions and locked-source/file/link consistency; not prose semantic certification",
+  "runtime_checks": 28,
+  "local_links_checked": 34,
+  "artifacts": [
+    {
+      "path": "解释.md",
+      "sha256": "4fd08385b9411f770984af9c55ba470b8289075185133b66d5fb3be39d4afe6c",
+      "bytes": 39036
+    },
+    {
+      "path": "资料/skill内容核查.md",
+      "sha256": "72ecb4bf5eb6c05a20bf70020a972b1dd912686dd1febe4d2c5ff14684e2e8f9",
+      "bytes": 4807
+    },
+    {
+      "path": "复现/README.md",
+      "sha256": "74ed8f997152799c757bff4b327a0dc2a11f027c7145fe78c7df22989d74c440",
+      "bytes": 4969
+    },
+    {
+      "path": "复现/scripts/demo_longmemeval.py",
+      "sha256": "ef5aa9700d00882c8b743b5df166d1e042ebbe0e9812a6d1045710f248d9dc0c",
+      "bytes": 8208
+    },
+    {
+      "path": "复现/scripts/trace_contracts.py",
+      "sha256": "0e6b391c6dff3cebaccb669ec83e22f01e20b28a7e85a604619d40eeab003678",
+      "bytes": 8989
+    },
+    {
+      "path": "复现/scripts/audit_skill_revision.py",
+      "sha256": "6f598fcfb86a503fe54df586cb042272a779cd66df31476a33e93470b0a60b31",
+      "bytes": 3367
+    },
+    {
+      "path": "复现/outputs/contracts_trace.json",
+      "sha256": "47e1f0f96506defe76704375a0a7e058e3e0ad8c278bc2090797ba7920c4bfee",
+      "bytes": 4904
+    },
+    {
+      "path": "复现/outputs/contracts_stdout.txt",
+      "sha256": "754726d2ed572d5fa31ee8f5085621c691a8885c2392f705cec76a68e70b2829",
+      "bytes": 25
+    },
+    {
+      "path": "复现/outputs/results.json",
+      "sha256": "0173e0f5d7806f1d1542721fdf3e67436629e3db6327152ba19a36d45bb44741",
+      "bytes": 1369565
+    },
+    {
+      "path": "代码/LongMemEval-historical/src/generation/run_generation.py",
+      "sha256": "a972364c734604968b833e695fb2daaf613c4d74c2c4e91c0290904a06ca2a31",
+      "bytes": 21996
+    }
+  ],
+  "manual_content_review": "资料/skill内容核查.md"
+}

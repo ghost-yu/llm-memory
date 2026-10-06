@@ -1,0 +1,49 @@
+A-Mem: Agentic Memory for LLM Agents
+Wujiang Xu1, Zujie Liang2, Kai Mei1, Hang Gao1, Juntao Tan1, Yongfeng Zhang1,3
+1Rutgers University
+2Independent Researcher
+3AIOS Foundation
+wujiang.xu@rutgers.edu
+Abstract
+While large language model (LLM) agents can effectively use external tools for
+complex real-world tasks, they require memory systems to leverage historical
+experiences. Current memory systems enable basic storage and retrieval but lack
+sophisticated memory organization, despite recent attempts to incorporate graph
+databases. Moreover, these systems’ fixed operations and structures limit their
+adaptability across diverse tasks. To address this limitation, this paper proposes
+a novel agentic memory system for LLM agents that can dynamically organize
+memories in an agentic way. Following the basic principles of the Zettelkasten
+method, we designed our memory system to create interconnected knowledge
+networks through dynamic indexing and linking. When a new memory is added, we
+generate a comprehensive note containing multiple structured attributes, including
+contextual descriptions, keywords, and tags. The system then analyzes historical
+memories to identify relevant connections, establishing links where meaningful
+similarities exist. Additionally, this process enables memory evolution – as new
+memories are integrated, they can trigger updates to the contextual representations
+and attributes of existing historical memories, allowing the memory network to
+continuously refine its understanding. Our approach combines the structured
+organization principles of Zettelkasten with the flexibility of agent-driven decision
+making, allowing for more adaptive and context-aware memory management.
+Empirical experiments on six foundation models show superior improvement
+against existing SOTA baselines.
+Code for Benchmark Evaluation:
+https://github.com/WujiangXu/AgenticMemory
+Code for Production-ready Agentic Memory:
+https://github.com/WujiangXu/A-mem-sys
+1
+Introduction
+Large Language Model (LLM) agents have demonstrated remarkable capabilities in various tasks,
+with recent advances enabling them to interact with environments, execute tasks, and make decisions
+autonomously [23, 33, 7]. They integrate LLMs with external tools and delicate workflows to improve
+reasoning and planning abilities. Though LLM agent has strong reasoning performance, it still needs
+a memory system to provide long-term interaction ability with the external environment [35].
+Existing memory systems [25, 39, 28, 21] for LLM agents provide basic memory storage functionality.
+These systems require agent developers to predefine memory storage structures, specify storage
+points within the workflow, and establish retrieval timing. Meanwhile, to improve structured memory
+organization, Mem0 [8], following the principles of RAG [9, 18, 30], incorporates graph databases for
+storage and retrieval processes. While graph databases provide structured organization for memory
+systems, their reliance on predefined schemas and relationships fundamentally limits their adaptability.
+This limitation manifests clearly in practical scenarios - when an agent learns a novel mathematical
+solution, current systems can only categorize and link this information within their preset framework,
+Preprint.
+arXiv:2502.12110v11  [cs.CL]  8 Oct 2025

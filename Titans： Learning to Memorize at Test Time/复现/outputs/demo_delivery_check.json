@@ -1,0 +1,103 @@
+{
+  "checked_files": [
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\解释.md",
+      "bytes": 63968,
+      "sha256": "f65fd03c2e4202c4a88d7bd867e702d688041344fcda7b1ea48a80e69f1b75da"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\demo说明.md",
+      "bytes": 9178,
+      "sha256": "3f90036136a7335913874a198746f8f0dae4f646694be5cdcd3415089a5eed43"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\scripts\\demo_associative_memory.py",
+      "bytes": 10243,
+      "sha256": "d9de64d145a6a863c1e53b394fb4ab8ff2a251a89d5dea6aa4675542e38321e1"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_results.json",
+      "bytes": 6691,
+      "sha256": "79fdf571a2768e54fbc8959bd746a774ce3e0786f07ef0ffe02041de372383cf"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_checkpoint_check.json",
+      "bytes": 304,
+      "sha256": "8b0c617be8b5e9ecd2425b915f14b6ce340a43a4772cc177efb3f60dce55b6f1"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_report.html",
+      "bytes": 3778,
+      "sha256": "df3b3d641ab8cc78cdc9c472e8f0f04bdbcf3f66168b12984f54aa35bb34523a"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_summary.png",
+      "bytes": 116477,
+      "sha256": "efb9e265e5e8eded2e61f17e63114ba5d4baaf2c8659c443eb135a4260112065"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_summary.svg",
+      "bytes": 71969,
+      "sha256": "e34fc1fa5c13018d748871a6833f3a0ba9e11f8a6c9e44757e2d34b9bb89abfc"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\synthetic_memory_demo.pt",
+      "bytes": 12482,
+      "sha256": "754d6499a3a29b1f50f6d29029f9cd9de78a618a4cb9ed9a350a69b658b27c50"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\README.md",
+      "bytes": 8211,
+      "sha256": "06cb62d947b5a6ce796e887a0f1c8092dab9d70a32ebb7d0625923fdfa8f7ad5"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\资料\\skill内容核查.md",
+      "bytes": 4116,
+      "sha256": "72fa7a4af4f91f817b93aac2d38191f154cf29b58c22199bcb03b375ca73ddee"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\scripts\\trace_contracts.py",
+      "bytes": 8134,
+      "sha256": "22dc8f40f3d421e6895dcae4493a48d478dd1686817106ba69aef3f6aa2f0f87"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\scripts\\audit_skill_revision.py",
+      "bytes": 4018,
+      "sha256": "140e20f17dd994d42a69489cb3d65874c4cc443a0473f054bb76e18d1ce300dd"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\contracts_trace.json",
+      "bytes": 61422,
+      "sha256": "40fca635498b689e940675d16a1c302c91e03a73b5daa7effab7a44161bb6703"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\图片\\page-9.png",
+      "bytes": 297848,
+      "sha256": "6bc1c5fa072522e9e887666dd0d98060dad94f379453f73b03f843d5d51c2c9b"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\图片\\page-10.png",
+      "bytes": 227320,
+      "sha256": "fe78a48e565a23bfbfd2ef14a3ba29e606039c58e19c586dd2cf00d5fd244307"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\图片\\page-11.png",
+      "bytes": 273399,
+      "sha256": "9d6152e7e1a422dea5da1995412d86a931cbb6545dee9aac15acaa79220992da"
+    }
+  ],
+  "local_links_checked": 30,
+  "checkpoint_reload": {
+    "checkpoint_reload_matches_saved_metrics": true,
+    "differences": {
+      "written_accuracy": 0.0,
+      "reset_accuracy": 0.0,
+      "changed_context_accuracy": 0.0,
+      "changed_key_accuracy": 0.0,
+      "untouched_keys_accuracy": 0.0
+    },
+    "commit": "ce7da9e9a7909e95c8249ceece7c88000bc2c0b9"
+  },
+  "scope": "Titans revised reading and controlled demo; full paper benchmark not reproduced",
+  "revision_checks": 15
+}

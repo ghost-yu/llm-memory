@@ -1,0 +1,21 @@
+{
+  "core": {
+    "persona": "Research assistant.",
+    "human": "\nCity: Hangzhou"
+  },
+  "queue": [
+    {
+      "name": "archival_memory_search",
+      "args": {
+        "query": "b14ab8e9-e041-2118-991f-77c9f551abfd",
+        "page": 0
+      },
+      "result": "Showing 1 of 1 results (page 0/0): [\"timestamp: 2024-02-12 12:00:00, memory: Key: 219763c5-9682-e074-7915-72d53911c9b0; Value: b14ab8e9-e041-2118-991f-77c9f551abfd\"]",
+      "success": true,
+      "request_heartbeat": true,
+      "next_event": "heartbeat"
+    }
+  ],
+  "summary": "Evicted 1005 blocks. Details remain in recall storage.",
+  "budget_chars": 1200
+}

@@ -1,0 +1,62 @@
+{
+  "artifacts": [
+    {
+      "path": "原论文.pdf",
+      "bytes": 1987057,
+      "sha256": "faceb861d46d65fd7098cbdb97aa400081c7b5cb7e048ac8d010f01537915ab2"
+    },
+    {
+      "path": "解释.md",
+      "bytes": 47445,
+      "sha256": "6c75b2eabd84601a2434717d207cb2889a9aaa38d92611dec4caa98384f2146c"
+    },
+    {
+      "path": "代码/资源说明.md",
+      "bytes": 715,
+      "sha256": "d722946f680b074a8598523324a9ac7edac5ba3dfdedb1a98d0dff3ab3573fc2"
+    },
+    {
+      "path": "资料/来源核查.json",
+      "bytes": 67779,
+      "sha256": "cfb503df49cabbd9321a6903b219b9c43df0c10a062c4578df53331e5a89a2f0"
+    },
+    {
+      "path": "复现/README.md",
+      "bytes": 6022,
+      "sha256": "d7dfc6142e3436d868305cf27d75173082d29c4b68b8deed7365a2ed31ff0267"
+    },
+    {
+      "path": "复现/requirements.txt",
+      "bytes": 4031,
+      "sha256": "e7251deea97523b144bcde36b1978c0313231d9c610fe7736abbe5e0af094021"
+    },
+    {
+      "path": "复现/scripts/demo_miras.py",
+      "bytes": 5054,
+      "sha256": "a270b041b16bd8e9b7e9d428e70a0ff1c6b3bc94e8b0a925f9f5b7b83d14556c"
+    },
+    {
+      "path": "复现/scripts/plot_demo.py",
+      "bytes": 2005,
+      "sha256": "783021dcf1beb5c743c833c28d99fcb8467e40419467186f261cc7fbbf0b2d32"
+    },
+    {
+      "path": "复现/outputs/demo_results.json",
+      "bytes": 73193,
+      "sha256": "8beee424489de4fa13b91ffc646e4add69eee17a2bf7a09af1482f976537c212"
+    },
+    {
+      "path": "复现/outputs/demo_summary.png",
+      "bytes": 176148,
+      "sha256": "65c2e7cd06a696775b578122c1363f4cb76327ed4768a6a9f21f052a1561c381"
+    },
+    {
+      "path": "复现/outputs/demo_summary.svg",
+      "bytes": 100790,
+      "sha256": "a7ca30c656bde5ce1ac0aa39cee27a131e8524fbaad825141df32ef467152757"
+    }
+  ],
+  "local_links_checked": 26,
+  "status": "pass",
+  "scope": "mechanism reproduction only"
+}

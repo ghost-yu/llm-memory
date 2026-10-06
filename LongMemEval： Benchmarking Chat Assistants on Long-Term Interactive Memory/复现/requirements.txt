@@ -1,0 +1,5 @@
+# Recorded working demo environment (not the full official environment)
+# Python 3.7.6; installed wheel locally in vendor
+numpy==1.21.6
+rank-bm25==0.2.2
+matplotlib==3.1.3

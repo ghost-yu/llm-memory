@@ -1,0 +1,8 @@
+{
+  "bvid": "BV1DabS6vEba",
+  "title": "一口气搞懂AI Agent五种记忆架构/SQLite/mem0/Zep/LangMem实测竞速",
+  "desc": "每一次 LLM 调用都是失忆的。ChatGPT 和 Claude 之所以记得你，不是因为模型，而是因为有人在模型外面搭了一套记忆系统。\n\n这期我先在白板上把 Agent 记忆的三个问题讲清楚：它是什么、怎么找到它、怎么维护它, 并解释五种真实的记忆层案例.\n\nYou Can Build Anything. You Can Learn Anything. 💪\n\n章节：\n0:00 为什么每次 LLM 调用都从失忆开始\n0:25 Harness 回顾：程序性、语义、情节记忆\n0:58 RAG、Agentic RAG、Graph RAG，以及为什么 Hermes 和 Waku 一个都没用\n1:52 一次完整的 Agent run：检索门、工具调用、tracing\n2:31 支柱一：记忆是什么（纯文本、表、图）\n5:04 支柱二：Agent 怎么找到它（什么都不做、关键词、RAG、Graph RAG）\n7:29 支柱三：怎么维护（增、删、retire、溯源、reflect）\n7:52 retire 和删除的区别：1000 星到 1300 星\n9:01 Reflect，以及 Anthropic 提出的 dreaming\n9:47 第一层：纯文本（SOUL.MD、Skills、memory.MD）\n11:12 整合（consolidation）流水线和检索门\n12:33 第二层：SQLite state.db 与关键词搜索\n13:13 第三层：向量库（Supabase PGVector、Weaviate、Pinecone）\n14:38 第四层：mem0 的 row memory 和 graph memory\n16:29 第五层：Zep 时序图记忆\n17:20 LangMem：它只是一个包，不是存储\n18:16 晚宴实验：给五个存储喂同样的事实\n21:03 代码实操：examples/memory_native\n23:15 实测：黄仁勋和那瓶辣椒油\n24:19 实测：用中文问 Paul Graham 欠我多少钱\n24:47 实测：把 Elon 的到达时间从七点改成九点\n26:32 拆开 Zep 的图：那条带着语义的边\n28:59 时序图什么时候是杀鸡用牛刀\n30:04 结论：记忆才是资产\n\n开源仓库 Waku Agent：https://github.com/ShenSeanChen/Waku-agent\n社区 / 每两周直播答疑：seanchen.io",
+  "pubdate": 1786843658,
+  "cid": 40951612567,
+  "uploader": "肖恩君Sean"
+}

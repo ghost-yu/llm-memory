@@ -1,0 +1,395 @@
+{
+  "scope": "Original evaluation MemoryNote/AgenticMemorySystem classes with replaced LLMController/SimpleEmbeddingRetriever; selected system methods for negative checks",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "commits": {
+    "evaluation": "c3bb1ee6d4825b13460dd26be1444b5f870ddb64",
+    "system": "aec6d34c6035d3a8f56df37d741f25e3adcecfea"
+  },
+  "sources": {
+    "代码\\A-mem-historical\\memory_layer.py": "120a0ac5071279dba8e0e06ef5de12c88ceb30e4adecb2b3827b27552e3dc592",
+    "代码\\A-mem-sys-historical\\agentic_memory\\memory_system.py": "b25dfccaa1c059e92d6c4eead10d462719be6716dd1528db7e3394636f35e38b"
+  },
+  "checks": {
+    "noninsertion_neighbor_order": true,
+    "attributes_generated": true,
+    "new_link_to_cache": true,
+    "target_neighbor_evolved": true,
+    "unrelated_neighbor_unchanged": true,
+    "raw_content_preserved": true,
+    "stale_index_before_consolidation_observed": true,
+    "linked_memory_expands_seed": true,
+    "consolidation_refreshes_document": true,
+    "index_note_count_alignment": true,
+    "evolution_history_not_populated_observed": true,
+    "host_state_reload_exact": true,
+    "system_rank_index_mismatch_observed": true,
+    "system_full_seed_budget_drops_links_observed": true
+  },
+  "steps": [
+    {
+      "stage": "art",
+      "notes": [
+        {
+          "content": "Alice enjoys art painting",
+          "id": "art",
+          "keywords": [
+            "painting",
+            "art",
+            "hobby"
+          ],
+          "links": [],
+          "importance_score": 1.0,
+          "retrieval_count": 0,
+          "timestamp": "202501011000",
+          "last_accessed": "202610050130",
+          "context": "art painting hobby",
+          "evolution_history": [],
+          "category": "Uncategorized",
+          "tags": [
+            "art",
+            "painting",
+            "hobby"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "cache",
+      "notes": [
+        {
+          "content": "Alice enjoys art painting",
+          "id": "art",
+          "keywords": [
+            "painting",
+            "art",
+            "hobby"
+          ],
+          "links": [],
+          "importance_score": 1.0,
+          "retrieval_count": 0,
+          "timestamp": "202501011000",
+          "last_accessed": "202610050130",
+          "context": "art painting hobby",
+          "evolution_history": [],
+          "category": "Uncategorized",
+          "tags": [
+            "art",
+            "painting",
+            "hobby"
+          ]
+        },
+        {
+          "content": "Alice built a cache storage for web",
+          "id": "cache",
+          "keywords": [
+            "cache",
+            "storage",
+            "web"
+          ],
+          "links": [],
+          "importance_score": 1.0,
+          "retrieval_count": 0,
+          "timestamp": "202501021000",
+          "last_accessed": "202610050130",
+          "context": "cache storage for web",
+          "evolution_history": [],
+          "category": "Uncategorized",
+          "tags": [
+            "software",
+            "cache",
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "evolved_before_consolidation",
+      "notes": [
+        {
+          "content": "Alice enjoys art painting",
+          "id": "art",
+          "keywords": [
+            "painting",
+            "art",
+            "hobby"
+          ],
+          "links": [],
+          "importance_score": 1.0,
+          "retrieval_count": 0,
+          "timestamp": "202501011000",
+          "last_accessed": "202610050130",
+          "context": "art painting hobby",
+          "evolution_history": [],
+          "category": "Uncategorized",
+          "tags": [
+            "art",
+            "painting",
+            "hobby"
+          ]
+        },
+        {
+          "content": "Alice built a cache storage for web",
+          "id": "cache",
+          "keywords": [
+            "cache",
+            "storage",
+            "web"
+          ],
+          "links": [],
+          "importance_score": 1.0,
+          "retrieval_count": 0,
+          "timestamp": "202501021000",
+          "last_accessed": "202610050130",
+          "context": "cache uses LRU eviction",
+          "evolution_history": [],
+          "category": "Uncategorized",
+          "tags": [
+            "cache",
+            "LRU",
+            "eviction"
+          ]
+        },
+        {
+          "content": "Alice added LRU eviction to the cache",
+          "id": "lru",
+          "keywords": [
+            "cache",
+            "storage",
+            "web"
+          ],
+          "links": [
+            1
+          ],
+          "importance_score": 1.0,
+          "retrieval_count": 0,
+          "timestamp": "202501031000",
+          "last_accessed": "202610050130",
+          "context": "cache storage for web",
+          "evolution_history": [],
+          "category": "Uncategorized",
+          "tags": [
+            "cache",
+            "LRU",
+            "eviction"
+          ]
+        }
+      ],
+      "corpus": [
+        "content:Alice enjoys art painting context:art painting hobby keywords: painting, art, hobby tags: art, painting, hobby",
+        "content:Alice built a cache storage for web context:cache storage for web keywords: cache, storage, web tags: software, cache, storage",
+        "content:Alice added LRU eviction to the cache context:cache storage for web keywords: cache, storage, web tags: cache, LRU, eviction"
+      ],
+      "retrieved_text": "talk start time:202501031000memory content: Alice added LRU eviction to the cachememory context: cache storage for webmemory keywords: ['cache', 'storage', 'web']memory tags: ['cache', 'LRU', 'eviction']\ntalk start time:202501021000memory content: Alice built a cache storage for webmemory context: cache uses LRU evictionmemory keywords: ['cache', 'storage', 'web']memory tags: ['cache', 'LRU', 'eviction']\n"
+    }
+  ],
+  "final": [
+    {
+      "content": "Alice enjoys art painting",
+      "id": "art",
+      "keywords": [
+        "painting",
+        "art",
+        "hobby"
+      ],
+      "links": [],
+      "importance_score": 1.0,
+      "retrieval_count": 0,
+      "timestamp": "202501011000",
+      "last_accessed": "202610050130",
+      "context": "art painting hobby",
+      "evolution_history": [],
+      "category": "Uncategorized",
+      "tags": [
+        "art",
+        "painting",
+        "hobby"
+      ]
+    },
+    {
+      "content": "Alice built a cache storage for web",
+      "id": "cache",
+      "keywords": [
+        "cache",
+        "storage",
+        "web"
+      ],
+      "links": [],
+      "importance_score": 1.0,
+      "retrieval_count": 0,
+      "timestamp": "202501021000",
+      "last_accessed": "202610050130",
+      "context": "cache uses LRU eviction",
+      "evolution_history": [],
+      "category": "Uncategorized",
+      "tags": [
+        "cache",
+        "LRU",
+        "eviction"
+      ]
+    },
+    {
+      "content": "Alice added LRU eviction to the cache",
+      "id": "lru",
+      "keywords": [
+        "cache",
+        "storage",
+        "web"
+      ],
+      "links": [
+        1
+      ],
+      "importance_score": 1.0,
+      "retrieval_count": 0,
+      "timestamp": "202501031000",
+      "last_accessed": "202610050130",
+      "context": "cache storage for web",
+      "evolution_history": [],
+      "category": "Uncategorized",
+      "tags": [
+        "cache",
+        "LRU",
+        "eviction"
+      ]
+    }
+  ],
+  "refreshed_corpus": [
+    "Alice enjoys art painting , art painting hobby painting art hobby art painting hobby",
+    "Alice built a cache storage for web , cache uses LRU eviction cache storage web cache LRU eviction",
+    "Alice added LRU eviction to the cache , cache storage for web cache storage web cache LRU eviction"
+  ],
+  "model_calls": [
+    {
+      "stage": "analyze",
+      "prompt": "Generate a structured analysis of the following content by:\n            1. Identifying the most salient keywords (focus on nouns, verbs, and key concepts)\n            2. Extracting core themes and contextual elements\n            3. Creating relevant categorical tags\n\n            Format the response as a JSON object:\n            {\n                \"keywords\": [\n                    // several specific, distinct keywords that capture key concepts and terminology\n                    // Order from most to least important\n                    // Don't include keywords that are the name of the speaker or time\n                    // At least three keywords, but don't be too redundant.\n                ],\n                \"context\": \n                    // one sentence summarizing:\n                    // - Main topic/domain\n                    // - Key arguments/points\n                    // - Intended audience/purpose\n                ,\n                \"tags\": [\n                    // several broad categories/themes for classification\n                    // Include domain, format, and type tags\n                    // At least three tags, but don't be too redundant.\n                ]\n            }\n\n            Content for analysis:\n            Alice enjoys art painting",
+      "response": {
+        "keywords": [
+          "painting",
+          "art",
+          "hobby"
+        ],
+        "context": "art painting hobby",
+        "tags": [
+          "art",
+          "painting",
+          "hobby"
+        ]
+      }
+    },
+    {
+      "stage": "evolve",
+      "prompt": "\n                                You are an AI memory evolution agent responsible for managing and evolving a knowledge base.\n                                Analyze the the new memory note according to keywords and context, also with their several nearest neighbors memory.\n                                Make decisions about its evolution.  \n\n                                The new memory context:\n                                art painting hobby\n                                content: Alice enjoys art painting\n                                keywords: ['painting', 'art', 'hobby']\n\n                                The nearest neighbors memories:\n                                \n\n                                Based on this information, determine:\n                                1. Should this memory be evolved? Consider its relationships with other memories.\n                                2. What specific actions should be taken (strengthen, update_neighbor)?\n                                   2.1 If choose to strengthen the connection, which memory should it be connected to? Can you give the updated tags of this memory?\n                                   2.2 If choose to update_neighbor, you can update the context and tags of these memories based on the understanding of these memories. If the context and the tags are not updated, the new context and tags should be the same as the original ones. Generate the new context and tags in the sequential order of the input neighbors.\n                                Tags should be determined by the content of these characteristic of these memories, which can be used to retrieve them later and categorize them.\n                                Note that the length of new_tags_neighborhood must equal the number of input neighbors, and the length of new_context_neighborhood must equal the number of input neighbors.\n                                The number of neighbors is 0.\n                                Return your decision in JSON format with the following structure:\n                                {\n                                    \"should_evolve\": True or False,\n                                    \"actions\": [\"strengthen\", \"update_neighbor\"],\n                                    \"suggested_connections\": [\"neighbor_memory_ids\"],\n                                    \"tags_to_update\": [\"tag_1\",...\"tag_n\"], \n                                    \"new_context_neighborhood\": [\"new context\",...,\"new context\"],\n                                    \"new_tags_neighborhood\": [[\"tag_1\",...,\"tag_n\"],...[\"tag_1\",...,\"tag_n\"]],\n                                }\n                                ",
+      "response": {
+        "should_evolve": false,
+        "actions": [],
+        "suggested_connections": [],
+        "tags_to_update": [],
+        "new_context_neighborhood": [],
+        "new_tags_neighborhood": []
+      }
+    },
+    {
+      "stage": "analyze",
+      "prompt": "Generate a structured analysis of the following content by:\n            1. Identifying the most salient keywords (focus on nouns, verbs, and key concepts)\n            2. Extracting core themes and contextual elements\n            3. Creating relevant categorical tags\n\n            Format the response as a JSON object:\n            {\n                \"keywords\": [\n                    // several specific, distinct keywords that capture key concepts and terminology\n                    // Order from most to least important\n                    // Don't include keywords that are the name of the speaker or time\n                    // At least three keywords, but don't be too redundant.\n                ],\n                \"context\": \n                    // one sentence summarizing:\n                    // - Main topic/domain\n                    // - Key arguments/points\n                    // - Intended audience/purpose\n                ,\n                \"tags\": [\n                    // several broad categories/themes for classification\n                    // Include domain, format, and type tags\n                    // At least three tags, but don't be too redundant.\n                ]\n            }\n\n            Content for analysis:\n            Alice built a cache storage for web",
+      "response": {
+        "keywords": [
+          "cache",
+          "storage",
+          "web"
+        ],
+        "context": "cache storage for web",
+        "tags": [
+          "software",
+          "cache",
+          "storage"
+        ]
+      }
+    },
+    {
+      "stage": "evolve",
+      "prompt": "\n                                You are an AI memory evolution agent responsible for managing and evolving a knowledge base.\n                                Analyze the the new memory note according to keywords and context, also with their several nearest neighbors memory.\n                                Make decisions about its evolution.  \n\n                                The new memory context:\n                                cache storage for web\n                                content: Alice built a cache storage for web\n                                keywords: ['cache', 'storage', 'web']\n\n                                The nearest neighbors memories:\n                                memory index:0\t talk start time:202501011000\t memory content: Alice enjoys art painting\t memory context: art painting hobby\t memory keywords: ['painting', 'art', 'hobby']\t memory tags: ['art', 'painting', 'hobby']\n\n\n                                Based on this information, determine:\n                                1. Should this memory be evolved? Consider its relationships with other memories.\n                                2. What specific actions should be taken (strengthen, update_neighbor)?\n                                   2.1 If choose to strengthen the connection, which memory should it be connected to? Can you give the updated tags of this memory?\n                                   2.2 If choose to update_neighbor, you can update the context and tags of these memories based on the understanding of these memories. If the context and the tags are not updated, the new context and tags should be the same as the original ones. Generate the new context and tags in the sequential order of the input neighbors.\n                                Tags should be determined by the content of these characteristic of these memories, which can be used to retrieve them later and categorize them.\n                                Note that the length of new_tags_neighborhood must equal the number of input neighbors, and the length of new_context_neighborhood must equal the number of input neighbors.\n                                The number of neighbors is 1.\n                                Return your decision in JSON format with the following structure:\n                                {\n                                    \"should_evolve\": True or False,\n                                    \"actions\": [\"strengthen\", \"update_neighbor\"],\n                                    \"suggested_connections\": [\"neighbor_memory_ids\"],\n                                    \"tags_to_update\": [\"tag_1\",...\"tag_n\"], \n                                    \"new_context_neighborhood\": [\"new context\",...,\"new context\"],\n                                    \"new_tags_neighborhood\": [[\"tag_1\",...,\"tag_n\"],...[\"tag_1\",...,\"tag_n\"]],\n                                }\n                                ",
+      "response": {
+        "should_evolve": false,
+        "actions": [],
+        "suggested_connections": [],
+        "tags_to_update": [],
+        "new_context_neighborhood": [],
+        "new_tags_neighborhood": []
+      }
+    },
+    {
+      "stage": "analyze",
+      "prompt": "Generate a structured analysis of the following content by:\n            1. Identifying the most salient keywords (focus on nouns, verbs, and key concepts)\n            2. Extracting core themes and contextual elements\n            3. Creating relevant categorical tags\n\n            Format the response as a JSON object:\n            {\n                \"keywords\": [\n                    // several specific, distinct keywords that capture key concepts and terminology\n                    // Order from most to least important\n                    // Don't include keywords that are the name of the speaker or time\n                    // At least three keywords, but don't be too redundant.\n                ],\n                \"context\": \n                    // one sentence summarizing:\n                    // - Main topic/domain\n                    // - Key arguments/points\n                    // - Intended audience/purpose\n                ,\n                \"tags\": [\n                    // several broad categories/themes for classification\n                    // Include domain, format, and type tags\n                    // At least three tags, but don't be too redundant.\n                ]\n            }\n\n            Content for analysis:\n            Alice added LRU eviction to the cache",
+      "response": {
+        "keywords": [
+          "cache",
+          "storage",
+          "web"
+        ],
+        "context": "cache storage for web",
+        "tags": [
+          "software",
+          "cache",
+          "storage"
+        ]
+      }
+    },
+    {
+      "stage": "evolve",
+      "prompt": "\n                                You are an AI memory evolution agent responsible for managing and evolving a knowledge base.\n                                Analyze the the new memory note according to keywords and context, also with their several nearest neighbors memory.\n                                Make decisions about its evolution.  \n\n                                The new memory context:\n                                cache storage for web\n                                content: Alice added LRU eviction to the cache\n                                keywords: ['cache', 'storage', 'web']\n\n                                The nearest neighbors memories:\n                                memory index:1\t talk start time:202501021000\t memory content: Alice built a cache storage for web\t memory context: cache storage for web\t memory keywords: ['cache', 'storage', 'web']\t memory tags: ['software', 'cache', 'storage']\nmemory index:0\t talk start time:202501011000\t memory content: Alice enjoys art painting\t memory context: art painting hobby\t memory keywords: ['painting', 'art', 'hobby']\t memory tags: ['art', 'painting', 'hobby']\n\n\n                                Based on this information, determine:\n                                1. Should this memory be evolved? Consider its relationships with other memories.\n                                2. What specific actions should be taken (strengthen, update_neighbor)?\n                                   2.1 If choose to strengthen the connection, which memory should it be connected to? Can you give the updated tags of this memory?\n                                   2.2 If choose to update_neighbor, you can update the context and tags of these memories based on the understanding of these memories. If the context and the tags are not updated, the new context and tags should be the same as the original ones. Generate the new context and tags in the sequential order of the input neighbors.\n                                Tags should be determined by the content of these characteristic of these memories, which can be used to retrieve them later and categorize them.\n                                Note that the length of new_tags_neighborhood must equal the number of input neighbors, and the length of new_context_neighborhood must equal the number of input neighbors.\n                                The number of neighbors is 2.\n                                Return your decision in JSON format with the following structure:\n                                {\n                                    \"should_evolve\": True or False,\n                                    \"actions\": [\"strengthen\", \"update_neighbor\"],\n                                    \"suggested_connections\": [\"neighbor_memory_ids\"],\n                                    \"tags_to_update\": [\"tag_1\",...\"tag_n\"], \n                                    \"new_context_neighborhood\": [\"new context\",...,\"new context\"],\n                                    \"new_tags_neighborhood\": [[\"tag_1\",...,\"tag_n\"],...[\"tag_1\",...,\"tag_n\"]],\n                                }\n                                ",
+      "response": {
+        "should_evolve": true,
+        "actions": [
+          "strengthen",
+          "update_neighbor"
+        ],
+        "suggested_connections": [
+          1
+        ],
+        "tags_to_update": [
+          "cache",
+          "LRU",
+          "eviction"
+        ],
+        "new_context_neighborhood": [
+          "cache uses LRU eviction",
+          "art painting hobby"
+        ],
+        "new_tags_neighborhood": [
+          [
+            "cache",
+            "LRU",
+            "eviction"
+          ],
+          [
+            "art",
+            "painting",
+            "hobby"
+          ]
+        ]
+      }
+    }
+  ],
+  "seed_indices": [
+    2
+  ],
+  "linked_retrieved_text": "talk start time:202501031000memory content: Alice added LRU eviction to the cachememory context: cache storage for webmemory keywords: ['cache', 'storage', 'web']memory tags: ['cache', 'LRU', 'eviction']\ntalk start time:202501021000memory content: Alice built a cache storage for webmemory context: cache uses LRU evictionmemory keywords: ['cache', 'storage', 'web']memory tags: ['cache', 'LRU', 'eviction']\n",
+  "system_wrong_update": {
+    "art": "evolved_cache",
+    "cache": "cache",
+    "lru": "General"
+  },
+  "system_search_result": [
+    {
+      "id": "lru",
+      "content": "lru",
+      "context": "",
+      "keywords": [],
+      "tags": [],
+      "timestamp": "",
+      "category": "Uncategorized",
+      "is_neighbor": false,
+      "score": 0.0
+    }
+  ],
+  "state_file": "notes-56b00452c5a4.json"
+}

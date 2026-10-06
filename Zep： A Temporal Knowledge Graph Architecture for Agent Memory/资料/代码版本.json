@@ -1,0 +1,82 @@
+{
+  "sha": "77cb67cdfea7a080f217236b56f8ca39b25ca0e4",
+  "node_id": "C_kwDOMhI98toAKDc3Y2I2N2NkZmVhN2EwODBmMjE3MjM2YjU2ZjhjYTM5YjI1Y2EwZTQ",
+  "commit": {
+    "author": {
+      "name": "Preston Rasmussen",
+      "email": "109292228+prasmussen15@users.noreply.github.com",
+      "date": "2024-12-17T20:15:49Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2024-12-17T20:15:49Z"
+    },
+    "message": "bump version (#247)",
+    "tree": {
+      "sha": "b39f0b053720babbb0f59b0d762f1935d4cc0c66",
+      "url": "https://api.github.com/repos/getzep/graphiti/git/trees/b39f0b053720babbb0f59b0d762f1935d4cc0c66"
+    },
+    "url": "https://api.github.com/repos/getzep/graphiti/git/commits/77cb67cdfea7a080f217236b56f8ca39b25ca0e4",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJnYdv2CRC1aQ7uu5UhlAAAFt8QAEpK0Mh1XeA8HKifxNn6uoX4\nc+tGSVDjxP+AJheJ//85tkeyUTUctulyQ/F+aQYnIxS8abYSVv6R/5EFyZolfVp2\nI8wY10/St3VRIvRxsdVWKUARKF+H3mg7QP4vPPJ7AWCtr0HkYrD59XyRbO9Yu1Nn\nr/dEAeKb239NrxmxLM8myb7XYM593jTa64aUdNS0/t1z+A4gjKcBqlWSBxBAzUdY\nQkEO2+kO5lo1NQGfLfs6iKRP5XZviYZyZE9xj+cZHq7QGuugigXuuEZON0JFHihQ\nWVbvFEfSDiR61HHatfyhaEK9DSgD84o4GDZXTRkQQkDIM3ajkQkahMOmzkk1QmgF\nhpCgYlUasWEB7OCakSC/KwAzrVrkcXETM71DR8bEoBHuSs5qj75+NrBeWtj6SFep\ncwZqRBN3SXpt48e58uZK0qvePT3oLkyJtmzsnVhy7d2Qy238X/nCWQz0Z+vo6xoj\nJiQhDEMJmuacmhjvK3EAMB68wLqrTECYSfwuguYrVrARBcBaVnAwh8UdUwpyiYpc\nBaaf1sI4wheruWOY+h7ANhARomLuL60jUo7Sr1jW/oHeyoAwTimtSqOachUXVoKV\nXakvOVT7+cCwpkLnjw02N3MVR2Rm0APKHxsxasMGPwEOZDpHja7YB0DOjBHdHTwy\nHQg4XabBn9eO7YyYEeCc\n=hV4p\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree b39f0b053720babbb0f59b0d762f1935d4cc0c66\nparent fcff4ca67c1792a355fe9e068aab12b496d7d5ba\nauthor Preston Rasmussen <109292228+prasmussen15@users.noreply.github.com> 1734466549 -0500\ncommitter GitHub <noreply@github.com> 1734466549 -0500\n\nbump version (#247)\n\n",
+      "verified_at": "2024-12-17T20:16:41Z"
+    }
+  },
+  "url": "https://api.github.com/repos/getzep/graphiti/commits/77cb67cdfea7a080f217236b56f8ca39b25ca0e4",
+  "html_url": "https://github.com/getzep/graphiti/commit/77cb67cdfea7a080f217236b56f8ca39b25ca0e4",
+  "comments_url": "https://api.github.com/repos/getzep/graphiti/commits/77cb67cdfea7a080f217236b56f8ca39b25ca0e4/comments",
+  "author": {
+    "login": "prasmussen15",
+    "id": 109292228,
+    "node_id": "U_kgDOBoOqxA",
+    "avatar_url": "https://avatars.githubusercontent.com/u/109292228?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/prasmussen15",
+    "html_url": "https://github.com/prasmussen15",
+    "followers_url": "https://api.github.com/users/prasmussen15/followers",
+    "following_url": "https://api.github.com/users/prasmussen15/following{/other_user}",
+    "gists_url": "https://api.github.com/users/prasmussen15/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/prasmussen15/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/prasmussen15/subscriptions",
+    "organizations_url": "https://api.github.com/users/prasmussen15/orgs",
+    "repos_url": "https://api.github.com/users/prasmussen15/repos",
+    "events_url": "https://api.github.com/users/prasmussen15/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/prasmussen15/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "fcff4ca67c1792a355fe9e068aab12b496d7d5ba",
+      "url": "https://api.github.com/repos/getzep/graphiti/commits/fcff4ca67c1792a355fe9e068aab12b496d7d5ba",
+      "html_url": "https://github.com/getzep/graphiti/commit/fcff4ca67c1792a355fe9e068aab12b496d7d5ba"
+    }
+  ]
+}

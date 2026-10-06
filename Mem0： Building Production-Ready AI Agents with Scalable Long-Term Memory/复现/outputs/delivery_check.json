@@ -1,0 +1,51 @@
+{
+  "checks": "passed",
+  "local_links": 22,
+  "history_events": {
+    "ADD": 6,
+    "DELETE": 1,
+    "UPDATE": 1
+  },
+  "files": {
+    "解释.md": {
+      "bytes": 42313,
+      "sha256": "e00bfb87958b5596d93c1eb26122ea20befbd5c70f422f843537c55a9f576f56"
+    },
+    "复现/README.md": {
+      "bytes": 5509,
+      "sha256": "88f55449f4f658960fa7e3077fe1ef58823fcc946d92fca972aa364be44e3701"
+    },
+    "复现/scripts/demo_mem0.py": {
+      "bytes": 8550,
+      "sha256": "eb76ed6dd3bf82ef7760bc2f1af4942a9842d443ec870957c3e7dee5bc8b4bc0"
+    },
+    "复现/scripts/plot_results.py": {
+      "bytes": 1154,
+      "sha256": "bd6ebf0d8abb12d4c7f420d77e6392d5e589b7f273d3ffe7184aeb36f175ee07"
+    },
+    "复现/scripts/audit_delivery.py": {
+      "bytes": 1955,
+      "sha256": "fdbcbac203fba5a77bb3bc624e3cba7468f2ffd6245bc275248782c96f608ee8"
+    },
+    "复现/outputs/results.json": {
+      "bytes": 54125,
+      "sha256": "16ac867c68b17549f0f28dd03079422889389ea5d0f4db033f1aaa1ae73b0836"
+    },
+    "复现/outputs/mechanism.png": {
+      "bytes": 95648,
+      "sha256": "9e4f45a663a78d8d3fd49bfe0442d0f65402d7d066405a83a427719c9ef6284d"
+    },
+    "复现/outputs/mechanism.svg": {
+      "bytes": 54333,
+      "sha256": "5f9b47db72a8afb13d2792dc1c9c9ce209027f6a1f5fb94741bf9543d24e1c92"
+    },
+    "复现/outputs/vectors-b6934155bd3b.sqlite": {
+      "bytes": 12288,
+      "sha256": "43a684b1780596dfa29736c92ed08421af692b7eb4d0a349f369a52d276c5527"
+    },
+    "复现/outputs/history-b6934155bd3b.sqlite": {
+      "bytes": 12288,
+      "sha256": "5792e43db429c84ad6de759fe234d95e8f162b42c004300d83ef6347d57b9eed"
+    }
+  }
+}

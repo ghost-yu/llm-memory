@@ -1,0 +1,161 @@
+{
+  "scope": "local teaching code contract trace; semantic document review is separate",
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "device": "cpu",
+    "dtype": "torch.float64"
+  },
+  "source_sha256": "a270b041b16bd8e9b7e9d428e70a0ff1c6b3bc94e8b0a925f9f5b7b83d14556c",
+  "signatures": {
+    "write": "(w, k, v, mode='l2', eta=0.2, alpha=1.0, delta=0.5)",
+    "checks": "()",
+    "corrupted_stream": "(seed, contamination)",
+    "legitimate_shift": "()",
+    "main": "()"
+  },
+  "write": {
+    "input_w": [
+      [
+        1.0,
+        -1.0
+      ]
+    ],
+    "w_shape": [
+      1,
+      2
+    ],
+    "k_shape": [
+      2
+    ],
+    "read_shape": [
+      1
+    ],
+    "error_shape": [],
+    "key_row_shape": [
+      1,
+      2
+    ],
+    "l2": [
+      [
+        5.0,
+        -1.0
+      ]
+    ],
+    "huber": [
+      [
+        1.1,
+        -1.0
+      ]
+    ],
+    "zero_gradient_decay": [
+      [
+        0.98,
+        -0.98
+      ]
+    ],
+    "input_unchanged": true,
+    "vector_v_accepted_but_unsupported": [
+      [
+        5.0,
+        -1.0
+      ]
+    ]
+  },
+  "observed_errors": {
+    "invalid_mode": {
+      "type": "ValueError",
+      "message": "bad"
+    },
+    "wrong_key_shape": {
+      "type": "RuntimeError",
+      "message": "size mismatch, got input (1), mat (1x2), vec (3)"
+    }
+  },
+  "multi_output_huber": {
+    "residual": [
+      2.0,
+      0.25
+    ],
+    "coordinate": [
+      0.5,
+      0.25
+    ],
+    "norm_huber": [
+      0.49613893835683387,
+      0.062017367294604234
+    ],
+    "norm_branch_l1": [
+      0.5,
+      0.5
+    ]
+  },
+  "normalization": {
+    "joint": [
+      [
+        0.03205860328008499,
+        0.08714431874203257
+      ],
+      [
+        0.23688281808991016,
+        0.6439142598879724
+      ]
+    ],
+    "joint_total": 1.0,
+    "columns": [
+      [
+        0.11920292202211755,
+        0.11920292202211755
+      ],
+      [
+        0.8807970779778823,
+        0.8807970779778823
+      ]
+    ],
+    "column_total": 1.9999999999999996,
+    "column_sums": [
+      0.9999999999999999,
+      0.9999999999999999
+    ]
+  },
+  "episode_replay": {
+    "seed": 2026,
+    "contamination": 0.03,
+    "corruptions": 13,
+    "trace_length": {
+      "l2": 500,
+      "huber": 500
+    },
+    "matches_saved": true
+  },
+  "shift_steps": {
+    "l2": 14,
+    "huber": 23
+  },
+  "mechanisms": {
+    "analytical_vs_autograd_max_error": {
+      "l2_20.0": 3.552713678800501e-15,
+      "huber_20.0": 4.440892098500626e-16,
+      "huber_1.1": 0.0
+    },
+    "memora_positive_min": 0.0924640814449984,
+    "memora_column_sum_max_error": 2.220446049250313e-16,
+    "entropy_before": 0.9404479886553263,
+    "entropy_after_zero_gradient_retention": 1.2749502967258166
+  },
+  "checks_passed": [
+    "input immutability",
+    "l2 update",
+    "scalar Huber update",
+    "zero-gradient decay",
+    "invalid mode rejected",
+    "wrong key dimension rejected",
+    "vector target boundary observed",
+    "Huber variants differ",
+    "joint simplex",
+    "column simplex",
+    "episode exact replay",
+    "shift exact replay",
+    "mechanism exact replay"
+  ]
+}

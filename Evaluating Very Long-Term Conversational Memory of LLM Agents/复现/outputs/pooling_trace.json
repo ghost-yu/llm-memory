@@ -1,0 +1,56 @@
+{
+  "scope": "Original mean_pooling function, real CPU torch tensors; no tokenizer, encoder/model, or rag_utils whole-package import",
+  "source": "代码\\locomo-official\\task_eval\\rag_utils.py",
+  "source_sha256": "71bb9a7734ddfc11e97028711e0eee6ddd2a385439cd41e284c4c44b2c6a8cf2",
+  "signature": "(token_embeddings, mask)",
+  "checks_passed": {
+    "binary_mask_average": true,
+    "all_masked_row_NaN": true,
+    "nonbinary_mask_changes_denominator": true,
+    "input_tensor_unchanged": true,
+    "autograd_and_masked_token_zero": true
+  },
+  "input_shape": [
+    3,
+    3,
+    2
+  ],
+  "mask_shape": [
+    3,
+    3
+  ],
+  "output_shape": [
+    3,
+    2
+  ],
+  "observations": {
+    "binary_result": [
+      3.0,
+      5.0
+    ],
+    "all_masked_is_nan": true,
+    "nonbinary_result": [
+      2.0,
+      3.3333332538604736
+    ],
+    "gradient": [
+      [
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    ]
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.14.1+cpu",
+  "device": "cpu"
+}

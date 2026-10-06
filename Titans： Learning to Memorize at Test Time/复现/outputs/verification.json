@@ -1,0 +1,83 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "os": "Windows-11-10.0.26200-SP0",
+  "checks": {
+    "syntax": {
+      "status": "pass",
+      "result": {
+        "parsed_files": 7
+      }
+    },
+    "scalar_gradient_and_memory_update": {
+      "status": "pass",
+      "result": {
+        "analytic": -16.0,
+        "finite_difference": -16.00000000046009,
+        "trajectory": [
+          {
+            "t": 1,
+            "before": 1.0,
+            "gradient": -16.0,
+            "momentum": 0.8,
+            "after": 1.7000000000000002,
+            "loss": 6.759999999999998
+          },
+          {
+            "t": 2,
+            "before": 1.7000000000000002,
+            "gradient": -10.399999999999999,
+            "momentum": 0.9199999999999999,
+            "after": 2.45,
+            "loss": 1.2099999999999993
+          }
+        ]
+      }
+    },
+    "associative_scan_algebra": {
+      "status": "pass",
+      "result": {
+        "composed": [
+          0.06400000000000002,
+          0.08399999999999999
+        ],
+        "sequential": 0.12240000000000002,
+        "composed_result": 0.12240000000000001
+      }
+    },
+    "repository_neural_memory_forward_backward_state_causality": {
+      "status": "pass",
+      "result": {
+        "shape": [
+          2,
+          16,
+          8
+        ],
+        "loss": 0.6237475872039795,
+        "finite_grad_tensors": 14,
+        "registered_parameter_delta_without_optimizer": 0.0,
+        "fast_state_delta": 0.5031479597091675,
+        "fresh_vs_continued_max_diff": 2.445744514465332,
+        "suffix_change_prefix_max_diff": 0.0,
+        "continued_seq_index": 20
+      }
+    },
+    "repository_mac_forward_backward": {
+      "status": "pass",
+      "result": {
+        "input_shape": [
+          2,
+          13
+        ],
+        "logits_shape": [
+          2,
+          13,
+          32
+        ],
+        "loss": 3.7134170532226562,
+        "parameter_count": 12587
+      }
+    }
+  },
+  "torch": "2.14.1+cpu",
+  "cuda_available": false
+}

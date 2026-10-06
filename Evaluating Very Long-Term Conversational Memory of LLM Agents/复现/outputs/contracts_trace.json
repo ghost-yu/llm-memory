@@ -1,0 +1,67 @@
+{
+  "scope": "Original five scorers, original context builder with word-count encoding/budget globals, and BM25/document host boundaries; no model inference",
+  "source_sha256": "6b2553d4c1f37f45ee7e4d232e0909fa3757245167c3762dee2e61368d6aca24",
+  "original_sources": {
+    "代码\\locomo-official\\task_eval\\evaluation.py": "c37d0ab9a3cc745d6ea8209b27ca980f4ff7d88aece04b208d4d4dcee33982f7",
+    "代码\\locomo-official\\data\\locomo10.json": "553cd5a15e25f2ceccc6ed185221eba645080c93e5b91087560a91aa5961f365",
+    "代码\\locomo-official\\task_eval\\gpt_utils.py": "6599324eece87aa95646c75d68838ca44662c9c1a2476a730753a6659145ee5d"
+  },
+  "checks_passed": {
+    "normalize_comma_merges_words": true,
+    "stemmer_equates_plural": true,
+    "multiset_penalizes_repeated_prediction": true,
+    "empty_F1_zero_but_set_EM_true": true,
+    "list_item_reuse_no_global_penalty": true,
+    "open_domain_uses_first_semicolon_answer": true,
+    "metric_argument_does_not_select_EM": true,
+    "scorer_does_not_mutate_QA": true,
+    "nonempty_evidence_empty_context_IndexError": true,
+    "empty_evidence_context_defaults_one": true,
+    "summary_recall_coarse_session": true,
+    "first_context_ID_controls_mode": true,
+    "evidence_duplicates_preserved_denominator": true,
+    "category5_keyword_negation_still_passes": true,
+    "unknown_category_ValueError": true,
+    "prediction_list_not_supported": true,
+    "empty_batch_returns_empty_lists": true,
+    "query_repetitions_deduplicated": true,
+    "unknown_query_tie_chronological": true,
+    "BM25_empty_docs_safe": true,
+    "documents_numeric_sessions_and_caption": true,
+    "budget_builder_keeps_old_session_first": true
+  },
+  "signatures": {
+    "normalize_answer": "(s)",
+    "f1_score": "(prediction, ground_truth)",
+    "f1": "(prediction, ground_truth)",
+    "eval_question_answering": "(qas, eval_key='prediction', metric='f1')",
+    "exact_match_score": "(prediction, ground_truth)",
+    "BM25.__init__": "(self, docs)",
+    "BM25.rank": "(self, query)",
+    "demo.terms": "(text)",
+    "demo.documents": "(sample)",
+    "demo.main": "()",
+    "get_input_context": "(data, num_question_tokens, encoding, args)"
+  },
+  "observations": {
+    "nonempty_evidence_empty_context_IndexError": "IndexError: list index out of range",
+    "unknown_category_ValueError": "ValueError: ",
+    "prediction_list_not_supported": "AttributeError: 'list' object has no attribute 'replace'",
+    "budgeted_context": "DATE: DAY2\nCONVERSATION:\nDATE: DAY1\nCONVERSATION:\nA said, \"old\"\n\n\n\n\n\n",
+    "metric_ignored": [
+      [
+        0.6666666666666666
+      ],
+      0.0,
+      [
+        1
+      ]
+    ],
+    "repeated_evidence_recall": 0.6666666666666666
+  },
+  "python": "3.7.6 (default, Jan  8 2020, 20:23:39) [MSC v.1916 64 bit (AMD64)]",
+  "versions": {
+    "numpy": "1.21.6",
+    "nltk": "3.4.5"
+  }
+}

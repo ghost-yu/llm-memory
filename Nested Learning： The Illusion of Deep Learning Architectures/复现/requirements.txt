@@ -1,0 +1,34 @@
+accelerated-scan==0.3.1
+assoc-scan==0.0.6
+axial_positional_embedding @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/axial_positional_embedding-0.3.12-py3-none-any.whl#sha256=f5708106b18903c3b99aced0bfa79d1ae6f708dae34f56e641e8c24dbc06b02f
+cloudpickle==3.1.2
+colorama==0.4.6
+einops @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/einops-0.8.2-py3-none-any.whl#sha256=54058201ac7087911181bfec4af6091bb59380360f069276601256a76af08193
+einx @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/einx-0.4.3-py3-none-any.whl#sha256=47ce54a0144f6dffcfacdd8fe2cc9e2e5e6485dda2471330ab75ee747dd22f39
+filelock @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/filelock-3.32.3-py3-none-any.whl#sha256=7f0ca4bcc0e181c60dbbd8aa9ab5b120ebb99e4e064e83636340056f833a1f09
+frozendict==2.4.7
+fsspec @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/fsspec-2026.9.0-py3-none-any.whl#sha256=8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f
+hyper-connections @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/hyper_connections-0.4.11-py3-none-any.whl#sha256=92a8d24340ef6dbf2a356b1f2e74ebb877d680aa96afc6f9f1cff636ab2e55f0
+importlib_metadata==9.0.1
+Jinja2 @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/jinja2-3.1.6-py3-none-any.whl#sha256=85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67
+loguru==0.7.3
+MarkupSafe @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/markupsafe-3.0.3-cp312-cp312-win_amd64.whl#sha256=26a5784ded40c9e318cfc2bdb30fe164bdb8665ded9cd64d500a34fb42067b1c
+mpmath==1.3.0
+networkx @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/networkx-3.7-py3-none-any.whl#sha256=e3fd2c13a7814cee3746340d8d7f8598a67f16a58bf47fb7f8793fab6efca1b0
+ninja==1.13.2
+numpy==2.3.5
+orjson==3.12.0
+packaging==26.3
+pyvers==0.2.3
+rotary-embedding-torch==0.9.1
+setuptools @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/setuptools-84.0.0-py3-none-any.whl#sha256=51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670
+sympy @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/sympy-1.14.0-py3-none-any.whl#sha256=e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5
+tensordict==0.14.2
+titans-pytorch @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E4%BB%A3%E7%A0%81/titans-pytorch
+torch @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/torch-2.14.1%2Bcpu-cp312-cp312-win_amd64.whl#sha256=c52adc3bd526ff7fc5bdcc58fc4a76e6214d09951b646ffe5256ebd7ba60cef1
+torch-einops-utils==0.1.34
+tqdm==4.70.1
+typing_extensions @ file:///G:/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%B0%E5%BF%86/Titans%EF%BC%9A%20Learning%20to%20Memorize%20at%20Test%20Time/%E5%A4%8D%E7%8E%B0/wheels/typing_extensions-4.16.0-py3-none-any.whl#sha256=481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8
+win32_setctime==1.2.0
+x-transformers==2.31.5
+zipp==4.1.0

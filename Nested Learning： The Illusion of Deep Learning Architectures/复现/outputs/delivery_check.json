@@ -1,0 +1,73 @@
+{
+  "status": "pass",
+  "scope": "CMS mechanism only",
+  "artifacts": [
+    {
+      "path": "原论文.pdf",
+      "bytes": 6089956,
+      "sha256": "e87a9ce82ff24e96f55b83fb9713a5d6fc9e4a1a232c12d42da49c10022ed891"
+    },
+    {
+      "path": "解释.md",
+      "bytes": 45241,
+      "sha256": "626685fc4cdc0685cba1b945e39e805cc353c04ff40836255d37b2458be25c6d"
+    },
+    {
+      "path": "代码/资源说明.md",
+      "bytes": 659,
+      "sha256": "35475c5b92673d3ec083d19c9c20680c64e36305e3865ece714eefb18a8b32cd"
+    },
+    {
+      "path": "资料/来源核查.json",
+      "bytes": 359486,
+      "sha256": "5a115a4e8464d9d4995e6e052fabcf9e1a6bafb29f1d6044508cd805d4683d55"
+    },
+    {
+      "path": "复现/README.md",
+      "bytes": 6075,
+      "sha256": "067cf9f7a02b4e1fcdfd603a8e6300c3ed7afcd14b985cef0b7084a4dc6fe86c"
+    },
+    {
+      "path": "复现/requirements.txt",
+      "bytes": 4031,
+      "sha256": "e7251deea97523b144bcde36b1978c0313231d9c610fe7736abbe5e0af094021"
+    },
+    {
+      "path": "复现/scripts/demo_cms.py",
+      "bytes": 7865,
+      "sha256": "084c17b2f5ee13e53c1cd1fa1e1764196b6f128b69dfcc88f7cabdb63a1a441d"
+    },
+    {
+      "path": "复现/scripts/plot_demo.py",
+      "bytes": 2264,
+      "sha256": "d7d774290762a61cc1493cab1c72eab760558e8fd0dc25f4e7e330fa1fa6fe7f"
+    },
+    {
+      "path": "复现/outputs/demo_results.json",
+      "bytes": 4063796,
+      "sha256": "4e03a292cffa4a815218d26208cdc13110c36fdee9f91d0e14ecb06caaad0224"
+    },
+    {
+      "path": "复现/outputs/toy_cms_checkpoint.pt",
+      "bytes": 32247,
+      "sha256": "1a96128328a5d0c6e5232c00e4cdd89c730cf48376fbb1858cd5a40357c234e4"
+    },
+    {
+      "path": "复现/outputs/demo_summary.png",
+      "bytes": 193562,
+      "sha256": "8cd520356ac3dcbf3a787ce1f83ec57e32a1c4157d4845586d99cffee9c3f3fd"
+    },
+    {
+      "path": "复现/outputs/demo_summary.svg",
+      "bytes": 96460,
+      "sha256": "e5ce260e2fba7a5a8ee44c156adda132ac69c661e7fafffca48afce2f55f096b"
+    }
+  ],
+  "local_links_checked": 25,
+  "checkpoint_metric_max_errors": {
+    "every_step": 0.0,
+    "cms": 0.0,
+    "all_slow": 0.0
+  },
+  "trajectory_checks": "all 5 seeds, 3 modes, 640 steps: counts, holds and summary means"
+}

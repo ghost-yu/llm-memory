@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "role": "artifact/source/observed trace consistency, not an automatic semantic judge",
+  "checks": 15,
+  "contracts": 11,
+  "local_links": 30,
+  "semantic_review": "资料/skill内容核查.md",
+  "artifacts": {
+    "解释.md": {
+      "bytes": 63968,
+      "sha256": "f65fd03c2e4202c4a88d7bd867e702d688041344fcda7b1ea48a80e69f1b75da"
+    },
+    "复现/README.md": {
+      "bytes": 8211,
+      "sha256": "06cb62d947b5a6ce796e887a0f1c8092dab9d70a32ebb7d0625923fdfa8f7ad5"
+    },
+    "资料/skill内容核查.md": {
+      "bytes": 4116,
+      "sha256": "72fa7a4af4f91f817b93aac2d38191f154cf29b58c22199bcb03b375ca73ddee"
+    },
+    "复现/scripts/trace_contracts.py": {
+      "bytes": 8134,
+      "sha256": "22dc8f40f3d421e6895dcae4493a48d478dd1686817106ba69aef3f6aa2f0f87"
+    },
+    "复现/scripts/audit_skill_revision.py": {
+      "bytes": 4018,
+      "sha256": "140e20f17dd994d42a69489cb3d65874c4cc443a0473f054bb76e18d1ce300dd"
+    },
+    "复现/outputs/contracts_trace.json": {
+      "bytes": 61422,
+      "sha256": "40fca635498b689e940675d16a1c302c91e03a73b5daa7effab7a44161bb6703"
+    },
+    "图片/page-9.png": {
+      "bytes": 297848,
+      "sha256": "6bc1c5fa072522e9e887666dd0d98060dad94f379453f73b03f843d5d51c2c9b"
+    },
+    "图片/page-10.png": {
+      "bytes": 227320,
+      "sha256": "fe78a48e565a23bfbfd2ef14a3ba29e606039c58e19c586dd2cf00d5fd244307"
+    },
+    "图片/page-11.png": {
+      "bytes": 273399,
+      "sha256": "9d6152e7e1a422dea5da1995412d86a931cbb6545dee9aac15acaa79220992da"
+    }
+  }
+}

@@ -1,0 +1,2710 @@
+{
+  "commit": "ce7da9e9a7909e95c8249ceece7c88000bc2c0b9",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.14.1+cpu",
+    "device": "cpu"
+  },
+  "contracts": {
+    "MemoryMLP.__init__": {
+      "signature": "(self, dim, depth, expansion_factor=2.0)",
+      "file": "titans_pytorch\\memory_models.py",
+      "line": 55
+    },
+    "MemoryMLP.forward": {
+      "signature": "(self, x)",
+      "file": "titans_pytorch\\memory_models.py",
+      "line": 70
+    },
+    "NeuralMemory.__init__": {
+      "signature": "(self, dim, chunk_size: 'int | tuple[int, int]' = 1, batch_size=None, dim_head=None, heads=1, model: 'Module | None' = None, store_memory_loss_fn: 'Callable' = <function default_loss_fn at 0x0000024049431260>, adaptive_step_transform: 'Callable | None' = None, default_step_transform_max_lr=1.0, per_parameter_lr_modulation=False, max_mem_layer_modulation=1.0, per_head_learned_parameters=True, attn_pool_chunks=False, momentum=True, momentum_order=1, learned_momentum_combine=False, learned_combine_include_zeroth=False, num_kv_per_token=1, qkv_receives_diff_views=False, pre_rmsnorm=True, post_rmsnorm=False, qk_rmsnorm=False, max_grad_norm: 'float | None' = None, use_accelerated_scan=False, activation: 'Module | None' = None, init_adaptive_step_bias=None, init_momentum_bias=None, init_decay_bias=None, accept_weight_residual=False, spectral_norm_surprises=False, gated_transition=False, mem_model_norm_add_residual=True, default_model_kwargs: 'dict' = {'depth': 2, 'expansion_factor': 4.0})",
+      "file": "titans_pytorch\\neural_memory.py",
+      "line": 259
+    },
+    "NeuralMemory.init_weights": {
+      "signature": "(self, batch)",
+      "file": "titans_pytorch\\neural_memory.py",
+      "line": 545
+    },
+    "NeuralMemory.init_momentum": {
+      "signature": "(self, batch)",
+      "file": "titans_pytorch\\neural_memory.py",
+      "line": 556
+    },
+    "NeuralMemory.store_memories": {
+      "signature": "(self, seq, weights: 'dict[str, Tensor] | None' = None, past_state: 'tuple[dict[str, Tensor], dict[str, Tensor]] | None' = None, seq_index=0, prev_weights=None, mask: 'Tensor | None' = None, return_surprises=True)",
+      "file": "titans_pytorch\\neural_memory.py",
+      "line": 569
+    },
+    "NeuralMemory.retrieve_memories": {
+      "signature": "(self, seq, weights: 'dict[str, Tensor]')",
+      "file": "titans_pytorch\\neural_memory.py",
+      "line": 814
+    },
+    "NeuralMemory.forward": {
+      "signature": "(self, seq, store_seq=None, state: 'NeuralMemState | None' = None, detach_mem_state=False, prev_weights=None, store_mask: 'Tensor | None' = None, return_surprises=False, ttt_batch_size: 'int | None' = None)",
+      "file": "titans_pytorch\\neural_memory.py",
+      "line": 905
+    },
+    "mem_state_detach": {
+      "signature": "(state: 'NeuralMemState')",
+      "file": "titans_pytorch\\neural_memory.py",
+      "line": 54
+    },
+    "MemoryAsContextTransformer.forward": {
+      "signature": "(self, x, return_loss=False, return_loss_breakdown=False, disable_flex_attn=False, cache=None, return_cache=False, factorized_pos_emb=None)",
+      "file": "titans_pytorch\\mac_transformer.py",
+      "line": 701
+    },
+    "MemoryAsContextTransformer.sample": {
+      "signature": "(self, prompt: 'Tensor', seq_len: 'int', temperature=1.5, filter_fn: 'Callable' = <function min_p_filter at 0x000002404959F7E0>, filter_kwargs: 'dict' = {'min_p': 0.1}, show_progress=True, use_cache=False)",
+      "file": "titans_pytorch\\mac_transformer.py",
+      "line": 636
+    }
+  },
+  "config": {
+    "batch": 2,
+    "sequence": 5,
+    "dim": 8,
+    "chunk": 2,
+    "reference_refresh": 4,
+    "depth": 2,
+    "expansion": 2.0,
+    "momentum": true,
+    "normalization": false
+  },
+  "first": {
+    "output": {
+      "shape": [
+        2,
+        5,
+        8
+      ],
+      "dtype": "torch.float32",
+      "requires_grad": true
+    },
+    "state": [
+      4,
+      {
+        "weights.0": {
+          "shape": [
+            2,
+            8,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        },
+        "weights.1": {
+          "shape": [
+            2,
+            16,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      },
+      {
+        "shape": [
+          2,
+          1,
+          8
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": false
+      },
+      [
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        },
+        {
+          "weights.0": {
+            "shape": [
+              1,
+              2,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              1,
+              2,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        }
+      ],
+      {
+        "weights.0": {
+          "shape": [
+            2,
+            3,
+            8,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        },
+        "weights.1": {
+          "shape": [
+            2,
+            3,
+            16,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      }
+    ],
+    "state_fields": [
+      "seq_index",
+      "weights",
+      "cache_store_segment",
+      "states",
+      "updates"
+    ]
+  },
+  "unaligned_continuation": {
+    "type": "RuntimeError",
+    "message": "The size of tensor a (4) must match the size of tensor b (6) at non-singleton dimension 0",
+    "first_length": 5,
+    "next_length": 3,
+    "chunk": 2,
+    "expected": "current implementation fails at query/weight time alignment"
+  },
+  "store_cache_consumed": [
+    8,
+    {
+      "weights.0": {
+        "shape": [
+          2,
+          8,
+          16
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      },
+      "weights.1": {
+        "shape": [
+          2,
+          16,
+          8
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    },
+    {
+      "shape": [
+        2,
+        0,
+        8
+      ],
+      "dtype": "torch.float32",
+      "requires_grad": false
+    },
+    [
+      {
+        "weights.0": {
+          "shape": [
+            2,
+            8,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        },
+        "weights.1": {
+          "shape": [
+            2,
+            16,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      },
+      {
+        "weights.0": {
+          "shape": [
+            1,
+            2,
+            8,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        },
+        "weights.1": {
+          "shape": [
+            1,
+            2,
+            16,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      }
+    ],
+    {
+      "weights.0": {
+        "shape": [
+          2,
+          3,
+          8,
+          16
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      },
+      "weights.1": {
+        "shape": [
+          2,
+          3,
+          16,
+          8
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    }
+  ],
+  "continued": {
+    "output": {
+      "shape": [
+        2,
+        4,
+        8
+      ],
+      "dtype": "torch.float32",
+      "requires_grad": true
+    },
+    "state": [
+      8,
+      {
+        "weights.0": {
+          "shape": [
+            2,
+            8,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        "weights.1": {
+          "shape": [
+            2,
+            16,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        }
+      },
+      {
+        "shape": [
+          2,
+          0,
+          8
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": false
+      },
+      [
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          }
+        },
+        {
+          "weights.0": {
+            "shape": [
+              1,
+              2,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          },
+          "weights.1": {
+            "shape": [
+              1,
+              2,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          }
+        }
+      ],
+      {
+        "weights.0": {
+          "shape": [
+            2,
+            3,
+            8,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        "weights.1": {
+          "shape": [
+            2,
+            3,
+            16,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        }
+      }
+    ]
+  },
+  "memory_trace": [
+    {
+      "method": "store_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            4,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        null
+      ],
+      "kwargs": {
+        "seq_index": 0,
+        "past_state": null,
+        "prev_weights": null,
+        "mask": null,
+        "return_surprises": true
+      },
+      "output": [
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              3,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              3,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        },
+        [
+          4,
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "shape": [
+              2,
+              0,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          },
+          [
+            {
+              "weights.0": {
+                "shape": [
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            },
+            {
+              "weights.0": {
+                "shape": [
+                  1,
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  1,
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            }
+          ],
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                3,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                3,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ],
+        [
+          {
+            "shape": [
+              2,
+              1,
+              4
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          {
+            "shape": [
+              2,
+              1,
+              4
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        ]
+      ]
+    },
+    {
+      "method": "store_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            1,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        }
+      ],
+      "kwargs": {
+        "seq_index": 4,
+        "past_state": [
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "weights.0": {
+              "shape": [
+                1,
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                1,
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ],
+        "prev_weights": null,
+        "mask": null,
+        "return_surprises": true
+      },
+      "output": [
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              1,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              1,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        },
+        [
+          4,
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "shape": [
+              2,
+              1,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          },
+          [
+            {
+              "weights.0": {
+                "shape": [
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            },
+            {
+              "weights.0": {
+                "shape": [
+                  1,
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  1,
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            }
+          ],
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                1,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                1,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ],
+        [
+          {
+            "shape": [
+              2,
+              1,
+              0
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          {
+            "shape": [
+              2,
+              1,
+              0
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        ]
+      ]
+    },
+    {
+      "method": "retrieve_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            5,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              3,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              3,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        }
+      ],
+      "kwargs": {},
+      "output": {
+        "shape": [
+          2,
+          5,
+          8
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    },
+    {
+      "method": "store_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            4,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        }
+      ],
+      "kwargs": {
+        "seq_index": 4,
+        "past_state": [
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "weights.0": {
+              "shape": [
+                1,
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                1,
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ],
+        "prev_weights": null,
+        "mask": null,
+        "return_surprises": true
+      },
+      "output": [
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              3,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              3,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        },
+        [
+          8,
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "shape": [
+              2,
+              0,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          },
+          [
+            {
+              "weights.0": {
+                "shape": [
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            },
+            {
+              "weights.0": {
+                "shape": [
+                  1,
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  1,
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            }
+          ],
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                3,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                3,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ],
+        [
+          {
+            "shape": [
+              2,
+              1,
+              4
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          {
+            "shape": [
+              2,
+              1,
+              4
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        ]
+      ]
+    },
+    {
+      "method": "store_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            4,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        }
+      ],
+      "kwargs": {
+        "weights": {
+          "weights.0": {
+            "shape": [
+              2,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        },
+        "past_state": [
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "weights.0": {
+              "shape": [
+                1,
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                1,
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ],
+        "seq_index": 4
+      },
+      "output": [
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              3,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              3,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        },
+        [
+          8,
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "shape": [
+              2,
+              0,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          },
+          [
+            {
+              "weights.0": {
+                "shape": [
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            },
+            {
+              "weights.0": {
+                "shape": [
+                  1,
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  1,
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            }
+          ],
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                3,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                3,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ],
+        [
+          {
+            "shape": [
+              2,
+              1,
+              4
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          {
+            "shape": [
+              2,
+              1,
+              4
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        ]
+      ]
+    },
+    {
+      "method": "store_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            4,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        null
+      ],
+      "kwargs": {
+        "seq_index": 0,
+        "past_state": null,
+        "prev_weights": null,
+        "mask": null,
+        "return_surprises": true
+      },
+      "output": [
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              3,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              3,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        },
+        [
+          4,
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "shape": [
+              2,
+              0,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          },
+          [
+            {
+              "weights.0": {
+                "shape": [
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            },
+            {
+              "weights.0": {
+                "shape": [
+                  1,
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  1,
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            }
+          ],
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                3,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                3,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ],
+        [
+          {
+            "shape": [
+              2,
+              1,
+              4
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          {
+            "shape": [
+              2,
+              1,
+              4
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        ]
+      ]
+    },
+    {
+      "method": "retrieve_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            4,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              3,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              3,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        }
+      ],
+      "kwargs": {},
+      "output": {
+        "shape": [
+          2,
+          4,
+          8
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    },
+    {
+      "method": "store_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            4,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        }
+      ],
+      "kwargs": {
+        "seq_index": 4,
+        "past_state": [
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "weights.0": {
+              "shape": [
+                1,
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                1,
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ],
+        "prev_weights": null,
+        "mask": null,
+        "return_surprises": true
+      },
+      "output": [
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              3,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              3,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        },
+        [
+          8,
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "shape": [
+              2,
+              0,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          },
+          [
+            {
+              "weights.0": {
+                "shape": [
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            },
+            {
+              "weights.0": {
+                "shape": [
+                  1,
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  1,
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            }
+          ],
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                3,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                3,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ],
+        [
+          {
+            "shape": [
+              2,
+              1,
+              4
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          {
+            "shape": [
+              2,
+              1,
+              4
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        ]
+      ]
+    },
+    {
+      "method": "retrieve_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            4,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              3,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              3,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        }
+      ],
+      "kwargs": {},
+      "output": {
+        "shape": [
+          2,
+          4,
+          8
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    },
+    {
+      "method": "retrieve_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            1,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              1,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              1,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          }
+        }
+      ],
+      "kwargs": {},
+      "output": {
+        "shape": [
+          2,
+          1,
+          8
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    },
+    {
+      "method": "retrieve_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            1,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        },
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              1,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              1,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          }
+        }
+      ],
+      "kwargs": {},
+      "output": {
+        "shape": [
+          2,
+          1,
+          8
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    },
+    {
+      "method": "store_memories",
+      "input": [
+        {
+          "shape": [
+            2,
+            2,
+            8
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": false
+        }
+      ],
+      "kwargs": {
+        "weights": {
+          "weights.0": {
+            "shape": [
+              2,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        },
+        "mask": {
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "torch.bool",
+          "requires_grad": false
+        }
+      },
+      "output": [
+        {
+          "weights.0": {
+            "shape": [
+              2,
+              2,
+              8,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          "weights.1": {
+            "shape": [
+              2,
+              2,
+              16,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        },
+        [
+          2,
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "shape": [
+              2,
+              0,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": false
+          },
+          [
+            {
+              "weights.0": {
+                "shape": [
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            },
+            {
+              "weights.0": {
+                "shape": [
+                  1,
+                  2,
+                  8,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "weights.1": {
+                "shape": [
+                  1,
+                  2,
+                  16,
+                  8
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            }
+          ],
+          {
+            "weights.0": {
+              "shape": [
+                2,
+                2,
+                8,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "weights.1": {
+              "shape": [
+                2,
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ],
+        [
+          {
+            "shape": [
+              2,
+              1,
+              2
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          {
+            "shape": [
+              2,
+              1,
+              2
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          }
+        ]
+      ]
+    }
+  ],
+  "mlp": {
+    "input": {
+      "shape": [
+        2,
+        3,
+        8
+      ],
+      "dtype": "torch.float32",
+      "requires_grad": false
+    },
+    "weights": [
+      {
+        "shape": [
+          8,
+          16
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      },
+      {
+        "shape": [
+          16,
+          8
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    ],
+    "output": {
+      "shape": [
+        2,
+        3,
+        8
+      ],
+      "dtype": "torch.float32",
+      "requires_grad": true
+    }
+  },
+  "mac_inference": [
+    {
+      "name": "token_emb",
+      "owner": "Embedding",
+      "input": [
+        {
+          "shape": [
+            2,
+            13
+          ],
+          "dtype": "torch.int64",
+          "requires_grad": false
+        }
+      ],
+      "output": {
+        "shape": [
+          2,
+          13,
+          16
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    },
+    {
+      "name": "layers.0.4",
+      "owner": "NeuralMemory",
+      "input": [
+        {
+          "shape": [
+            3,
+            2,
+            19,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      ],
+      "kwargs": {
+        "state": null,
+        "prev_weights": null
+      },
+      "output": [
+        {
+          "shape": [
+            2,
+            19,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        },
+        [
+          18,
+          {
+            "norm.gamma": {
+              "shape": [
+                2,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "model.weights.0": {
+              "shape": [
+                2,
+                16,
+                64
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "model.weights.1": {
+              "shape": [
+                2,
+                64,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "shape": [
+              2,
+              2,
+              1,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          [
+            {
+              "norm.gamma": {
+                "shape": [
+                  2,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "model.weights.0": {
+                "shape": [
+                  2,
+                  16,
+                  64
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "model.weights.1": {
+                "shape": [
+                  2,
+                  64,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            },
+            {
+              "norm.gamma": {
+                "shape": [
+                  1,
+                  2,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "model.weights.0": {
+                "shape": [
+                  1,
+                  2,
+                  16,
+                  64
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "model.weights.1": {
+                "shape": [
+                  1,
+                  2,
+                  64,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            }
+          ],
+          {
+            "norm.gamma": {
+              "shape": [
+                2,
+                10,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "model.weights.0": {
+              "shape": [
+                2,
+                10,
+                16,
+                64
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "model.weights.1": {
+              "shape": [
+                2,
+                10,
+                64,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "layers.0.5",
+      "owner": "SegmentedAttention",
+      "input": [
+        {
+          "shape": [
+            2,
+            19,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      ],
+      "output": [
+        {
+          "shape": [
+            2,
+            19,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        },
+        [
+          {
+            "shape": [
+              2,
+              2,
+              24,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          [
+            {
+              "shape": [
+                2,
+                2,
+                19,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            {
+              "shape": [
+                2,
+                2,
+                19,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "norm",
+      "owner": "RMSNorm",
+      "input": [
+        {
+          "shape": [
+            2,
+            13,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      ],
+      "output": {
+        "shape": [
+          2,
+          13,
+          16
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    },
+    {
+      "name": "to_logits",
+      "owner": "Linear",
+      "input": [
+        {
+          "shape": [
+            2,
+            13,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      ],
+      "output": {
+        "shape": [
+          2,
+          13,
+          32
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    }
+  ],
+  "mac_training": [
+    {
+      "name": "token_emb",
+      "owner": "Embedding",
+      "input": [
+        {
+          "shape": [
+            2,
+            12
+          ],
+          "dtype": "torch.int64",
+          "requires_grad": false
+        }
+      ],
+      "output": {
+        "shape": [
+          2,
+          12,
+          16
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    },
+    {
+      "name": "layers.0.4",
+      "owner": "NeuralMemory",
+      "input": [
+        {
+          "shape": [
+            3,
+            2,
+            16,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      ],
+      "kwargs": {
+        "state": null,
+        "prev_weights": null
+      },
+      "output": [
+        {
+          "shape": [
+            2,
+            16,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        },
+        [
+          16,
+          {
+            "norm.gamma": {
+              "shape": [
+                2,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "model.weights.0": {
+              "shape": [
+                2,
+                16,
+                64
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "model.weights.1": {
+              "shape": [
+                2,
+                64,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          },
+          {
+            "shape": [
+              2,
+              2,
+              0,
+              16
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          [
+            {
+              "norm.gamma": {
+                "shape": [
+                  2,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "model.weights.0": {
+                "shape": [
+                  2,
+                  16,
+                  64
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "model.weights.1": {
+                "shape": [
+                  2,
+                  64,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            },
+            {
+              "norm.gamma": {
+                "shape": [
+                  1,
+                  2,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "model.weights.0": {
+                "shape": [
+                  1,
+                  2,
+                  16,
+                  64
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              },
+              "model.weights.1": {
+                "shape": [
+                  1,
+                  2,
+                  64,
+                  16
+                ],
+                "dtype": "torch.float32",
+                "requires_grad": true
+              }
+            }
+          ],
+          {
+            "norm.gamma": {
+              "shape": [
+                2,
+                9,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "model.weights.0": {
+              "shape": [
+                2,
+                9,
+                16,
+                64
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            "model.weights.1": {
+              "shape": [
+                2,
+                9,
+                64,
+                16
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "layers.0.5",
+      "owner": "SegmentedAttention",
+      "input": [
+        {
+          "shape": [
+            2,
+            16,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      ],
+      "output": [
+        {
+          "shape": [
+            2,
+            16,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        },
+        [
+          {
+            "shape": [
+              2,
+              2,
+              18,
+              8
+            ],
+            "dtype": "torch.float32",
+            "requires_grad": true
+          },
+          [
+            {
+              "shape": [
+                2,
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            },
+            {
+              "shape": [
+                2,
+                2,
+                16,
+                8
+              ],
+              "dtype": "torch.float32",
+              "requires_grad": true
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "norm",
+      "owner": "RMSNorm",
+      "input": [
+        {
+          "shape": [
+            2,
+            12,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      ],
+      "output": {
+        "shape": [
+          2,
+          12,
+          16
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    },
+    {
+      "name": "to_logits",
+      "owner": "Linear",
+      "input": [
+        {
+          "shape": [
+            2,
+            12,
+            16
+          ],
+          "dtype": "torch.float32",
+          "requires_grad": true
+        }
+      ],
+      "output": {
+        "shape": [
+          2,
+          12,
+          32
+        ],
+        "dtype": "torch.float32",
+        "requires_grad": true
+      }
+    }
+  ],
+  "mask_state_delta": 0.3099729120731354,
+  "checks": {
+    "incomplete_chunk_cached": true,
+    "store_path_consumes_cache": true,
+    "unaligned_continuation_failure_observed": true,
+    "aligned_continuation_passed": true,
+    "caller_old_cache_unchanged": true,
+    "frozen_read_no_mutation": true,
+    "repeated_read_equal": true,
+    "masked_loss_still_decay": true,
+    "registered_parameters_unchanged": true,
+    "detached_values_unchanged": true,
+    "detached_has_no_graph": true,
+    "mac_memory_observed": true,
+    "mac_output_shape": true,
+    "mac_loss_scalar": true,
+    "mac_backward_finite": true
+  },
+  "sources": {
+    "titans_pytorch\\neural_memory.py": "e3d56c786c977f63175dcf2cc3561fee39f8dc1e37188563f816a742626189c3",
+    "titans_pytorch\\memory_models.py": "840064caa4a849ee91c26b1dcf93f2f8a8ead3abc1245bb5d3326ac46431697c",
+    "titans_pytorch\\mac_transformer.py": "7d15baf062ac7d652c615cdb0addee127b5b21496d04ac9024856c78a7b093a4"
+  },
+  "scope": "contract and shape observations, not paper benchmark"
+}

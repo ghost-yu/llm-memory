@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "role": "Current nine-paper evidence/hash/link snapshot only; semantic acceptance is documented separately and cannot be inferred from this script",
+  "papers": 9,
+  "runtime_conditions": 170,
+  "signatures_or_contracts": 158,
+  "local_links_checked": 270,
+  "manual_acceptance": "资料/skill整体验收.md",
+  "manual_acceptance_sha256": "622002e64dd6b6e8a240cf668c638eaf673812de62c6689ba9aa2951af6d2fbb",
+  "rows": [
+    {
+      "paper": "A-MEM： Agentic Memory for LLM Agents",
+      "runtime_conditions": 23,
+      "signatures_or_contracts": 24,
+      "revision_report_sha256": "02acc8c0c68bb565d76c7d382f91175d9db0af0238cbb5b042042c681e0a1fd9",
+      "explanation_sha256": "6b2be675f77b339718c455dcf34ddb78354398126261ddc2bb4ca550d34bfd66",
+      "manual_record_sha256": "61ddb7c9541ecee78495463572f4cd8b2059af10b76d434dd3d278329d02723f",
+      "trace_sha256": "64f75aa1a428372247902bd7ecfed892023e28ec8d377118aab0bc3990eda08e",
+      "artifacts_verified": 10,
+      "reproduction_status": "部分成功"
+    },
+    {
+      "paper": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
+      "runtime_conditions": 27,
+      "signatures_or_contracts": 12,
+      "revision_report_sha256": "5b1dd988ada5a399dccd39783a644f335804809b724fa158e3873e3f3ac171a4",
+      "explanation_sha256": "dd675e442580f1fca7677d9a4c489772df05edb1a747a555d631dcc7390538e7",
+      "manual_record_sha256": "486c25e8f27f0a33fbd6d72e4e61a17ae6698495179d4244b5219f0a86d2515e",
+      "trace_sha256": "379b8823ceb8586eee39d41ad123f9c83d9609688368fd3545ec59d160e3c4f8",
+      "artifacts_verified": 11,
+      "reproduction_status": "部分成功"
+    },
+    {
+      "paper": "It's All Connected： A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization",
+      "runtime_conditions": 13,
+      "signatures_or_contracts": 5,
+      "revision_report_sha256": "67118b11a7a400f971ed1feac7929a7fcc6122cfbde97a544d5d7472bb7e8dec",
+      "explanation_sha256": "6c75b2eabd84601a2434717d207cb2889a9aaa38d92611dec4caa98384f2146c",
+      "manual_record_sha256": "5ace5ac81b14a34628404065155502d23c8d5513b513804ba3d06d26545878e5",
+      "trace_sha256": "2cd5081a1b98da670077ef73d6b55326e239a9e1914d9b4a19a3a37740376679",
+      "artifacts_verified": 10,
+      "reproduction_status": "部分成功"
+    },
+    {
+      "paper": "LongMemEval： Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "runtime_conditions": 28,
+      "signatures_or_contracts": 14,
+      "revision_report_sha256": "befebbdd2d35d9579d81a00629209a8a2823d84b910dabe90802a2d73b4556c5",
+      "explanation_sha256": "4fd08385b9411f770984af9c55ba470b8289075185133b66d5fb3be39d4afe6c",
+      "manual_record_sha256": "72ecb4bf5eb6c05a20bf70020a972b1dd912686dd1febe4d2c5ff14684e2e8f9",
+      "trace_sha256": "47e1f0f96506defe76704375a0a7e058e3e0ad8c278bc2090797ba7920c4bfee",
+      "artifacts_verified": 10,
+      "reproduction_status": "部分成功"
+    },
+    {
+      "paper": "Mem0： Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "runtime_conditions": 14,
+      "signatures_or_contracts": 28,
+      "revision_report_sha256": "5b3f388a98ef66d739ea7c5bd565c1fc76df5118fc64b89944f4f8469865aee2",
+      "explanation_sha256": "e00bfb87958b5596d93c1eb26122ea20befbd5c70f422f843537c55a9f576f56",
+      "manual_record_sha256": "4f98478ceac0de8efe083fa110f9619d76d94c5b2e3013a5d69958df641a4156",
+      "trace_sha256": "cd27705ecfaf2a5bfc236c714101221458d1e9a8e34f2e37be02a0a5e9800c17",
+      "artifacts_verified": 9,
+      "reproduction_status": "部分成功"
+    },
+    {
+      "paper": "MemGPT： Towards LLMs as Operating Systems",
+      "runtime_conditions": 18,
+      "signatures_or_contracts": 33,
+      "revision_report_sha256": "653e625c261a6c43a10e2784b882770fbc05f4cb20d74b84d9e87d11203e766d",
+      "explanation_sha256": "84e2da7d54d9df39ef02ea04c3ecb32808ea724865fd0a829269ac97291a6b6c",
+      "manual_record_sha256": "f3ccfd0aa2b8c88260d3874cce4ae626918ffb64c45ee55619bab630808e871f",
+      "trace_sha256": "46fee70959aa2f6b0467973e5a432515d6a7559cf6d771baaa74959dd99954de",
+      "artifacts_verified": 10,
+      "reproduction_status": "部分成功"
+    },
+    {
+      "paper": "Nested Learning： The Illusion of Deep Learning Architectures",
+      "runtime_conditions": 16,
+      "signatures_or_contracts": 11,
+      "revision_report_sha256": "b295ee6bebc86428ce37bc9330e422f7eb96b474a74eff279820a2a43a2d4678",
+      "explanation_sha256": "626685fc4cdc0685cba1b945e39e805cc353c04ff40836255d37b2458be25c6d",
+      "manual_record_sha256": "cb5ad175df6084f4121874a4dbbc0e3d4d6d28721917427b2cda53f049f84474",
+      "trace_sha256": "b8889391aff62cb9b5e442e520b5ed9efd691341b18c86cb4037b8b77a1f1f60",
+      "artifacts_verified": 9,
+      "reproduction_status": "部分成功"
+    },
+    {
+      "paper": "Titans： Learning to Memorize at Test Time",
+      "runtime_conditions": 15,
+      "signatures_or_contracts": 11,
+      "revision_report_sha256": "d02cf9a7a950e8b41cd68b5351dac923a9389893530fb2b8e1d3f04f320084ad",
+      "explanation_sha256": "f65fd03c2e4202c4a88d7bd867e702d688041344fcda7b1ea48a80e69f1b75da",
+      "manual_record_sha256": "72fa7a4af4f91f817b93aac2d38191f154cf29b58c22199bcb03b375ca73ddee",
+      "trace_sha256": "40fca635498b689e940675d16a1c302c91e03a73b5daa7effab7a44161bb6703",
+      "artifacts_verified": 9,
+      "reproduction_status": "部分成功"
+    },
+    {
+      "paper": "Zep： A Temporal Knowledge Graph Architecture for Agent Memory",
+      "runtime_conditions": 16,
+      "signatures_or_contracts": 20,
+      "revision_report_sha256": "c96adeaabc00db74368d7b224f8f4f85adea63c37c07573aee34b4a7c1eac111",
+      "explanation_sha256": "e43bf03388833f2ede2115c35c53a74818405caf81e8f6487e208e20e4b4a0ae",
+      "manual_record_sha256": "3fb1028b50e7f497fd8d21b3aa15eda417c83202d6b443dbeb6e7aacb6bf24f2",
+      "trace_sha256": "dc391fb16812a6e296d4da79ffbb8336a7bd31b88ea14306349a0a1ccb50894b",
+      "artifacts_verified": 9,
+      "reproduction_status": "部分成功"
+    }
+  ]
+}

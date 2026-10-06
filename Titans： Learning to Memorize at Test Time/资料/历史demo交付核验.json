@@ -1,0 +1,62 @@
+{
+  "checked_files": [
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\解释.md",
+      "bytes": 36962,
+      "sha256": "625255f3a2bc14ea5794ba9ccc1721d32d317653706d65f47f6a07ee5f040192"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\demo说明.md",
+      "bytes": 9178,
+      "sha256": "3f90036136a7335913874a198746f8f0dae4f646694be5cdcd3415089a5eed43"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\scripts\\demo_associative_memory.py",
+      "bytes": 10243,
+      "sha256": "d9de64d145a6a863c1e53b394fb4ab8ff2a251a89d5dea6aa4675542e38321e1"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_results.json",
+      "bytes": 6691,
+      "sha256": "79fdf571a2768e54fbc8959bd746a774ce3e0786f07ef0ffe02041de372383cf"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_checkpoint_check.json",
+      "bytes": 304,
+      "sha256": "8b0c617be8b5e9ecd2425b915f14b6ce340a43a4772cc177efb3f60dce55b6f1"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_report.html",
+      "bytes": 3778,
+      "sha256": "df3b3d641ab8cc78cdc9c472e8f0f04bdbcf3f66168b12984f54aa35bb34523a"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_summary.png",
+      "bytes": 116477,
+      "sha256": "efb9e265e5e8eded2e61f17e63114ba5d4baaf2c8659c443eb135a4260112065"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_summary.svg",
+      "bytes": 71969,
+      "sha256": "e34fc1fa5c13018d748871a6833f3a0ba9e11f8a6c9e44757e2d34b9bb89abfc"
+    },
+    {
+      "path": "Titans： Learning to Memorize at Test Time\\复现\\outputs\\synthetic_memory_demo.pt",
+      "bytes": 12482,
+      "sha256": "754d6499a3a29b1f50f6d29029f9cd9de78a618a4cb9ed9a350a69b658b27c50"
+    }
+  ],
+  "local_links_checked": 36,
+  "checkpoint_reload": {
+    "checkpoint_reload_matches_saved_metrics": true,
+    "differences": {
+      "written_accuracy": 0.0,
+      "reset_accuracy": 0.0,
+      "changed_context_accuracy": 0.0,
+      "changed_key_accuracy": 0.0,
+      "untouched_keys_accuracy": 0.0
+    },
+    "commit": "ce7da9e9a7909e95c8249ceece7c88000bc2c0b9"
+  },
+  "scope": "Titans content plus controlled demo only; other papers pending"
+}

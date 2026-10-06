@@ -1,0 +1,110 @@
+{
+  "scope": "original Mem0 methods with controlled providers and SQLite adapters; no natural-language quality or paper benchmark",
+  "source_sha256": "eb76ed6dd3bf82ef7760bc2f1af4942a9842d443ec870957c3e7dee5bc8b4bc0",
+  "original_sources": {
+    "mem0/configs/prompts.py": "f1ce95c847189e4513940f7d02852edfba2ebe93de6d99c44c4eec948be07d49",
+    "mem0/memory/utils.py": "7282ca7a1358598345ceaf42c393f187305b2c69748d20f8e73f4edc9ce5c9de",
+    "mem0/configs/base.py": "5c0f8060eb162cd1a5341b1661eed0aeff7fdc25ceee76b97e8b0c659f359000",
+    "mem0/memory/storage.py": "85d94d4c34a2916b6e572e818bde2752bf9b6678a6ff1d0860f81e6c2d93bbbe",
+    "mem0/memory/main.py": "63c86caa29cd5b223199128914bfc71c680acb6229d379e72948cbe295fb030c"
+  },
+  "signatures": {
+    "Memory.add": "(self, messages, user_id=None, agent_id=None, run_id=None, metadata=None, filters=None, infer=True, memory_type=None, prompt=None)",
+    "Memory._add_to_vector_store": "(self, messages, metadata, filters, infer)",
+    "Memory._add_to_graph": "(self, messages, filters)",
+    "Memory.search": "(self, query, user_id=None, agent_id=None, run_id=None, limit=100, filters=None)",
+    "Memory._search_vector_store": "(self, query, filters, limit)",
+    "Memory._create_memory": "(self, data, existing_embeddings, metadata=None)",
+    "Memory._update_memory": "(self, memory_id, data, existing_embeddings, metadata=None)",
+    "Memory._delete_memory": "(self, memory_id)",
+    "parse_messages": "(messages)",
+    "get_fact_retrieval_messages": "(message)",
+    "remove_code_blocks": "(content: str) -> str",
+    "parse_vision_messages": "(messages, llm=None, vision_details='auto')",
+    "SQLiteManager.__init__": "(self, db_path=':memory:')",
+    "SQLiteManager.add_history": "(self, memory_id, old_memory, new_memory, event, created_at=None, updated_at=None, is_deleted=0)",
+    "SQLiteManager.get_history": "(self, memory_id)",
+    "Embedder.embed": "(self, text, memory_action=None)",
+    "Vectors.__init__": "(self, path)",
+    "Vectors.insert": "(self, vectors, ids, payloads)",
+    "Vectors.snapshot": "(self)",
+    "Vectors.get": "(self, vector_id)",
+    "Vectors.update": "(self, vector_id, vector, payload)",
+    "Vectors.delete": "(self, vector_id)",
+    "Vectors.search": "(self, query, vectors, limit, filters)",
+    "Provider.__init__": "(self)",
+    "Provider.generate_response": "(self, messages, response_format=None)",
+    "demo.load": "(path, names=None)",
+    "demo.setup": "(vpath, hpath)",
+    "demo.main": "()"
+  },
+  "observations": {
+    "mutated_filters": {
+      "tag": "one",
+      "user_id": "alice"
+    },
+    "mutated_metadata": {
+      "custom": "original",
+      "user_id": "alice",
+      "data": "city=Beijing",
+      "hash": "b088cd5f69a03974704249d50b41f3d5",
+      "created_at": "2026-10-04T20:38:54.701948-07:00"
+    },
+    "updated_payload": {
+      "user_id": "alice",
+      "data": "city=Hangzhou",
+      "hash": "1fe05fc17f8ca8453726ed45e709c52c",
+      "created_at": "2026-10-04T20:38:54.701948-07:00",
+      "updated_at": "2026-10-04T20:38:54.712656-07:00"
+    },
+    "empty_scope_result": {
+      "results": []
+    },
+    "zero_query_results": {
+      "results": [
+        {
+          "id": "7ca0a130-1c3e-4956-a4ee-01d192daede6",
+          "memory": "city=Hangzhou",
+          "hash": "1fe05fc17f8ca8453726ed45e709c52c",
+          "metadata": null,
+          "score": 0.0,
+          "created_at": "2026-10-04T20:38:54.701948-07:00",
+          "updated_at": "2026-10-04T20:38:54.712656-07:00",
+          "user_id": "alice"
+        }
+      ]
+    },
+    "partial_actions_result": {
+      "results": [
+        {
+          "id": "b4bae27e-9b8b-4648-9aba-1c56e0261ea7",
+          "memory": "hobby=walking",
+          "event": "ADD"
+        }
+      ]
+    },
+    "provider_stage_cost_duplicate": 2,
+    "provider_stage_cost_BAD_JSON": 2,
+    "history_failure": {
+      "vector_records": 1,
+      "history_records": 0,
+      "boundary": "controlled failure, isolated temp databases"
+    }
+  },
+  "checks_passed": [
+    "add mutates supplied filters",
+    "create mutates supplied metadata",
+    "update preserves ID/time",
+    "update drops unprovided custom metadata",
+    "NONE still uses both provider stages",
+    "bad extraction still enters update stage",
+    "missing scope rejected",
+    "None-valued scope key accepted observed",
+    "non-Latin query maps to zero vector",
+    "zero score still returned by adapter",
+    "infer False skips system only and provider",
+    "invalid action ID skipped while later ADD succeeds",
+    "history API omits is_deleted",
+    "vector write survives subsequent history failure"
+  ]
+}

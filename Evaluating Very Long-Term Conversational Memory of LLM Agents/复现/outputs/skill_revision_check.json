@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "scope": "11 runtime metric/host/context signatures, original pooling AST signature, 27 observed conditions, source/file consistency and one real ranking replay; not semantic completeness certification",
+  "runtime_checks": 27,
+  "signatures_checked": 12,
+  "local_links_checked": 34,
+  "artifacts": [
+    {
+      "path": "解释.md",
+      "sha256": "dd675e442580f1fca7677d9a4c489772df05edb1a747a555d631dcc7390538e7",
+      "bytes": 35935
+    },
+    {
+      "path": "资料/skill内容核查.md",
+      "sha256": "486c25e8f27f0a33fbd6d72e4e61a17ae6698495179d4244b5219f0a86d2515e",
+      "bytes": 5040
+    },
+    {
+      "path": "复现/README.md",
+      "sha256": "af4c15fa152c32a48d25435f4ccf6aca6779b5a63cebe277277bb95ba9ba9556",
+      "bytes": 5812
+    },
+    {
+      "path": "复现/scripts/demo_locomo.py",
+      "sha256": "6b2553d4c1f37f45ee7e4d232e0909fa3757245167c3762dee2e61368d6aca24",
+      "bytes": 7555
+    },
+    {
+      "path": "复现/scripts/trace_contracts.py",
+      "sha256": "43eb3ba77b00ad3f447c4eb95083780bcccf6b5e4b55d4db8d19c8e8bbb06700",
+      "bytes": 5864
+    },
+    {
+      "path": "复现/scripts/trace_pooling.py",
+      "sha256": "5de8969cf355aa262ee21b59b520025e8627b0346486b775d6cbfe34152fd71e",
+      "bytes": 1995
+    },
+    {
+      "path": "复现/scripts/audit_skill_revision.py",
+      "sha256": "8930e1bba744809ff8dfad01cada46f9014a657a64d20b0381cb0d1ccb7671ac",
+      "bytes": 4951
+    },
+    {
+      "path": "复现/outputs/contracts_trace.json",
+      "sha256": "379b8823ceb8586eee39d41ad123f9c83d9609688368fd3545ec59d160e3c4f8",
+      "bytes": 2928
+    },
+    {
+      "path": "复现/outputs/contracts_stdout.txt",
+      "sha256": "9597e9086f9c7c443e6a96e7d0b12f4b059bdf2f83ba396449cfd53bdad55a8c",
+      "bytes": 511
+    },
+    {
+      "path": "复现/outputs/pooling_trace.json",
+      "sha256": "c9a26d6137a78c626246ee8ff1c896df92b531ec64e74b3f8af697bedbbc14fd",
+      "bytes": 1210
+    },
+    {
+      "path": "复现/outputs/results.json",
+      "sha256": "f1c054fb71fab4dd5c2e361c0e65efc43ac542d59d458c3962ed82fd8c50973d",
+      "bytes": 4513180
+    }
+  ],
+  "manual_content_review": "资料/skill内容核查.md"
+}

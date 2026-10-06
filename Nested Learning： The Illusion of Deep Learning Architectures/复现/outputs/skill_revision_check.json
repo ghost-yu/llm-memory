@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "scope": "11 signatures, runtime/boundary evidence and artifact consistency; does not certify semantic completeness",
+  "runtime_checks": 16,
+  "local_links_checked": 25,
+  "artifacts": [
+    {
+      "path": "解释.md",
+      "sha256": "626685fc4cdc0685cba1b945e39e805cc353c04ff40836255d37b2458be25c6d",
+      "bytes": 45241
+    },
+    {
+      "path": "资料/skill内容核查.md",
+      "sha256": "cb5ad175df6084f4121874a4dbbc0e3d4d6d28721917427b2cda53f049f84474",
+      "bytes": 3658
+    },
+    {
+      "path": "复现/README.md",
+      "sha256": "067cf9f7a02b4e1fcdfd603a8e6300c3ed7afcd14b985cef0b7084a4dc6fe86c",
+      "bytes": 6075
+    },
+    {
+      "path": "复现/scripts/demo_cms.py",
+      "sha256": "084c17b2f5ee13e53c1cd1fa1e1764196b6f128b69dfcc88f7cabdb63a1a441d",
+      "bytes": 7865
+    },
+    {
+      "path": "复现/scripts/trace_contracts.py",
+      "sha256": "ae953ecae23e03d5697fd74cdb271c11233def1ec842acfe91aa76acd91a87e2",
+      "bytes": 6268
+    },
+    {
+      "path": "复现/scripts/audit_skill_revision.py",
+      "sha256": "52b6649b171a90cab0a1f159e4a6972c96bf697f0cd47570e3ea6741da8ce747",
+      "bytes": 2938
+    },
+    {
+      "path": "复现/outputs/contracts_trace.json",
+      "sha256": "b8889391aff62cb9b5e442e520b5ed9efd691341b18c86cb4037b8b77a1f1f60",
+      "bytes": 4515
+    },
+    {
+      "path": "复现/outputs/demo_results.json",
+      "sha256": "4e03a292cffa4a815218d26208cdc13110c36fdee9f91d0e14ecb06caaad0224",
+      "bytes": 4063796
+    },
+    {
+      "path": "复现/outputs/toy_cms_checkpoint.pt",
+      "sha256": "1a96128328a5d0c6e5232c00e4cdd89c730cf48376fbb1858cd5a40357c234e4",
+      "bytes": 32247
+    }
+  ],
+  "manual_content_review": "资料/skill内容核查.md"
+}

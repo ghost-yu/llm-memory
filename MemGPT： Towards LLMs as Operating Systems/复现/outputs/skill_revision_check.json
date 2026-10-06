@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "scope": "33 signatures, original commit/hash and boundary evidence, file/structure consistency; not semantic completeness certification",
+  "runtime_checks": 18,
+  "local_links_checked": 25,
+  "artifacts": [
+    {
+      "path": "解释.md",
+      "sha256": "84e2da7d54d9df39ef02ea04c3ecb32808ea724865fd0a829269ac97291a6b6c",
+      "bytes": 41447
+    },
+    {
+      "path": "资料/skill内容核查.md",
+      "sha256": "f3ccfd0aa2b8c88260d3874cce4ae626918ffb64c45ee55619bab630808e871f",
+      "bytes": 3686
+    },
+    {
+      "path": "复现/README.md",
+      "sha256": "75d0f964cd358d94cdc0be33b74f03bd9d4d32beb7d457e18604a9ecee092367",
+      "bytes": 6213
+    },
+    {
+      "path": "复现/scripts/demo_memgpt.py",
+      "sha256": "6caccdfa6580e42ed21135f8af70e79454920cb9d2155caecb8e8ef8e7954d57",
+      "bytes": 10796
+    },
+    {
+      "path": "复现/scripts/trace_contracts.py",
+      "sha256": "38dfdcdd80840c76f2c49d1eebdf5ff2f46f3454253cfe618b2d6f05200b90c8",
+      "bytes": 6747
+    },
+    {
+      "path": "复现/scripts/audit_skill_revision.py",
+      "sha256": "30525ee3fb29b4bb9973a2e12ceb50e0c4ddd66bc49127384466d15739b9f36e",
+      "bytes": 3642
+    },
+    {
+      "path": "复现/outputs/contracts_trace.json",
+      "sha256": "46fee70959aa2f6b0467973e5a432515d6a7559cf6d771baaa74959dd99954de",
+      "bytes": 5268
+    },
+    {
+      "path": "复现/outputs/demo_results.json",
+      "sha256": "d73e1864d2d235f8de75b34dc85c84ffcc3e9a53b23c6c0509bcb6befba598d4",
+      "bytes": 85625
+    },
+    {
+      "path": "代码/MemGPT-historical/memgpt/memory.py",
+      "sha256": "bb916ebde20f4b83306d6efa139e7cffa6bbe7eb1cb33ad788986c0a09080ba3",
+      "bytes": 19562
+    },
+    {
+      "path": "代码/MemGPT-historical/memgpt/agent.py",
+      "sha256": "9ee94ec62d7b1c1ebc05aba894fd9e7881d3bc6d57a8448e06a9de7c78042978",
+      "bytes": 45756
+    }
+  ],
+  "manual_content_review": "资料/skill内容核查.md"
+}

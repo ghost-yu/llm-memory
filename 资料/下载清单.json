@@ -1,0 +1,186 @@
+{
+  "papers": [
+    {
+      "arxiv": "2501.00663",
+      "title": "Titans: Learning to Memorize at Test Time",
+      "category": "模型内部记忆",
+      "relation": "视频一直接链接",
+      "purpose": "测试时通过神经记忆模块写入和检索信息。",
+      "version": "v1",
+      "pdf_url": "https://arxiv.org/pdf/2501.00663v1",
+      "local_pdf": "G:\\大模型记忆\\Titans： Learning to Memorize at Test Time\\原论文.pdf",
+      "pages": 27,
+      "bytes": 3657065,
+      "sha256": "a65e4a7d02784df1a040b487127e6dd09fff4474e5caf94d93263af3d50cfbc2",
+      "authors": [
+        "Behrouz, Ali",
+        "Zhong, Peilin",
+        "Mirrokni, Vahab"
+      ]
+    },
+    {
+      "arxiv": "2504.13173",
+      "title": "It's All Connected: A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization",
+      "category": "模型内部记忆",
+      "relation": "Google 博客关联工作（MIRAS）",
+      "purpose": "用关联记忆、学习目标、保留机制和更新算法统一分析序列模型。",
+      "version": "v1",
+      "pdf_url": "https://arxiv.org/pdf/2504.13173v1",
+      "local_pdf": "G:\\大模型记忆\\It's All Connected： A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization\\原论文.pdf",
+      "pages": 26,
+      "bytes": 1987057,
+      "sha256": "faceb861d46d65fd7098cbdb97aa400081c7b5cb7e048ac8d010f01537915ab2",
+      "authors": [
+        "Behrouz, Ali",
+        "Razaviyayn, Meisam",
+        "Zhong, Peilin",
+        "Mirrokni, Vahab"
+      ]
+    },
+    {
+      "arxiv": "2512.24695",
+      "title": "Nested Learning: The Illusion of Deep Learning Architectures",
+      "category": "模型内部记忆",
+      "relation": "视频一简介所链接 Google 博客的论文",
+      "purpose": "讨论多层优化、不同更新频率的记忆，以及 Hope 架构。",
+      "version": "v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.24695v1",
+      "local_pdf": "G:\\大模型记忆\\Nested Learning： The Illusion of Deep Learning Architectures\\原论文.pdf",
+      "pages": 52,
+      "bytes": 6089956,
+      "sha256": "e87a9ce82ff24e96f55b83fb9713a5d6fc9e4a1a232c12d42da49c10022ed891",
+      "authors": [
+        "Behrouz, Ali",
+        "Razaviyayn, Meisam",
+        "Zhong, Peilin",
+        "Mirrokni, Vahab"
+      ]
+    },
+    {
+      "arxiv": "2504.19413",
+      "title": "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "category": "Agent 外部记忆",
+      "relation": "对应视频二提及的 Mem0 系统",
+      "purpose": "从对话抽取、整合和检索事实，并讨论图记忆扩展。",
+      "version": "v1",
+      "pdf_url": "https://arxiv.org/pdf/2504.19413v1",
+      "local_pdf": "G:\\大模型记忆\\Mem0： Building Production-Ready AI Agents with Scalable Long-Term Memory\\原论文.pdf",
+      "pages": 23,
+      "bytes": 1144031,
+      "sha256": "bec870b657aa73405275a6d8fe27bcd4271799e028bc62986ab9c4cd27a3712d",
+      "authors": [
+        "Chhikara, Prateek",
+        "Khant, Dev",
+        "Aryan, Saket",
+        "Singh, Taranjeet",
+        "Yadav, Deshraj"
+      ]
+    },
+    {
+      "arxiv": "2501.13956",
+      "title": "Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+      "category": "Agent 外部记忆",
+      "relation": "对应视频二提及的 Zep 系统",
+      "purpose": "用时序知识图谱追踪事实、关系及其时间变化。",
+      "version": "v1",
+      "pdf_url": "https://arxiv.org/pdf/2501.13956v1",
+      "local_pdf": "G:\\大模型记忆\\Zep： A Temporal Knowledge Graph Architecture for Agent Memory\\原论文.pdf",
+      "pages": 12,
+      "bytes": 148771,
+      "sha256": "d26f7eb599540e8b14d75e7efda58a07661abbb1b864e58323b5768475a15d42",
+      "authors": [
+        "Rasmussen, Preston",
+        "Paliychuk, Pavlo",
+        "Beauvais, Travis",
+        "Ryan, Jack",
+        "Chalef, Daniel"
+      ]
+    },
+    {
+      "arxiv": "2310.08560",
+      "title": "MemGPT: Towards LLMs as Operating Systems",
+      "category": "Agent 外部记忆",
+      "relation": "方向补充，未确认视频逐字讨论该论文",
+      "purpose": "借鉴操作系统分层内存，让 Agent 管理有限上下文与外部存储。",
+      "version": "v2",
+      "pdf_url": "https://arxiv.org/pdf/2310.08560v2",
+      "local_pdf": "G:\\大模型记忆\\MemGPT： Towards LLMs as Operating Systems\\原论文.pdf",
+      "pages": 13,
+      "bytes": 663708,
+      "sha256": "9f674bcff69c86f11c813dcfad613d8841f5f8ed17979e3c4df06a91df7762e0",
+      "authors": [
+        "Packer, Charles",
+        "Wooders, Sarah",
+        "Lin, Kevin",
+        "Fang, Vivian",
+        "Patil, Shishir G.",
+        "Stoica, Ion",
+        "Gonzalez, Joseph E."
+      ]
+    },
+    {
+      "arxiv": "2502.12110",
+      "title": "A-MEM: Agentic Memory for LLM Agents",
+      "category": "Agent 外部记忆",
+      "relation": "方向补充，未确认视频逐字讨论该论文",
+      "purpose": "让记忆形成带关联的笔记，并随新信息组织和演化。",
+      "version": "v11",
+      "pdf_url": "https://arxiv.org/pdf/2502.12110v11",
+      "local_pdf": "G:\\大模型记忆\\A-MEM： Agentic Memory for LLM Agents\\原论文.pdf",
+      "pages": 28,
+      "bytes": 1015164,
+      "sha256": "fec32b521c4a1f793442bf1aeb26139c583078350d1cd4ab8f4eccc54a0694f0",
+      "authors": [
+        "Xu, Wujiang",
+        "Liang, Zujie",
+        "Mei, Kai",
+        "Gao, Hang",
+        "Tan, Juntao",
+        "Zhang, Yongfeng"
+      ]
+    },
+    {
+      "arxiv": "2402.17753",
+      "title": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
+      "category": "记忆评测",
+      "relation": "方向补充：LoCoMo，Mem0 论文使用的基准",
+      "purpose": "评估长时间、多会话对话中的记忆能力。",
+      "version": "v1",
+      "pdf_url": "https://arxiv.org/pdf/2402.17753v1",
+      "local_pdf": "G:\\大模型记忆\\Evaluating Very Long-Term Conversational Memory of LLM Agents\\原论文.pdf",
+      "pages": 19,
+      "bytes": 1608560,
+      "sha256": "218188e1d66a553afe324491e3e5e5d0af107196c9ff32c65bb3640ebf638539",
+      "authors": [
+        "Maharana, Adyasha",
+        "Lee, Dong-Ho",
+        "Tulyakov, Sergey",
+        "Bansal, Mohit",
+        "Barbieri, Francesco",
+        "Fang, Yuwei"
+      ]
+    },
+    {
+      "arxiv": "2410.10813",
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "category": "记忆评测",
+      "relation": "方向补充：Zep 论文使用的基准",
+      "purpose": "检查信息提取、跨会话推理、时间推理、知识更新和拒答能力。",
+      "version": "v2",
+      "pdf_url": "https://arxiv.org/pdf/2410.10813v2",
+      "local_pdf": "G:\\大模型记忆\\LongMemEval： Benchmarking Chat Assistants on Long-Term Interactive Memory\\原论文.pdf",
+      "pages": 28,
+      "bytes": 749169,
+      "sha256": "05c5d055201466a241a56e082cdd02d39ad566fa04b3804891983e4e069a3fda",
+      "authors": [
+        "Wu, Di",
+        "Wang, Hongwei",
+        "Yu, Wenhao",
+        "Zhang, Yuwei",
+        "Chang, Kai-Wei",
+        "Yu, Dong"
+      ]
+    }
+  ],
+  "errors": []
+}

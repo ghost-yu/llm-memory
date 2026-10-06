@@ -1,0 +1,328 @@
+{
+  "status": "passed",
+  "role": "artifact consistency only; does not certify skill semantic completeness",
+  "content_review_progress": "资料/skill补齐进度.md",
+  "papers": 9,
+  "scope": "nine readings with modest demos, not full paper benchmarks",
+  "local_links_checked": 299,
+  "details": [
+    {
+      "title": "Titans: Learning to Memorize at Test Time",
+      "folder": "Titans： Learning to Memorize at Test Time",
+      "pdf_pages": 27,
+      "pdf_sha256": "a65e4a7d02784df1a040b487127e6dd09fff4474e5caf94d93263af3d50cfbc2",
+      "scripts": 5,
+      "repositories": [
+        {
+          "path": "Titans： Learning to Memorize at Test Time\\代码\\titans-pytorch",
+          "head": "ce7da9e9a7909e95c8249ceece7c88000bc2c0b9"
+        }
+      ],
+      "files": {
+        "Titans： Learning to Memorize at Test Time\\解释.md": {
+          "bytes": 63968,
+          "sha256": "f65fd03c2e4202c4a88d7bd867e702d688041344fcda7b1ea48a80e69f1b75da"
+        },
+        "Titans： Learning to Memorize at Test Time\\复现\\README.md": {
+          "bytes": 8211,
+          "sha256": "06cb62d947b5a6ce796e887a0f1c8092dab9d70a32ebb7d0625923fdfa8f7ad5"
+        },
+        "Titans： Learning to Memorize at Test Time\\复现\\requirements.txt": {
+          "bytes": 4031,
+          "sha256": "e7251deea97523b144bcde36b1978c0313231d9c610fe7736abbe5e0af094021"
+        },
+        "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_results.json": {
+          "bytes": 6691,
+          "sha256": "79fdf571a2768e54fbc8959bd746a774ce3e0786f07ef0ffe02041de372383cf"
+        },
+        "Titans： Learning to Memorize at Test Time\\复现\\outputs\\demo_delivery_check.json": {
+          "bytes": 4191,
+          "sha256": "7f116a6596b65b398954e71420986ad89cbfae1e4d7f5e28c34753d3e97098aa"
+        }
+      },
+      "scope": "paper reading and small demo, partial reproduction"
+    },
+    {
+      "title": "It's All Connected: A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization",
+      "folder": "It's All Connected： A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization",
+      "pdf_pages": 26,
+      "pdf_sha256": "faceb861d46d65fd7098cbdb97aa400081c7b5cb7e048ac8d010f01537915ab2",
+      "scripts": 4,
+      "repositories": [],
+      "files": {
+        "It's All Connected： A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization\\解释.md": {
+          "bytes": 47445,
+          "sha256": "6c75b2eabd84601a2434717d207cb2889a9aaa38d92611dec4caa98384f2146c"
+        },
+        "It's All Connected： A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization\\复现\\README.md": {
+          "bytes": 6022,
+          "sha256": "d7dfc6142e3436d868305cf27d75173082d29c4b68b8deed7365a2ed31ff0267"
+        },
+        "It's All Connected： A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization\\复现\\requirements.txt": {
+          "bytes": 4031,
+          "sha256": "e7251deea97523b144bcde36b1978c0313231d9c610fe7736abbe5e0af094021"
+        },
+        "It's All Connected： A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization\\复现\\outputs\\demo_results.json": {
+          "bytes": 73193,
+          "sha256": "8beee424489de4fa13b91ffc646e4add69eee17a2bf7a09af1482f976537c212"
+        },
+        "It's All Connected： A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization\\复现\\outputs\\delivery_check.json": {
+          "bytes": 1925,
+          "sha256": "9f9c832f9f247aa229a58a8fa8dfa9f1f8d8b9983c6c26b8cf2913638684c796"
+        }
+      },
+      "scope": "paper reading and small demo, partial reproduction"
+    },
+    {
+      "title": "Nested Learning: The Illusion of Deep Learning Architectures",
+      "folder": "Nested Learning： The Illusion of Deep Learning Architectures",
+      "pdf_pages": 52,
+      "pdf_sha256": "e87a9ce82ff24e96f55b83fb9713a5d6fc9e4a1a232c12d42da49c10022ed891",
+      "scripts": 4,
+      "repositories": [],
+      "files": {
+        "Nested Learning： The Illusion of Deep Learning Architectures\\解释.md": {
+          "bytes": 45241,
+          "sha256": "626685fc4cdc0685cba1b945e39e805cc353c04ff40836255d37b2458be25c6d"
+        },
+        "Nested Learning： The Illusion of Deep Learning Architectures\\复现\\README.md": {
+          "bytes": 6075,
+          "sha256": "067cf9f7a02b4e1fcdfd603a8e6300c3ed7afcd14b985cef0b7084a4dc6fe86c"
+        },
+        "Nested Learning： The Illusion of Deep Learning Architectures\\复现\\requirements.txt": {
+          "bytes": 4031,
+          "sha256": "e7251deea97523b144bcde36b1978c0313231d9c610fe7736abbe5e0af094021"
+        },
+        "Nested Learning： The Illusion of Deep Learning Architectures\\复现\\outputs\\demo_results.json": {
+          "bytes": 4063796,
+          "sha256": "4e03a292cffa4a815218d26208cdc13110c36fdee9f91d0e14ecb06caaad0224"
+        },
+        "Nested Learning： The Illusion of Deep Learning Architectures\\复现\\outputs\\delivery_check.json": {
+          "bytes": 2290,
+          "sha256": "c90041bc2fb1fc9447776e2adc381f46385247df7202b8a2a2a7ea8af708acb6"
+        }
+      },
+      "scope": "paper reading and small demo, partial reproduction"
+    },
+    {
+      "title": "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "folder": "Mem0： Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "pdf_pages": 23,
+      "pdf_sha256": "bec870b657aa73405275a6d8fe27bcd4271799e028bc62986ab9c4cd27a3712d",
+      "scripts": 5,
+      "repositories": [
+        {
+          "path": "Mem0： Building Production-Ready AI Agents with Scalable Long-Term Memory\\代码\\mem0-historical",
+          "head": "6d13e8300143b61aefc3a1ab5fb936f6d52008a4"
+        }
+      ],
+      "files": {
+        "Mem0： Building Production-Ready AI Agents with Scalable Long-Term Memory\\解释.md": {
+          "bytes": 42313,
+          "sha256": "e00bfb87958b5596d93c1eb26122ea20befbd5c70f422f843537c55a9f576f56"
+        },
+        "Mem0： Building Production-Ready AI Agents with Scalable Long-Term Memory\\复现\\README.md": {
+          "bytes": 5509,
+          "sha256": "88f55449f4f658960fa7e3077fe1ef58823fcc946d92fca972aa364be44e3701"
+        },
+        "Mem0： Building Production-Ready AI Agents with Scalable Long-Term Memory\\复现\\requirements.txt": {
+          "bytes": 227,
+          "sha256": "230f9f7ecd37f3c6b1891bca8e319a021a5168facdc8fd3fc0ea7d6cfc6e28e0"
+        },
+        "Mem0： Building Production-Ready AI Agents with Scalable Long-Term Memory\\复现\\outputs\\results.json": {
+          "bytes": 54125,
+          "sha256": "16ac867c68b17549f0f28dd03079422889389ea5d0f4db033f1aaa1ae73b0836"
+        },
+        "Mem0： Building Production-Ready AI Agents with Scalable Long-Term Memory\\复现\\outputs\\delivery_check.json": {
+          "bytes": 1683,
+          "sha256": "e8d1e1929cbb6df52a43eefeb9939901e58683ad725c792fab6625d6df550580"
+        }
+      },
+      "scope": "paper reading and small demo, partial reproduction"
+    },
+    {
+      "title": "Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+      "folder": "Zep： A Temporal Knowledge Graph Architecture for Agent Memory",
+      "pdf_pages": 12,
+      "pdf_sha256": "d26f7eb599540e8b14d75e7efda58a07661abbb1b864e58323b5768475a15d42",
+      "scripts": 5,
+      "repositories": [
+        {
+          "path": "Zep： A Temporal Knowledge Graph Architecture for Agent Memory\\代码\\graphiti-historical",
+          "head": "77cb67cdfea7a080f217236b56f8ca39b25ca0e4"
+        }
+      ],
+      "files": {
+        "Zep： A Temporal Knowledge Graph Architecture for Agent Memory\\解释.md": {
+          "bytes": 40624,
+          "sha256": "e43bf03388833f2ede2115c35c53a74818405caf81e8f6487e208e20e4b4a0ae"
+        },
+        "Zep： A Temporal Knowledge Graph Architecture for Agent Memory\\复现\\README.md": {
+          "bytes": 5261,
+          "sha256": "54c4dd2d943809987c4d81122dbd5c82faa9e63237a1344354ac8cf030ffc8ee"
+        },
+        "Zep： A Temporal Knowledge Graph Architecture for Agent Memory\\复现\\requirements.txt": {
+          "bytes": 115,
+          "sha256": "0a51420ef806718c319ba54354049b3261c3152818abc06320e7295f9c77b7a3"
+        },
+        "Zep： A Temporal Knowledge Graph Architecture for Agent Memory\\复现\\outputs\\results.json": {
+          "bytes": 18088,
+          "sha256": "2c02e14157136a81d01cbcca89563fe4761a34d4ed4a96965da6762206a9b5d3"
+        },
+        "Zep： A Temporal Knowledge Graph Architecture for Agent Memory\\复现\\outputs\\delivery_check.json": {
+          "bytes": 1644,
+          "sha256": "00c7a51610dbd0e96d9ad476a8bdb7a4284b57d73a5a59d5226c34381308e139"
+        }
+      },
+      "scope": "paper reading and small demo, partial reproduction"
+    },
+    {
+      "title": "MemGPT: Towards LLMs as Operating Systems",
+      "folder": "MemGPT： Towards LLMs as Operating Systems",
+      "pdf_pages": 13,
+      "pdf_sha256": "9f674bcff69c86f11c813dcfad613d8841f5f8ed17979e3c4df06a91df7762e0",
+      "scripts": 4,
+      "repositories": [
+        {
+          "path": "MemGPT： Towards LLMs as Operating Systems\\代码\\MemGPT-historical",
+          "head": "a0139b5fdc203f827168cb741c9f4fea3cec09bf"
+        }
+      ],
+      "files": {
+        "MemGPT： Towards LLMs as Operating Systems\\解释.md": {
+          "bytes": 41447,
+          "sha256": "84e2da7d54d9df39ef02ea04c3ecb32808ea724865fd0a829269ac97291a6b6c"
+        },
+        "MemGPT： Towards LLMs as Operating Systems\\复现\\README.md": {
+          "bytes": 6213,
+          "sha256": "75d0f964cd358d94cdc0be33b74f03bd9d4d32beb7d457e18604a9ecee092367"
+        },
+        "MemGPT： Towards LLMs as Operating Systems\\复现\\requirements.txt": {
+          "bytes": 222,
+          "sha256": "d01c492d7bcd27c6c771bb8eeb2e0d9b27bd71fac2facf1fd35e77631e613a50"
+        },
+        "MemGPT： Towards LLMs as Operating Systems\\复现\\outputs\\demo_results.json": {
+          "bytes": 85625,
+          "sha256": "d73e1864d2d235f8de75b34dc85c84ffcc3e9a53b23c6c0509bcb6befba598d4"
+        },
+        "MemGPT： Towards LLMs as Operating Systems\\复现\\outputs\\delivery_check.json": {
+          "bytes": 2316,
+          "sha256": "7226d8d72157897f510ca53ee03d3e36a666029564e9e4752e7f032b8cfc5072"
+        }
+      },
+      "scope": "paper reading and small demo, partial reproduction"
+    },
+    {
+      "title": "A-MEM: Agentic Memory for LLM Agents",
+      "folder": "A-MEM： Agentic Memory for LLM Agents",
+      "pdf_pages": 28,
+      "pdf_sha256": "fec32b521c4a1f793442bf1aeb26139c583078350d1cd4ab8f4eccc54a0694f0",
+      "scripts": 5,
+      "repositories": [
+        {
+          "path": "A-MEM： Agentic Memory for LLM Agents\\代码\\A-mem-historical",
+          "head": "c3bb1ee6d4825b13460dd26be1444b5f870ddb64"
+        },
+        {
+          "path": "A-MEM： Agentic Memory for LLM Agents\\代码\\A-mem-sys-historical",
+          "head": "aec6d34c6035d3a8f56df37d741f25e3adcecfea"
+        }
+      ],
+      "files": {
+        "A-MEM： Agentic Memory for LLM Agents\\解释.md": {
+          "bytes": 44016,
+          "sha256": "6b2be675f77b339718c455dcf34ddb78354398126261ddc2bb4ca550d34bfd66"
+        },
+        "A-MEM： Agentic Memory for LLM Agents\\复现\\README.md": {
+          "bytes": 5587,
+          "sha256": "d68b565b3a376f7bc4424c6dc48fc2ffe67754d873454f613d7f446998f30d74"
+        },
+        "A-MEM： Agentic Memory for LLM Agents\\复现\\requirements.txt": {
+          "bytes": 122,
+          "sha256": "b0f6f61e90cd81890a4485d66311af3463e3813fd95afb549835cd0edef98212"
+        },
+        "A-MEM： Agentic Memory for LLM Agents\\复现\\outputs\\results.json": {
+          "bytes": 24119,
+          "sha256": "2781174fcad50e1f8edc40470c4c8f6e6fe566d77261227aa369ae9b2cc83c91"
+        },
+        "A-MEM： Agentic Memory for LLM Agents\\复现\\outputs\\delivery_check.json": {
+          "bytes": 2018,
+          "sha256": "09f131fc27fadc174113344df8e3df3ffdbb1258305a80592f21dedb7faf9a76"
+        }
+      },
+      "scope": "paper reading and small demo, partial reproduction"
+    },
+    {
+      "title": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
+      "folder": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
+      "pdf_pages": 19,
+      "pdf_sha256": "218188e1d66a553afe324491e3e5e5d0af107196c9ff32c65bb3640ebf638539",
+      "scripts": 6,
+      "repositories": [
+        {
+          "path": "Evaluating Very Long-Term Conversational Memory of LLM Agents\\代码\\locomo-official",
+          "head": "3eb6f2c585f5e1699204e3c3bdf7adc5c28cb376"
+        }
+      ],
+      "files": {
+        "Evaluating Very Long-Term Conversational Memory of LLM Agents\\解释.md": {
+          "bytes": 35935,
+          "sha256": "dd675e442580f1fca7677d9a4c489772df05edb1a747a555d631dcc7390538e7"
+        },
+        "Evaluating Very Long-Term Conversational Memory of LLM Agents\\复现\\README.md": {
+          "bytes": 5812,
+          "sha256": "af4c15fa152c32a48d25435f4ccf6aca6779b5a63cebe277277bb95ba9ba9556"
+        },
+        "Evaluating Very Long-Term Conversational Memory of LLM Agents\\复现\\requirements.txt": {
+          "bytes": 127,
+          "sha256": "44813e15029d1f8d989f44ef05615d19583913ab34312a33ac965d2f637afdc2"
+        },
+        "Evaluating Very Long-Term Conversational Memory of LLM Agents\\复现\\outputs\\results.json": {
+          "bytes": 4513180,
+          "sha256": "f1c054fb71fab4dd5c2e361c0e65efc43ac542d59d458c3962ed82fd8c50973d"
+        },
+        "Evaluating Very Long-Term Conversational Memory of LLM Agents\\复现\\outputs\\delivery_check.json": {
+          "bytes": 1608,
+          "sha256": "4083a88cefa06a3549ae43e7a965855f2006cecb8dab3739351cf3480548275d"
+        }
+      },
+      "scope": "paper reading and small demo, partial reproduction"
+    },
+    {
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "folder": "LongMemEval： Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "pdf_pages": 28,
+      "pdf_sha256": "05c5d055201466a241a56e082cdd02d39ad566fa04b3804891983e4e069a3fda",
+      "scripts": 7,
+      "repositories": [
+        {
+          "path": "LongMemEval： Benchmarking Chat Assistants on Long-Term Interactive Memory\\代码\\LongMemEval-historical",
+          "head": "8a44eb1bb033842b12c67c594ac2094fc3028526"
+        }
+      ],
+      "files": {
+        "LongMemEval： Benchmarking Chat Assistants on Long-Term Interactive Memory\\解释.md": {
+          "bytes": 39036,
+          "sha256": "4fd08385b9411f770984af9c55ba470b8289075185133b66d5fb3be39d4afe6c"
+        },
+        "LongMemEval： Benchmarking Chat Assistants on Long-Term Interactive Memory\\复现\\README.md": {
+          "bytes": 4969,
+          "sha256": "74ed8f997152799c757bff4b327a0dc2a11f027c7145fe78c7df22989d74c440"
+        },
+        "LongMemEval： Benchmarking Chat Assistants on Long-Term Interactive Memory\\复现\\requirements.txt": {
+          "bytes": 171,
+          "sha256": "7c0ae48f05720f13807d69628c199bf4ee93bfe49ee1866419a70ec0d12ecd3f"
+        },
+        "LongMemEval： Benchmarking Chat Assistants on Long-Term Interactive Memory\\复现\\outputs\\results.json": {
+          "bytes": 1369565,
+          "sha256": "0173e0f5d7806f1d1542721fdf3e67436629e3db6327152ba19a36d45bb44741"
+        },
+        "LongMemEval： Benchmarking Chat Assistants on Long-Term Interactive Memory\\复现\\outputs\\delivery_check.json": {
+          "bytes": 1621,
+          "sha256": "1428ed607ae4b3f737cc205a1d66709dcc5675169aba89f74fb5a58eded6402c"
+        }
+      },
+      "scope": "paper reading and small demo, partial reproduction"
+    }
+  ]
+}

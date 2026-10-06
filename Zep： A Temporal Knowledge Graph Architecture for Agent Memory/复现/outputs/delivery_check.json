@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "checks": 14,
+  "controlled_calls": 16,
+  "local_links": 29,
+  "snapshots": 5,
+  "files": {
+    "解释.md": {
+      "bytes": 40624,
+      "sha256": "e43bf03388833f2ede2115c35c53a74818405caf81e8f6487e208e20e4b4a0ae"
+    },
+    "复现/README.md": {
+      "bytes": 5261,
+      "sha256": "54c4dd2d943809987c4d81122dbd5c82faa9e63237a1344354ac8cf030ffc8ee"
+    },
+    "复现/requirements.txt": {
+      "bytes": 115,
+      "sha256": "0a51420ef806718c319ba54354049b3261c3152818abc06320e7295f9c77b7a3"
+    },
+    "复现/scripts/demo_zep.py": {
+      "bytes": 8181,
+      "sha256": "83bbe5053f68ff2abf748e3b64aa144eb012b97b0a340afa6c666770b6e34c47"
+    },
+    "复现/scripts/plot_results.py": {
+      "bytes": 1365,
+      "sha256": "7715923e5dd9e9c9b524b264452d58a280ec6cba18bfd16afd7dafb9c3ecbd23"
+    },
+    "复现/scripts/audit_delivery.py": {
+      "bytes": 1977,
+      "sha256": "acdfa4023c8c82708f2797e484e2d8632694d97db0ad81df03b65cebe6beb4b8"
+    },
+    "复现/outputs/results.json": {
+      "bytes": 18088,
+      "sha256": "2c02e14157136a81d01cbcca89563fe4761a34d4ed4a96965da6762206a9b5d3"
+    },
+    "复现/outputs/temporal.png": {
+      "bytes": 43740,
+      "sha256": "7a5cdc57344285cbd9f9ca8581cc87f328beb112b8370ea9b8ad8bcbd6c3c4b0"
+    },
+    "复现/outputs/temporal.svg": {
+      "bytes": 40560,
+      "sha256": "30d6379558233cfed568b4fb9e3b69684fc4ad92112a56967973b9f4165c8da9"
+    },
+    "复现/outputs/temporal-82b30ae14f83.sqlite": {
+      "bytes": 16384,
+      "sha256": "0cb53d710ea1b0dd92bb84c11b001cfb5380cc0c6281bdba7f6ad9a5b6d6bcb9"
+    }
+  }
+}

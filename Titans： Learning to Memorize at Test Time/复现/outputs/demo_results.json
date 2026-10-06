@@ -1,0 +1,299 @@
+{
+  "scope": "Synthetic LMM component demo, not paper benchmark reproduction",
+  "commit": "ce7da9e9a7909e95c8249ceece7c88000bc2c0b9",
+  "torch": "2.14.1+cpu",
+  "device": "cpu",
+  "config": {
+    "dim": 16,
+    "keys": 8,
+    "depth": 2,
+    "momentum": true,
+    "decay": true,
+    "chunk_size": 1,
+    "batch_size": 8,
+    "meta_training_steps": 400,
+    "meta_batch": 16,
+    "learning_rate": 0.003,
+    "fixed_kqv": true,
+    "test_seed": 101
+  },
+  "linear_reference": {
+    "episodes": 256,
+    "queries": 2048,
+    "chance_accuracy": 0.125,
+    "written_accuracy": 1.0,
+    "reset_accuracy": 0.125,
+    "changed_context_accuracy": 1.0,
+    "changed_key_accuracy": 1.0,
+    "untouched_keys_accuracy": 1.0,
+    "initial_vs_written_max_difference": 1.0,
+    "examples": [
+      {
+        "key": "key_0",
+        "target": 7,
+        "read": 7,
+        "after_reset": 0,
+        "updated_target": 0,
+        "after_update": 0
+      },
+      {
+        "key": "key_1",
+        "target": 5,
+        "read": 5,
+        "after_reset": 0,
+        "updated_target": 5,
+        "after_update": 5
+      },
+      {
+        "key": "key_2",
+        "target": 3,
+        "read": 3,
+        "after_reset": 0,
+        "updated_target": 3,
+        "after_update": 3
+      },
+      {
+        "key": "key_3",
+        "target": 4,
+        "read": 4,
+        "after_reset": 0,
+        "updated_target": 4,
+        "after_update": 4
+      },
+      {
+        "key": "key_4",
+        "target": 0,
+        "read": 0,
+        "after_reset": 0,
+        "updated_target": 0,
+        "after_update": 0
+      },
+      {
+        "key": "key_5",
+        "target": 1,
+        "read": 1,
+        "after_reset": 0,
+        "updated_target": 1,
+        "after_update": 1
+      },
+      {
+        "key": "key_6",
+        "target": 2,
+        "read": 2,
+        "after_reset": 0,
+        "updated_target": 2,
+        "after_update": 2
+      },
+      {
+        "key": "key_7",
+        "target": 6,
+        "read": 6,
+        "after_reset": 0,
+        "updated_target": 6,
+        "after_update": 6
+      }
+    ]
+  },
+  "deep_before": {
+    "episodes": 256,
+    "queries": 2048,
+    "chance_accuracy": 0.125,
+    "written_accuracy": 0.22265625,
+    "reset_accuracy": 0.1455078125,
+    "changed_context_accuracy": 0.2001953125,
+    "changed_key_accuracy": 0.3203125,
+    "untouched_keys_accuracy": 0.1953125,
+    "initial_vs_written_max_difference": 0.0758574903011322,
+    "examples": [
+      {
+        "key": "key_0",
+        "target": 7,
+        "read": 0,
+        "after_reset": 0,
+        "updated_target": 0,
+        "after_update": 0
+      },
+      {
+        "key": "key_1",
+        "target": 5,
+        "read": 1,
+        "after_reset": 1,
+        "updated_target": 5,
+        "after_update": 1
+      },
+      {
+        "key": "key_2",
+        "target": 3,
+        "read": 3,
+        "after_reset": 3,
+        "updated_target": 3,
+        "after_update": 3
+      },
+      {
+        "key": "key_3",
+        "target": 4,
+        "read": 0,
+        "after_reset": 0,
+        "updated_target": 4,
+        "after_update": 0
+      },
+      {
+        "key": "key_4",
+        "target": 0,
+        "read": 7,
+        "after_reset": 7,
+        "updated_target": 0,
+        "after_update": 7
+      },
+      {
+        "key": "key_5",
+        "target": 1,
+        "read": 6,
+        "after_reset": 6,
+        "updated_target": 1,
+        "after_update": 6
+      },
+      {
+        "key": "key_6",
+        "target": 2,
+        "read": 4,
+        "after_reset": 4,
+        "updated_target": 2,
+        "after_update": 4
+      },
+      {
+        "key": "key_7",
+        "target": 6,
+        "read": 3,
+        "after_reset": 3,
+        "updated_target": 6,
+        "after_update": 3
+      }
+    ]
+  },
+  "deep_after": {
+    "episodes": 256,
+    "queries": 2048,
+    "chance_accuracy": 0.125,
+    "written_accuracy": 1.0,
+    "reset_accuracy": 0.12744140625,
+    "changed_context_accuracy": 1.0,
+    "changed_key_accuracy": 1.0,
+    "untouched_keys_accuracy": 1.0,
+    "initial_vs_written_max_difference": 1.3367161750793457,
+    "examples": [
+      {
+        "key": "key_0",
+        "target": 7,
+        "read": 7,
+        "after_reset": 2,
+        "updated_target": 0,
+        "after_update": 0
+      },
+      {
+        "key": "key_1",
+        "target": 5,
+        "read": 5,
+        "after_reset": 3,
+        "updated_target": 5,
+        "after_update": 5
+      },
+      {
+        "key": "key_2",
+        "target": 3,
+        "read": 3,
+        "after_reset": 5,
+        "updated_target": 3,
+        "after_update": 3
+      },
+      {
+        "key": "key_3",
+        "target": 4,
+        "read": 4,
+        "after_reset": 3,
+        "updated_target": 4,
+        "after_update": 4
+      },
+      {
+        "key": "key_4",
+        "target": 0,
+        "read": 0,
+        "after_reset": 2,
+        "updated_target": 0,
+        "after_update": 0
+      },
+      {
+        "key": "key_5",
+        "target": 1,
+        "read": 1,
+        "after_reset": 2,
+        "updated_target": 1,
+        "after_update": 1
+      },
+      {
+        "key": "key_6",
+        "target": 2,
+        "read": 2,
+        "after_reset": 1,
+        "updated_target": 2,
+        "after_update": 2
+      },
+      {
+        "key": "key_7",
+        "target": 6,
+        "read": 6,
+        "after_reset": 3,
+        "updated_target": 6,
+        "after_update": 6
+      }
+    ]
+  },
+  "history": [
+    {
+      "step": 1,
+      "loss": 2.231806993484497,
+      "training_batch_accuracy": 0.15625
+    },
+    {
+      "step": 50,
+      "loss": 1.6373084783554077,
+      "training_batch_accuracy": 0.96875
+    },
+    {
+      "step": 100,
+      "loss": 1.2332592010498047,
+      "training_batch_accuracy": 1.0
+    },
+    {
+      "step": 150,
+      "loss": 0.5642768740653992,
+      "training_batch_accuracy": 1.0
+    },
+    {
+      "step": 200,
+      "loss": 0.1429496854543686,
+      "training_batch_accuracy": 1.0
+    },
+    {
+      "step": 250,
+      "loss": 0.0514361672103405,
+      "training_batch_accuracy": 1.0
+    },
+    {
+      "step": 300,
+      "loss": 0.030214490368962288,
+      "training_batch_accuracy": 1.0
+    },
+    {
+      "step": 350,
+      "loss": 0.02218027412891388,
+      "training_batch_accuracy": 1.0
+    },
+    {
+      "step": 400,
+      "loss": 0.016810107976198196,
+      "training_batch_accuracy": 1.0
+    }
+  ],
+  "seconds": 10.003582499994081
+}

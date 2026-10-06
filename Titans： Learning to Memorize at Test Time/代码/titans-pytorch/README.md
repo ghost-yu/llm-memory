@@ -1,0 +1,227 @@
+<img src="./fig2.png" width="400px"></img>
+
+<img src="./fig1.png" width="400px"></img>
+
+## Titans - Pytorch
+
+Unofficial implementation of [Titans](https://arxiv.org/abs/2501.00663) in Pytorch. Will also contain some explorations into architectures beyond their simple 1-4 layer MLP for the neural memory module, if it works well to any degree.
+
+## Appreciation
+
+- [Eryk](https://github.com/sentialx) for sharing his early experimental results with me, positive for 2 layer MLP
+
+## Install
+
+```bash
+$ pip install titans-pytorch
+```
+
+## Usage
+
+```python
+import torch
+from titans_pytorch import NeuralMemory
+
+mem = NeuralMemory(
+    dim = 384,
+    chunk_size = 64 # set to smaller chunk size for better perf on smaller sequence lengths (but more memory usage)
+).cuda()
+
+seq = torch.randn(2, 1024, 384).cuda()
+retrieved, mem_state = mem(seq)
+
+assert seq.shape == retrieved.shape
+```
+
+A transformer with the `MAC` configuration can be used as
+
+```python
+import torch
+from titans_pytorch import MemoryAsContextTransformer
+
+transformer = MemoryAsContextTransformer(
+    num_tokens = 256,
+    dim = 256,
+    depth = 2,
+    segment_len = 128,              # local attention window size
+    num_persist_mem_tokens = 4,
+    num_longterm_mem_tokens = 16,
+)
+
+token_ids = torch.randint(0, 256, (1, 1023))
+
+loss = transformer(token_ids, return_loss = True) # (1, 1023, 256)
+loss.backward()
+
+# after much training
+
+sampled = transformer.sample(token_ids[:, :4], 512)
+```
+
+## Experiments
+
+```bash
+$ pip install .[examples]
+```
+
+Then modify `train_mac.py` and run it to query nature
+
+```bash
+$ python train_mac.py
+```
+
+## Validating Memory Learning
+
+You can verify that the neural memory module learns within a sequence by running the test script:
+
+```bash
+$ python test_memory_simple.py
+```
+
+### Example Output
+
+This demonstrates the key property of Titans: **the memory learns during inference** as it processes tokens sequentially.
+
+```
+Using device: cuda
+
+=== PROOF: M Learns Within Sequence ===
+M should help later tokens more than early tokens
+
+ninja: no work to do.
+Loss on tokens 1-256   (M just started): 1.1719
+Loss on tokens 769-1024 (M learned 768 tokens): 1.0623
+
+Improvement: 0.1097
+✓ M LEARNING WORKS!
+  Later predictions are better because M learned from earlier tokens
+
+=== How M Works ===
+✓ Within sequence: M learns as it goes (token 1 → 1000)
+✓ During generation: M accumulates across generated tokens
+✗ Between forward(): M resets (unless using cache in autoregressive mode)
+
+=== Text Generation Demo ===
+Prime text: dependence.  Countries bordering the [[Mediterrane
+================================================================================
+100%|█████████████████████████████████████████████| 78/78 [00:03<00:00, 24.43it/s]
+Generated text:
+an]] or the program of a decreasing that find the Caribbean which had placed i
+
+=== All Tests Complete ===
+Memory learning validated! Continue training for better results.
+```
+
+**Key Insight**: The loss improves from **1.1719** (early tokens) to **1.0623** (late tokens) in a single forward pass. This proves that the neural memory `M` accumulates knowledge as it processes the sequence, making predictions better for later tokens.
+
+## Citations
+
+```bibtex
+@inproceedings{Behrouz2024TitansLT,
+    title   = {Titans: Learning to Memorize at Test Time},
+    author  = {Ali Behrouz and Peilin Zhong and Vahab S. Mirrokni},
+    year    = {2024},
+    url     = {https://api.semanticscholar.org/CorpusID:275212078}
+}
+```
+
+```bibtex
+@article{Sun2024LearningT,
+    title   = {Learning to (Learn at Test Time): RNNs with Expressive Hidden States},
+    author  = {Yu Sun and Xinhao Li and Karan Dalal and Jiarui Xu and Arjun Vikram and Genghan Zhang and Yann Dubois and Xinlei Chen and Xiaolong Wang and Oluwasanmi Koyejo and Tatsunori Hashimoto and Carlos Guestrin},
+    journal = {ArXiv},
+    year    = {2024},
+    volume  = {abs/2407.04620},
+    url     = {https://api.semanticscholar.org/CorpusID:271039606}
+}
+```
+
+```bibtex
+@inproceedings{Yang2024GatedDN,
+    title   = {Gated Delta Networks: Improving Mamba2 with Delta Rule},
+    author  = {Songlin Yang and Jan Kautz and Ali Hatamizadeh},
+    year    = {2024},
+    url     = {https://api.semanticscholar.org/CorpusID:274598177}
+}
+```
+
+```bibtex
+@inproceedings{Nguyen2024TurningUT,
+    title   = {Turning Up the Heat: Min-p Sampling for Creative and Coherent LLM Outputs},
+    author  = {Minh Nguyen and Andrew Baker and Clement Neo and Allen Roush and Andreas Kirsch and Ravid Shwartz-Ziv},
+    year    = {2024},
+    url     = {https://api.semanticscholar.org/CorpusID:270870613}
+}
+```
+
+```bibtex
+@article{Zhu2024HyperConnections,
+    title   = {Hyper-Connections},
+    author  = {Defa Zhu and Hongzhi Huang and Zihao Huang and Yutao Zeng and Yunyao Mao and Banggu Wu and Qiyang Min and Xun Zhou},
+    journal = {ArXiv},
+    year    = {2024},
+    volume  = {abs/2409.19606},
+    url     = {https://api.semanticscholar.org/CorpusID:272987528}
+}
+```
+
+```bibtex
+@article{Zhou2024ValueRL,
+    title   = {Value Residual Learning For Alleviating Attention Concentration In Transformers},
+    author  = {Zhanchao Zhou and Tianyi Wu and Zhiyun Jiang and Zhenzhong Lan},
+    journal = {ArXiv},
+    year    = {2024},
+    volume  = {abs/2410.17897},
+    url     = {https://api.semanticscholar.org/CorpusID:273532030}
+}
+```
+
+```bibtex
+@software{Kyrylov_Accelerated_Scan_2024,
+    author  = {Kyrylov, Volodymyr},
+    doi     = {10.5281/zenodo.10600962},
+    title   = {Accelerated Scan},
+    version = {0.1.2},
+    year    = {2024}
+}
+```
+
+```bibtex
+@misc{wang2025testtimeregressionunifyingframework,
+    title   = {Test-time regression: a unifying framework for designing sequence models with associative memory},
+    author  = {Ke Alexander Wang and Jiaxin Shi and Emily B. Fox},
+    year    = {2025},
+    eprint  = {2501.12352},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.LG},
+    url     = {https://arxiv.org/abs/2501.12352},
+}
+```
+
+```bibtex
+@misc{jordan2024muon,
+    author  = {Keller Jordan and Yuchen Jin and Vlado Boza and Jiacheng You and
+                    Franz Cesista and Laker Newhouse and Jeremy Bernstein},
+    title   = {Muon: An optimizer for hidden layers in neural networks},
+    year    = {2024},
+    url     = {https://kellerjordan.github.io/posts/muon/}
+}
+```
+
+```bibtex
+@inproceedings{Zhang2025TestTimeTD,
+    title   = {Test-Time Training Done Right},
+    author  = {Tianyuan Zhang and Sai Bi and Yicong Hong and Kai Zhang and Fujun Luan and Songlin Yang and Kalyan Sunkavalli and William T. Freeman and Hao Tan},
+    year    = {2025},
+    url     = {https://api.semanticscholar.org/CorpusID:279071244}
+}
+```
+
+```bibtex
+@inproceedings{Behrouz2025ATLASLT,
+    title  = {ATLAS: Learning to Optimally Memorize the Context at Test Time},
+    author = {Ali Behrouz and Ze-Minghui Li and Praneeth Kacham and Majid Daliri and Yuan Deng and Peilin Zhong and Meisam Razaviyayn and Vahab S. Mirrokni},
+    year   = {2025},
+    url    = {https://api.semanticscholar.org/CorpusID:278996373}
+}
+```

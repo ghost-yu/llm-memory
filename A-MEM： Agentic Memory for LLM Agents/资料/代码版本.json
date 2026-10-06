@@ -1,0 +1,166 @@
+{
+  "A-mem": {
+    "sha": "c3bb1ee6d4825b13460dd26be1444b5f870ddb64",
+    "node_id": "C_kwDONx4wj9oAKGMzYmIxZWU2ZDQ4MjViMTM0NjBkZDI2YmUxNDQ0YjVmODcwZGRiNjQ",
+    "commit": {
+      "author": {
+        "name": "WujiangXu",
+        "email": "swust_imp@163.com",
+        "date": "2025-10-08T02:01:23Z"
+      },
+      "committer": {
+        "name": "WujiangXu",
+        "email": "swust_imp@163.com",
+        "date": "2025-10-08T02:01:23Z"
+      },
+      "message": "update",
+      "tree": {
+        "sha": "68d2cd5d0226e94fa00839714e99c145135fa8be",
+        "url": "https://api.github.com/repos/WujiangXu/A-mem/git/trees/68d2cd5d0226e94fa00839714e99c145135fa8be"
+      },
+      "url": "https://api.github.com/repos/WujiangXu/A-mem/git/commits/c3bb1ee6d4825b13460dd26be1444b5f870ddb64",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/WujiangXu/A-mem/commits/c3bb1ee6d4825b13460dd26be1444b5f870ddb64",
+    "html_url": "https://github.com/WujiangXu/A-mem/commit/c3bb1ee6d4825b13460dd26be1444b5f870ddb64",
+    "comments_url": "https://api.github.com/repos/WujiangXu/A-mem/commits/c3bb1ee6d4825b13460dd26be1444b5f870ddb64/comments",
+    "author": {
+      "login": "WujiangXu",
+      "id": 32159528,
+      "node_id": "MDQ6VXNlcjMyMTU5NTI4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32159528?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WujiangXu",
+      "html_url": "https://github.com/WujiangXu",
+      "followers_url": "https://api.github.com/users/WujiangXu/followers",
+      "following_url": "https://api.github.com/users/WujiangXu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WujiangXu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WujiangXu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WujiangXu/subscriptions",
+      "organizations_url": "https://api.github.com/users/WujiangXu/orgs",
+      "repos_url": "https://api.github.com/users/WujiangXu/repos",
+      "events_url": "https://api.github.com/users/WujiangXu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WujiangXu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WujiangXu",
+      "id": 32159528,
+      "node_id": "MDQ6VXNlcjMyMTU5NTI4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32159528?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WujiangXu",
+      "html_url": "https://github.com/WujiangXu",
+      "followers_url": "https://api.github.com/users/WujiangXu/followers",
+      "following_url": "https://api.github.com/users/WujiangXu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WujiangXu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WujiangXu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WujiangXu/subscriptions",
+      "organizations_url": "https://api.github.com/users/WujiangXu/orgs",
+      "repos_url": "https://api.github.com/users/WujiangXu/repos",
+      "events_url": "https://api.github.com/users/WujiangXu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WujiangXu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1df003993661073a173f9bf6e7106a642ff02700",
+        "url": "https://api.github.com/repos/WujiangXu/A-mem/commits/1df003993661073a173f9bf6e7106a642ff02700",
+        "html_url": "https://github.com/WujiangXu/A-mem/commit/1df003993661073a173f9bf6e7106a642ff02700"
+      }
+    ]
+  },
+  "A-mem-sys": {
+    "sha": "aec6d34c6035d3a8f56df37d741f25e3adcecfea",
+    "node_id": "C_kwDOPMhWT9oAKGFlYzZkMzRjNjAzNWQzYThmNTZkZjM3ZDc0MWYyNWUzYWRjZWNmZWE",
+    "commit": {
+      "author": {
+        "name": "WujiangXu",
+        "email": "swust_imp@163.com",
+        "date": "2025-07-27T21:10:53Z"
+      },
+      "committer": {
+        "name": "WujiangXu",
+        "email": "swust_imp@163.com",
+        "date": "2025-07-27T21:10:53Z"
+      },
+      "message": "fix metadata",
+      "tree": {
+        "sha": "93afcbc52a4a53a44b9217ebab50ea73845019fc",
+        "url": "https://api.github.com/repos/WujiangXu/A-mem-sys/git/trees/93afcbc52a4a53a44b9217ebab50ea73845019fc"
+      },
+      "url": "https://api.github.com/repos/WujiangXu/A-mem-sys/git/commits/aec6d34c6035d3a8f56df37d741f25e3adcecfea",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/WujiangXu/A-mem-sys/commits/aec6d34c6035d3a8f56df37d741f25e3adcecfea",
+    "html_url": "https://github.com/WujiangXu/A-mem-sys/commit/aec6d34c6035d3a8f56df37d741f25e3adcecfea",
+    "comments_url": "https://api.github.com/repos/WujiangXu/A-mem-sys/commits/aec6d34c6035d3a8f56df37d741f25e3adcecfea/comments",
+    "author": {
+      "login": "WujiangXu",
+      "id": 32159528,
+      "node_id": "MDQ6VXNlcjMyMTU5NTI4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32159528?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WujiangXu",
+      "html_url": "https://github.com/WujiangXu",
+      "followers_url": "https://api.github.com/users/WujiangXu/followers",
+      "following_url": "https://api.github.com/users/WujiangXu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WujiangXu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WujiangXu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WujiangXu/subscriptions",
+      "organizations_url": "https://api.github.com/users/WujiangXu/orgs",
+      "repos_url": "https://api.github.com/users/WujiangXu/repos",
+      "events_url": "https://api.github.com/users/WujiangXu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WujiangXu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WujiangXu",
+      "id": 32159528,
+      "node_id": "MDQ6VXNlcjMyMTU5NTI4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32159528?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WujiangXu",
+      "html_url": "https://github.com/WujiangXu",
+      "followers_url": "https://api.github.com/users/WujiangXu/followers",
+      "following_url": "https://api.github.com/users/WujiangXu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WujiangXu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WujiangXu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WujiangXu/subscriptions",
+      "organizations_url": "https://api.github.com/users/WujiangXu/orgs",
+      "repos_url": "https://api.github.com/users/WujiangXu/repos",
+      "events_url": "https://api.github.com/users/WujiangXu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WujiangXu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f459df8db1b24232569aa21ad1129a9762048e55",
+        "url": "https://api.github.com/repos/WujiangXu/A-mem-sys/commits/f459df8db1b24232569aa21ad1129a9762048e55",
+        "html_url": "https://github.com/WujiangXu/A-mem-sys/commit/f459df8db1b24232569aa21ad1129a9762048e55"
+      }
+    ]
+  }
+}

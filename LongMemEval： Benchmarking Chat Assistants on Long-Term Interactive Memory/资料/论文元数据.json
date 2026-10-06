@@ -1,0 +1,21 @@
+{
+  "arxiv": "2410.10813",
+  "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+  "category": "记忆评测",
+  "relation": "方向补充：Zep 论文使用的基准",
+  "purpose": "检查信息提取、跨会话推理、时间推理、知识更新和拒答能力。",
+  "version": "v2",
+  "pdf_url": "https://arxiv.org/pdf/2410.10813v2",
+  "local_pdf": "G:\\大模型记忆\\LongMemEval： Benchmarking Chat Assistants on Long-Term Interactive Memory\\原论文.pdf",
+  "pages": 28,
+  "bytes": 749169,
+  "sha256": "05c5d055201466a241a56e082cdd02d39ad566fa04b3804891983e4e069a3fda",
+  "authors": [
+    "Wu, Di",
+    "Wang, Hongwei",
+    "Yu, Wenhao",
+    "Zhang, Yuwei",
+    "Chang, Kai-Wei",
+    "Yu, Dong"
+  ]
+}

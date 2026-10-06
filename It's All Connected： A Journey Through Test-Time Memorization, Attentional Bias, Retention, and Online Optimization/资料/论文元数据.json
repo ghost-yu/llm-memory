@@ -1,0 +1,19 @@
+{
+  "arxiv": "2504.13173",
+  "title": "It's All Connected: A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization",
+  "category": "模型内部记忆",
+  "relation": "Google 博客关联工作（MIRAS）",
+  "purpose": "用关联记忆、学习目标、保留机制和更新算法统一分析序列模型。",
+  "version": "v1",
+  "pdf_url": "https://arxiv.org/pdf/2504.13173v1",
+  "local_pdf": "G:\\大模型记忆\\It's All Connected： A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization\\原论文.pdf",
+  "pages": 26,
+  "bytes": 1987057,
+  "sha256": "faceb861d46d65fd7098cbdb97aa400081c7b5cb7e048ac8d010f01537915ab2",
+  "authors": [
+    "Behrouz, Ali",
+    "Razaviyayn, Meisam",
+    "Zhong, Peilin",
+    "Mirrokni, Vahab"
+  ]
+}

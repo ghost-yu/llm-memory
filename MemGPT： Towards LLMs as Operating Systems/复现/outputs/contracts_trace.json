@@ -1,0 +1,121 @@
+{
+  "scope": "isolated original-body and adapter contracts; no full Agent, model or embedding backend",
+  "environment": {
+    "python": "3.12.14",
+    "stdlib_only": true
+  },
+  "source_sha256": "6caccdfa6580e42ed21135f8af70e79454920cb9d2155caecb8e8ef8e7954d57",
+  "original_sources": [
+    {
+      "path": "memgpt/memory.py",
+      "symbols": [
+        "CoreMemory"
+      ],
+      "sha256": "bb916ebde20f4b83306d6efa139e7cffa6bbe7eb1cb33ad788986c0a09080ba3"
+    },
+    {
+      "path": "memgpt/functions/function_sets/base.py",
+      "symbols": [
+        "archival_memory_insert",
+        "archival_memory_search",
+        "conversation_search",
+        "core_memory_append",
+        "core_memory_replace"
+      ],
+      "sha256": "7531f265f6cd87f7cb47973cee9d594daf6366fe354d23cd6f92c45a4b5af4b6"
+    }
+  ],
+  "signatures": {
+    "CoreMemory.__init__": "(self, persona=None, human=None, persona_char_limit=None, human_char_limit=None, archival_memory_exists=True)",
+    "CoreMemory.__repr__": "(self) -> str",
+    "CoreMemory.to_dict": "(self)",
+    "CoreMemory.load": "(state)",
+    "CoreMemory.edit_persona": "(self, new_persona)",
+    "CoreMemory.edit_human": "(self, new_human)",
+    "CoreMemory.edit": "(self, field, content)",
+    "CoreMemory.edit_append": "(self, field, content, sep='\\n')",
+    "CoreMemory.edit_replace": "(self, field, old_content, new_content)",
+    "core_memory_append": "(self, name: str, content: str) -> Optional[str]",
+    "core_memory_replace": "(self, name: str, old_content: str, new_content: str) -> Optional[str]",
+    "conversation_search": "(self, query: str, page: Optional[int] = 0) -> Optional[str]",
+    "archival_memory_insert": "(self, content: str) -> Optional[str]",
+    "archival_memory_search": "(self, query: str, page: Optional[int] = 0) -> Optional[str]",
+    "SQLiteStore.__init__": "(self, path)",
+    "SQLiteStore.add": "(self, kind, content, role='user')",
+    "SQLiteStore.query": "(self, kind, query, count, start)",
+    "SQLiteStore.insert": "(self, content)",
+    "SQLiteStore.search": "(self, query, count=5, start=0)",
+    "SQLiteStore.text_search": "(self, query, count=5, start=0)",
+    "SQLiteStore.close": "(self)",
+    "OfflineHost.__init__": "(self, symbols, db, budget=1200)",
+    "OfflineHost.rebuild_memory": "(self)",
+    "OfflineHost.context": "(self)",
+    "OfflineHost.append": "(self, block, role='tool')",
+    "OfflineHost.event": "(self, text)",
+    "OfflineHost.call": "(self, name, args, request_heartbeat=True)",
+    "OfflineHost.save": "(self, path)",
+    "OfflineHost.restore": "(self, path)",
+    "demo.load_original_symbols": "()",
+    "demo.result_rows": "(text)",
+    "demo.solve": "(host, start, paginate=True, max_calls=100)",
+    "demo.main": "()"
+  },
+  "errors": {
+    "empty_old": {
+      "type": "ValueError",
+      "message": "old_content cannot be an empty string (must specify old_content to replace)"
+    },
+    "missing_old": {
+      "type": "ValueError",
+      "message": "Content not found in human (make sure to use exact string)"
+    },
+    "bad_field": {
+      "type": "KeyError",
+      "message": "'No memory section named other (must be either \"persona\" or \"human\")'"
+    }
+  },
+  "historical_archival_search": {
+    "cached_candidates": 12,
+    "returned_rows": 5,
+    "returned_total": 5,
+    "page0_header": "Showing 5 of 5 results (page 0/0)",
+    "page1_manual": "Showing 5 of 5 results (page 1/0): [\"timestamp: probe-time, memory: item 5\", \"timestamp: probe-time, memory: item 6\", \"timestamp: probe-time, memory: item 7\", \"timestamp: probe-time, memory: item 8\", \"timestamp: probe-time, memory: item 9\"]",
+    "boundary": "cached fake passages; actual original search/tool bodies, no vector retrieval"
+  },
+  "CoreMemory_load_human_char_limit": null,
+  "adapter_probes": {
+    "adapter_page0": "Showing 5 of 12 results (page 0/2): [\"timestamp: 2024-02-12 12:00:00, memory: probe item 0\", \"timestamp: 2024-02-12 12:00:00, memory: probe item 1\", \"timestamp: 2024-02-12 12:00:00, memory: probe item 2\", \"timestamp: 2024-02-12 12:00:00, memory: probe item 3\", \"timestamp: 2024-02-12 12:00:00, memory: probe item 4\"]",
+    "adapter_page1_count": 5,
+    "invalid_page_message": "'page' argument must be an integer",
+    "saved_keys": [
+      "core",
+      "queue",
+      "summary",
+      "budget_chars"
+    ],
+    "limits_restored_by_custom_constructor": true
+  },
+  "Agent_step_return_tuple_lengths": [
+    5
+  ],
+  "checks_passed": [
+    "replace all matches",
+    "empty replacement rejected",
+    "missing replacement rejected",
+    "invalid field rejected",
+    "overflow preserves state",
+    "CoreMemory.load drops limits observed",
+    "raw historical search total equals page length observed",
+    "raw backend manual next page exists",
+    "original tool page header mismatch observed",
+    "SQLite adapter supplies full total",
+    "string page coercion",
+    "invalid page triggers heartbeat",
+    "empty query result success",
+    "None tool return success",
+    "tool reply enters context",
+    "JSON/SQLite reopen",
+    "custom restore preserves limits",
+    "Agent.step actual five-item tuple"
+  ]
+}
